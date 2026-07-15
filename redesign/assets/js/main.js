@@ -1,5 +1,5 @@
 /* ============================================================
-   Wissen-Haus — interactions v2
+   Wissen-Haus, interactions v2
    Single-source header/footer injection + rich motion.
    ============================================================ */
 (function () {
@@ -11,13 +11,14 @@
   var NAV = [
     { key: 'about', label: 'About', menu: [
       ['about.html', 'Our Story', 'How Wissen-Haus began'],
-      ['about.html#leadership', 'Our Leadership', 'The team behind the mission'],
+      ['about.html#milestones', 'Milestones', 'Our journey so far'],
+      ['about.html#founder', 'Meet the Founder', 'A note from Benz Olagbaye'],
       ['impact.html', 'Impact Stories', 'Alumni success journeys'],
       ['contact.html', 'Contact', 'Reach the foundation']
     ]},
     { key: 'programmes', label: 'Programmes', menu: [
       ['programmes.html', 'All Programmes', 'The full overview'],
-      ['programmes.html#bootcamp', 'Career Bootcamp', 'Skills for JS3–SS1 students'],
+      ['programmes.html#bootcamp', 'Career Bootcamp', 'Skills for JS3-SS1 students'],
       ['programmes.html#podcast', 'Opportunity Blueprint', 'Our flagship podcast'],
       ['programmes.html#impact-content', 'Impact Content', 'Social-impact storytelling'],
       ['programmes.html#events', 'Events', 'Bootcamps, cafés & more'],
@@ -29,6 +30,12 @@
       ['community.html#learning', 'Learning Library', 'Free courses & toolkits'],
       ['membership.html', 'Membership', 'Free & Premium plans']
     ]},
+    { key: 'careers', label: 'Careers', menu: [
+      ['careers.html#openings', 'Job Openings', 'Open roles &amp; ways to join'],
+      ['careers.html#internships', 'Internships', 'For students &amp; graduates'],
+      ['community.html#opportunities', 'Opportunity Hub', 'Curated jobs &amp; scholarships'],
+      ['programmes.html#career-hub', 'Career Hub', 'Guidance resources']
+    ]},
     { key: 'policy', label: 'Policy', href: 'policy-research.html' },
     { key: 'involved', label: 'Get Involved', menu: [
       ['volunteer.html', 'Volunteer', 'Mentor & give your time'],
@@ -39,7 +46,7 @@
   ];
   // which nav group is "active" for a given page
   var ACTIVE = { about:'about', impact:'about', contact:'about', programmes:'programmes',
-    community:'community', membership:'community', policy:'policy',
+    community:'community', membership:'community', careers:'careers', policy:'policy',
     volunteer:'involved', partner:'involved', donate:'involved' };
   var activeKey = ACTIVE[page] || '';
 
@@ -89,13 +96,13 @@
     return '' +
     '<footer class="site-footer"><div class="wrap wrap-wide"><div class="footer-top">' +
       '<div class="footer-brand"><a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Wissen-Haus logo"><span>Wissen-Haus<small>Youth Empowerment</small></span></a>' +
-        '<p>Bridging the skills gap in Nigeria — equipping young people with practical guidance, mentorship and global exposure for economic independence.</p>' +
+        '<p>Bridging the skills gap in Nigeria, equipping young people with practical guidance, mentorship and global exposure for economic independence.</p>' +
         '<div class="footer-social">' +
           '<a href="https://www.instagram.com/wissen_haus" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>' +
           '<a href="https://www.linkedin.com/company/wissen-haus-empowerment-foundation" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21h-4z"/></svg></a>' +
         '</div></div>' +
       '<div class="footer-col"><h5>Explore</h5><a href="about.html">About Us</a><a href="programmes.html">Programmes</a><a href="community.html">Community Hub</a><a href="impact.html">Impact Stories</a><a href="policy-research.html">Policy &amp; Research</a></div>' +
-      '<div class="footer-col"><h5>Get Involved</h5><a href="volunteer.html">Volunteer</a><a href="partner.html">Partner With Us</a><a href="membership.html">Membership</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a></div>' +
+      '<div class="footer-col"><h5>Get Involved</h5><a href="volunteer.html">Volunteer</a><a href="careers.html">Careers</a><a href="partner.html">Partner With Us</a><a href="membership.html">Membership</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a></div>' +
       '<div class="footer-col"><h5>Contact</h5><a href="#">Ibadan, Nigeria</a><a href="mailto:info@wissenhaus.org">info@wissenhaus.org</a><a href="tel:+234800947736">+234 800 WISSEN</a></div>' +
     '</div></div>' +
     '<div class="footer-mega" aria-hidden="true">WISSEN-HAUS</div>' +
@@ -309,7 +316,7 @@
       e.preventDefault();
       var btn = form.querySelector('[type="submit"]');
       var original = btn ? btn.innerHTML : '';
-      if (btn) { btn.innerHTML = "Thank you — we'll be in touch ✓"; btn.disabled = true; }
+      if (btn) { btn.innerHTML = "Thank you, we'll be in touch ✓"; btn.disabled = true; }
       form.reset();
       setTimeout(function () { if (btn) { btn.innerHTML = original; btn.disabled = false; } }, 3400);
     });
