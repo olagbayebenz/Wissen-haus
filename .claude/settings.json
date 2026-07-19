@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/bra/.local/bin)",
+      "Bash(cp __TRACKED_VAR__/gh_2.96.0_macOS_arm64/bin/gh /Users/bra/.local/bin/gh)",
+      "Bash(chmod +x /Users/bra/.local/bin/gh)",
+      "Bash(/Users/bra/.local/bin/gh --version)",
+      "Bash(grep -q '.local/bin' \"$HOME/.zshrc\" 2>/dev/null && echo \"already in .zshrc\" || echo \"not in .zshrc\")",
+      "Read(//Users/bra/**)",
+      "Bash(printf '\\\\nexport PATH=\"$HOME/.local/bin:$PATH\"\\\\n')",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(open http://localhost:8000/)",
+      "Bash(npm -v)",
+      "Bash(command -v node)",
+      "Read(//usr/local/**)",
+      "Bash(command -v npx)",
+      "Bash(grep -n \"\\\\.tl-tag\\\\|\\\\.tag-line\\\\|\\\\.card__body\\\\|\\\\.card \\\\|\\\\.card{\\\\|\\\\.card,\\\\|\\\\.grid-3\\\\|\\\\.section \\\\|\\\\.wrap \\\\|\\\\.badge-free\\\\|\\\\.empty-state\\\\|\\\\.loading\" redesign/assets/css/styles.css)",
+      "WebFetch(domain:remoteok.com)",
+      "WebFetch(domain:www.arbeitnow.com)",
+      "WebFetch(domain:himalayas.app)",
+      "WebFetch(domain:weworkremotely.com)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0 Safari/537.36\" \"https://remoteok.com/api\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://opportunitydesk.org/category/scholarships/feed/\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://opportunitydesk.org/category/competitions/feed/\")",
+      "Bash(awk '/<item>/{f=1} f{print} /<\\\\/item>/{if\\(f\\)exit}')",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://opportunitydesk.org/feed/\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" -o /dev/null -w \"%{http_code}\\\\n\" \"https://opportunitydesk.org/category/scholarships/\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" -o /dev/null -w \"%{http_code}\\\\n\" \"https://opportunitydesk.org/\")",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://www.youthop.com/scholarships/feed\" -o /tmp/yo_sch.xml -w \"final_code=%{http_code} url=%{url_effective}\\\\n\")",
+      "Read(//tmp/**)"
+    ]
+  }
+}

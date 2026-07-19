@@ -11,6 +11,12 @@
         'Give and receive constructive feedback professionally'
       ],
       summary: 'Master the art of clear, empathetic communication—the foundation of all workplace relationships. Learn to express ideas concisely, listen actively, and handle difficult conversations with grace.',
+      exercise: {
+        title: 'Email Rewrite Challenge',
+        scenario: 'Your colleague sent this email: "Hey, the project stuff isn\'t done yet and we have problems with the deadline thing. Let me know asap."',
+        task: 'Rewrite this email to be clear, professional, and respectful. Focus on: specific issue, impact, and concrete next steps.',
+        hint: 'A good email answers: What\'s the problem? Why does it matter? What do you need from the reader?'
+      },
       reflection: 'Think of a recent miscommunication at work or in your learning space. How could clearer communication have prevented it?'
     },
     {
@@ -22,6 +28,12 @@
         'Navigate conflict and find win-win solutions'
       ],
       summary: 'Great teams aren\'t built on talent alone—they\'re built on trust, respect, and shared purpose. Learn to collaborate across differences, support your teammates, and resolve conflicts constructively.',
+      exercise: {
+        title: 'Conflict Resolution Scenario',
+        scenario: 'Two teammates disagree on project approach. Alex wants a quick solution in 2 weeks. Jordan wants to do it thoroughly in 6 weeks. Both are right in their own way.',
+        task: 'Write out how you\'d facilitate this conversation as a mediator. What questions would you ask? How would you find middle ground?',
+        hint: 'Look for underlying concerns (speed, quality, resources, risk) rather than just positions. Can you reframe the problem so both win?'
+      },
       reflection: 'Describe a team project where collaboration went well. What specific behaviors made it successful?'
     },
     {
@@ -33,6 +45,12 @@
         'Recognize burnout signs and practice sustainable productivity'
       ],
       summary: 'Productivity isn\'t about doing more—it\'s about doing what matters most with intention. Learn proven prioritization methods, build focused work habits, and maintain balance to avoid burnout.',
+      exercise: {
+        title: 'Priority Matrix Exercise',
+        scenario: 'You have 5 tasks: (1) urgent email from your boss, (2) important project due next week, (3) quick admin task, (4) learning new skill for growth, (5) help a colleague with their deadline.',
+        task: 'Sort these into: Urgent+Important, Important-Not-Urgent, Urgent-Not-Important, Neither. Then decide: What gets done today? What gets scheduled later? What can be delegated?',
+        hint: 'Urgent ≠ Important. Protect time for Important-Not-Urgent tasks—that\'s where growth happens.'
+      },
       reflection: 'What\'s your biggest time management challenge right now? What\'s one small change you could make this week?'
     },
     {
@@ -44,6 +62,12 @@
         'Make informed decisions when facing uncertainty'
       ],
       summary: 'Every professional faces unexpected challenges. Develop a structured approach to problem-solving that moves beyond surface-level fixes to real, lasting solutions.',
+      exercise: {
+        title: 'Root Cause Analysis',
+        scenario: 'A course has a 40% dropout rate. Initial reaction: "Students aren\'t motivated." But dive deeper—what are the real causes?',
+        task: 'Ask 5 "Why?" questions to move from surface symptom to root cause. Example: Why are they dropping out? → Heavy workload. Why? → No clear schedule. Why? → No onboarding. What\'s the real fix?',
+        hint: 'Treating the symptom ("add motivation") fails. Fixing the root ("clear schedule from day one") works.'
+      },
       reflection: 'Think of a problem you solved recently. Could a more structured approach have saved time or led to a better outcome?'
     },
     {
@@ -55,6 +79,12 @@
         'Stay resourceful when plans fall apart'
       ],
       summary: 'The only constant in modern work is change. Build mental resilience, adopt a growth mindset, and learn to see challenges as chances to develop new capabilities.',
+      exercise: {
+        title: 'Failure Debrief',
+        scenario: 'You worked for 3 weeks on a project proposal. Your manager rejected it. Your first reaction: frustration. Now what?',
+        task: 'Write a "failure debrief": What assumptions were wrong? What did you learn? What\'ll you do differently next time? How does this actually make you stronger?',
+        hint: 'Reframe failure as feedback, not judgment. "I failed" → "I learned." Growth mindset is a choice you make in moments like this.'
+      },
       reflection: 'Recall a time when you had to adapt quickly. How did you handle it? What did you learn about yourself?'
     },
     {
@@ -66,6 +96,12 @@
         'Present yourself authentically in interviews and networking'
       ],
       summary: 'Your brand is how the world knows you. Learn to tell your story clearly, build a professional presence that reflects your values, and position yourself for opportunities.',
+      exercise: {
+        title: 'Your 30-Second Story',
+        scenario: 'You\'re at a networking event. Someone asks: "What do you do?" You have 30 seconds before they move on.',
+        task: 'Craft your elevator pitch. It should answer: What are you skilled at? What do you care about? What\'s unique about your approach? Make it authentic, not robotic.',
+        hint: 'Structure: "I [skill/role] because I\'m passionate about [impact]. Right now I\'m focused on [current goal]."'
+      },
       reflection: 'How would someone who knows you describe your professional strengths? Does your LinkedIn profile and resume tell that story?'
     }
   ];
@@ -114,6 +150,14 @@
             </ul>
           </div>
           <p class="module__summary">${module.summary}</p>
+          <div class="module__exercise">
+            <strong>Practical Exercise: ${module.exercise.title}</strong>
+            <div class="module__exercise-content">
+              <p><strong>Scenario:</strong> ${module.exercise.scenario}</p>
+              <p><strong>Your Task:</strong> ${module.exercise.task}</p>
+              <p><strong>💡 Hint:</strong> ${module.exercise.hint}</p>
+            </div>
+          </div>
           <div class="module__reflection">
             <strong>Reflection Prompt:</strong> <em>"${module.reflection}"</em>
           </div>

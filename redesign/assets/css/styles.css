@@ -684,6 +684,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .module__objectives li{margin-bottom:6px}
 
 .module__summary{color:var(--ink-60);line-height:1.6;margin:16px 0}
+
+.module__exercise{background:rgba(15,45,29,.04);padding:16px;border-radius:8px;margin:20px 0;border-left:3px solid var(--green-800)}
+.module__exercise strong{display:block;margin-bottom:12px;color:var(--green-800);font-weight:600}
+.module__exercise-content p{margin:0 0 8px;font-size:.95rem;color:var(--ink-60);line-height:1.6}
+.module__exercise-content p:last-child{margin:0}
+.module__exercise-content strong{color:var(--ink);font-weight:600}
+
 .module__reflection{background:rgba(200,160,80,.08);padding:12px 16px;border-left:3px solid var(--gold);border-radius:4px;font-size:.95rem;color:var(--ink-60);line-height:1.5;margin:16px 0 0}
 
 .certificate{background:var(--paper);padding:48px 32px;border:3px solid var(--green-800);border-radius:var(--radius-lg);text-align:center;animation:slideUp .6s var(--ease)}
