@@ -3,83 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sign Up - Wissen-Haus Community Hub</title>
-<meta name="description" content="Join the Wissen-Haus community to access opportunities, scholarships, internships and more.">
+<title>Join Wissen-Haus Community</title>
 <link rel="icon" href="assets/img/logo.png">
 <link rel="stylesheet" href="assets/css/styles.css">
 <style>
-.auth-container{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--paper);padding:20px}
-.auth-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:48px;max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,0,0,.08)}
-.auth-card h1{font-size:1.8rem;margin:0 0 12px;color:var(--ink)}
-.auth-card p{color:var(--ink-60);margin:0 0 32px;line-height:1.5}
-.auth-form{display:flex;flex-direction:column;gap:16px}
-.auth-form label{font-size:.9rem;font-weight:500;color:var(--ink);display:block;margin-bottom:6px}
-.auth-form input{padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);font-family:inherit;font-size:1rem;transition:border-color .2s}
-.auth-form input:focus{outline:none;border-color:var(--green-800);box-shadow:0 0 0 3px rgba(15,45,29,.1)}
-.auth-form button{padding:14px;background:var(--green-800);color:#fff;border:none;border-radius:var(--radius);font-weight:600;cursor:pointer;font-size:1rem;transition:background .2s}
-.auth-form button:hover{background:var(--green-900)}
-.auth-form button:disabled{opacity:.6;cursor:not-allowed}
-.auth-toggle{text-align:center;margin-top:20px;color:var(--ink-60);font-size:.9rem}
-.auth-toggle a{color:var(--green-800);cursor:pointer;text-decoration:underline}
-.auth-error{background:#fee;color:#c33;padding:12px;border-radius:var(--radius);font-size:.9rem;margin-bottom:16px;display:none}
-.auth-error.show{display:block}
-.auth-success{color:var(--green-800);font-size:.9rem;margin-top:8px}
-.auth-row{display:flex;gap:12px;width:100%} .auth-row > div{flex:1}
+body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.auth-wrapper{width:100%;max-width:500px}
+.auth-card{background:#fff;border-radius:var(--radius-lg);padding:60px 40px;box-shadow:0 20px 60px rgba(15,45,29,.3)}
+.auth-logo{text-align:center;margin-bottom:40px}
+.auth-logo img{height:60px;margin-bottom:16px}
+.auth-logo h1{color:var(--green-800);font-size:1.8rem;margin:0;font-weight:900}
+.auth-logo p{color:var(--ink-60);margin:8px 0 0;font-size:0.95rem}
+.auth-section h2{color:var(--ink);font-size:1.3rem;margin:0 0 24px;font-weight:700}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;color:var(--ink);font-weight:500;margin-bottom:8px;font-size:0.9rem}
+.form-group input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);font-size:1rem;font-family:inherit;transition:border-color .2s}
+.form-group input:focus{outline:none;border-color:var(--green-800);box-shadow:0 0 0 3px rgba(15,45,29,.1)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-row .form-group{margin-bottom:0}
+.form-submit{width:100%;padding:14px;background:var(--green-800);color:#fff;border:none;border-radius:var(--radius);font-weight:600;cursor:pointer;font-size:1rem;transition:background .2s;margin-top:8px}
+.form-submit:hover{background:var(--green-900)}
+.form-submit:disabled{opacity:.6;cursor:not-allowed}
+.form-error{background:#fee;color:#c33;padding:12px 14px;border-radius:var(--radius);font-size:0.9rem;margin-bottom:20px;display:none}
+.form-error.show{display:block}
+.auth-toggle{text-align:center;margin-top:24px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-60);font-size:0.9rem}
+.auth-toggle a{color:var(--green-800);cursor:pointer;font-weight:600;text-decoration:none}
+.auth-toggle a:hover{text-decoration:underline}
+#loginForm{display:none}
 </style>
-<noscript><style>.auth-container{display:none}</style><div style="background:#0F2D1D;color:#fff;padding:20px;text-align:center"><h2>JavaScript Required</h2><p>Please enable JavaScript to access the Community Hub.</p></div></noscript>
 </head>
 <body>
-<div class="auth-container">
-  <div class="auth-card">
-    <img src="assets/img/logo.png" alt="Wissen-Haus" style="height:48px;margin-bottom:24px">
 
-    <div id="signupForm">
-      <h1>Join the Community</h1>
-      <p>Sign up for free to access opportunities, scholarships, internships and more.</p>
-      <form class="auth-form" id="signup">
-        <div class="auth-error" id="signupError"></div>
-        <div class="auth-row">
-          <div>
-            <label for="signupFirstName">First Name</label>
-            <input type="text" id="signupFirstName" name="firstName" placeholder="First name" required>
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <!-- Logo & Branding -->
+    <div class="auth-logo">
+      <img src="assets/img/logo.png" alt="Wissen-Haus">
+      <h1>Wissen-Haus</h1>
+      <p>Community Hub</p>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="signupSection" class="auth-section">
+      <h2>Create Account</h2>
+      <form id="signupForm">
+        <div class="form-error" id="signupError"></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="First name" required>
           </div>
-          <div>
-            <label for="signupLastName">Last Name</label>
-            <input type="text" id="signupLastName" name="lastName" placeholder="Last name" required>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Last name" required>
           </div>
         </div>
-        <div>
+
+        <div class="form-group">
           <label for="signupEmail">Email</label>
-          <input type="email" id="signupEmail" name="email" placeholder="you@example.com" required>
+          <input type="email" id="signupEmail" placeholder="you@example.com" required>
         </div>
-        <div>
+
+        <div class="form-group">
           <label for="signupPassword">Password</label>
-          <input type="password" id="signupPassword" name="password" placeholder="At least 6 characters" required minlength="6">
+          <input type="password" id="signupPassword" placeholder="At least 6 characters" minlength="6" required>
         </div>
-        <button type="submit">Create Account</button>
+
+        <button type="submit" class="form-submit">Sign Up</button>
       </form>
+
       <div class="auth-toggle">
-        Already have an account? <a onclick="toggleForms()">Sign in</a>
+        Already have an account? <a onclick="toggleForms()">Sign In</a>
       </div>
     </div>
 
-    <div id="loginForm" style="display:none">
-      <h1>Welcome Back</h1>
-      <p>Sign in to your account to access the Community Hub.</p>
-      <form class="auth-form" id="login">
-        <div class="auth-error" id="loginError"></div>
-        <div>
+    <!-- Sign In Form -->
+    <div id="loginSection" class="auth-section">
+      <h2>Welcome Back</h2>
+      <form id="loginForm">
+        <div class="form-error" id="loginError"></div>
+
+        <div class="form-group">
           <label for="loginEmail">Email</label>
-          <input type="email" id="loginEmail" name="email" placeholder="you@example.com" required>
+          <input type="email" id="loginEmail" placeholder="you@example.com" required>
         </div>
-        <div>
+
+        <div class="form-group">
           <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" name="password" placeholder="Your password" required>
+          <input type="password" id="loginPassword" placeholder="Your password" required>
         </div>
-        <button type="submit">Sign In</button>
+
+        <button type="submit" class="form-submit">Sign In</button>
       </form>
+
       <div class="auth-toggle">
-        Don't have an account? <a onclick="toggleForms()">Sign up</a>
+        Don't have an account? <a onclick="toggleForms()">Sign Up</a>
       </div>
     </div>
   </div>
@@ -87,18 +106,18 @@
 
 <script>
 function toggleForms() {
-  const signup = document.getElementById('signupForm');
-  const login = document.getElementById('loginForm');
-  signup.style.display = signup.style.display === 'none' ? 'block' : 'none';
-  login.style.display = login.style.display === 'none' ? 'block' : 'none';
+  document.getElementById('signupSection').style.display = 
+    document.getElementById('signupSection').style.display === 'none' ? 'block' : 'none';
+  document.getElementById('loginSection').style.display = 
+    document.getElementById('loginSection').style.display === 'none' ? 'block' : 'none';
   document.getElementById('signupError').classList.remove('show');
   document.getElementById('loginError').classList.remove('show');
 }
 
-document.getElementById('signup').addEventListener('submit', function(e) {
+document.getElementById('signupForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const firstName = document.getElementById('signupFirstName').value.trim();
-  const lastName = document.getElementById('signupLastName').value.trim();
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
   const email = document.getElementById('signupEmail').value.trim();
   const password = document.getElementById('signupPassword').value;
   const error = document.getElementById('signupError');
@@ -125,7 +144,7 @@ document.getElementById('signup').addEventListener('submit', function(e) {
   window.location.href = 'community.html';
 });
 
-document.getElementById('login').addEventListener('submit', function(e) {
+document.getElementById('loginForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const email = document.getElementById('loginEmail').value.trim();
   const password = document.getElementById('loginPassword').value;
@@ -146,5 +165,6 @@ document.getElementById('login').addEventListener('submit', function(e) {
   window.location.href = 'community.html';
 });
 </script>
+
 </body>
 </html>
