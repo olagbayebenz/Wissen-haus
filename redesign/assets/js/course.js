@@ -1,73 +1,6 @@
 (function() {
   'use strict';
 
-  const API_KEY_STORAGE = 'wh_anthropic_api_key';
-
-  function getApiKey() {
-    return localStorage.getItem(API_KEY_STORAGE);
-  }
-
-  function showApiKeySetup() {
-    const modal = document.createElement('div');
-    modal.id = 'apiKeyModal';
-    modal.style.cssText = `
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-      padding: 20px;
-    `;
-
-    const card = document.createElement('div');
-    card.style.cssText = `
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: 40px;
-      max-width: 500px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    `;
-
-    card.innerHTML = `
-      <h2 style="margin: 0 0 16px; color: var(--green-800); font-family: var(--ff-display);">Setup Auto-Grading</h2>
-      <p style="color: var(--ink-60); margin: 0 0 24px;">To enable AI-powered exercise grading, you'll need a Claude API key.</p>
-      <p style="color: var(--ink-60); font-size: 0.9rem; margin: 0 0 16px;">
-        <strong>Get a free key:</strong> <a href="https://console.anthropic.com/account/keys" target="_blank" style="color: var(--green-800); text-decoration: underline;">console.anthropic.com</a>
-      </p>
-      <input type="password" id="apiKeyInput" placeholder="sk-ant-..." style="width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); font-family: var(--ff-mono); font-size: 0.9rem; margin-bottom: 20px;">
-      <div style="display: flex; gap: 12px;">
-        <button id="saveApiKeyBtn" style="flex: 1; padding: 12px; background: var(--green-800); color: #fff; border: none; border-radius: var(--radius); cursor: pointer; font-weight: 600;">Save Key</button>
-        <button id="skipApiKeyBtn" style="flex: 1; padding: 12px; background: var(--line); color: var(--ink); border: none; border-radius: var(--radius); cursor: pointer; font-weight: 600;">Skip for Now</button>
-      </div>
-      <p style="color: var(--ink-60); font-size: 0.85rem; margin: 16px 0 0; line-height: 1.5;">Your API key is stored locally in your browser only. You can update it anytime by clearing browser data.</p>
-    `;
-
-    modal.appendChild(card);
-    document.body.appendChild(modal);
-
-    document.getElementById('saveApiKeyBtn').addEventListener('click', function() {
-      const key = document.getElementById('apiKeyInput').value.trim();
-      if (key) {
-        localStorage.setItem(API_KEY_STORAGE, key);
-        modal.remove();
-        renderModules();
-        updateProgress();
-        updateCertificate();
-      } else {
-        alert('Please enter an API key');
-      }
-    });
-
-    document.getElementById('skipApiKeyBtn').addEventListener('click', function() {
-      modal.remove();
-      renderModules();
-      updateProgress();
-      updateCertificate();
-    });
-  }
-
   const modules = [
     {
       id: 1,
@@ -194,15 +127,6 @@
   }
 
   async function gradeExercise(module, userResponse) {
-    const apiKey = getApiKey();
-    if (!apiKey) {
-      return {
-        passed: false,
-        feedback: 'API key not configured. Set it up to enable auto-grading.',
-        score: 0
-      };
-    }
-
     const gradingPrompt = `You are an expert educator grading a practical exercise for a professional development course.
 
 Exercise: ${module.exercise.title}
@@ -225,48 +149,35 @@ Respond ONLY with valid JSON (no markdown, no code blocks):
 }`;
 
     try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
+      const response = await fetch('https://945a16ce-0bee-40a2-b955-2021797d6bd5-00-1n98zc0eiy1kr.picard.replit.dev/api/grade', {
         method: 'POST',
         headers: {
-          'content-type': 'application/json',
-          'x-api-key': apiKey,
-          'anthropic-version': '2023-06-01'
+          'content-type': 'application/json'
         },
         body: JSON.stringify({
-          model: 'claude-3-5-sonnet-20241022',
-          max_tokens: 300,
-          messages: [{
-            role: 'user',
-            content: gradingPrompt
-          }]
+          gradingPrompt: gradingPrompt
         })
       });
 
       if (!response.ok) {
-        throw new Error(`API error: ${response.status}`);
+        throw new Error(`Server error: ${response.status}`);
       }
 
-      const data = await response.json();
-      const content = data.content[0].text.trim();
+      const result = await response.json();
 
-      try {
-        const result = JSON.parse(content);
-        return {
-          passed: result.passed,
-          feedback: result.feedback,
-          score: result.score
-        };
-      } catch (e) {
-        return {
-          passed: false,
-          feedback: 'Error parsing grading response. Please try again.',
-          score: 0
-        };
+      if (result.error) {
+        throw new Error(result.error);
       }
+
+      return {
+        passed: result.passed !== undefined ? result.passed : true,
+        feedback: result.feedback || 'Response received',
+        score: result.score || 0
+      };
     } catch (error) {
       return {
         passed: false,
-        feedback: `Grading error: ${error.message}. Check your API key.`,
+        feedback: `Grading error: ${error.message}. Check that the server is running.`,
         score: 0
       };
     }
@@ -444,11 +355,7 @@ Respond ONLY with valid JSON (no markdown, no code blocks):
   window.linkedInShare = linkedInShare;
 
   // Initial render
-  if (!getApiKey()) {
-    showApiKeySetup();
-  } else {
-    renderModules();
-    updateProgress();
-    updateCertificate();
-  }
+  renderModules();
+  updateProgress();
+  updateCertificate();
 })();
