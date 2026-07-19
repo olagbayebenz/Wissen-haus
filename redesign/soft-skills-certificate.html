@@ -45,9 +45,10 @@
     const allProgress = JSON.parse(localStorage.getItem('wh_courseProgress') || '{}');
     const progress = allProgress[user.email] || { completedModules: [], certificateId: null, certificateIssuedAt: null };
 
-    if (progress.completedModules.length !== 6) {
-      document.getElementById('certificateSection').innerHTML = '<div class="wrap"><p style="text-align:center;color:var(--red);font-size:1.1rem;">You haven\'t completed all modules yet. <a href="soft-skills-course.html">Continue learning →</a></p></div>';
+    if (progress.completedModules.length !== 6 && !window.location.search.includes('preview')) {
+      document.getElementById('certificateSection').innerHTML = '<div class="wrap"><p style="text-align:center;color:var(--red);font-size:1.1rem;">You haven\'t completed all modules yet. <a href="soft-skills-course.html">Continue learning →</a></p><p style="text-align:center;margin-top:24px"><a href="?preview=true" style="color:var(--green-800);text-decoration:underline;">View preview →</a></p></div>';
     } else {
+      // Generate certificate ID if needed (for preview or completion)
       if (!progress.certificateId) {
         progress.certificateId = 'WH-SSC-' + Date.now().toString(36).toUpperCase().slice(-8);
         progress.certificateIssuedAt = new Date().toISOString();
@@ -55,7 +56,7 @@
         localStorage.setItem('wh_courseProgress', JSON.stringify(allProgress));
       }
 
-      const issuedDate = new Date(progress.certificateIssuedAt);
+      const issuedDate = new Date(progress.certificateIssuedAt || new Date());
       const dateStr = issuedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
       document.getElementById('certificate').innerHTML = `
