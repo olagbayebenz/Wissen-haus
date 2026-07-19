@@ -27,8 +27,7 @@
     { key: 'community', label: 'Community', menu: [
       ['community.html', 'Community Hub', 'Where youth grow together'],
       ['community.html#opportunities', 'Opportunity Hub', 'Scholarships, jobs & grants'],
-      ['community.html#learning', 'Learning Library', 'Free courses & toolkits'],
-      ['membership.html', 'Membership', 'Free & Premium plans']
+      ['community.html#learning', 'Learning Library', 'Free courses & toolkits']
     ]},
     { key: 'careers', label: 'Careers', menu: [
       ['careers.html#openings', 'Job Openings', 'Open roles &amp; ways to join'],
@@ -40,13 +39,12 @@
     { key: 'involved', label: 'Get Involved', menu: [
       ['volunteer.html', 'Volunteer', 'Mentor & give your time'],
       ['partner.html', 'Partner With Us', 'For institutions'],
-      ['membership.html', 'Become a Member', 'Join the community'],
       ['donate.html', 'Donate', 'Fuel the mission']
     ]}
   ];
   // which nav group is "active" for a given page
   var ACTIVE = { about:'about', impact:'about', contact:'about', programmes:'programmes',
-    community:'community', membership:'community', careers:'careers', policy:'policy',
+    community:'community', careers:'careers', policy:'policy',
     volunteer:'involved', partner:'involved', donate:'involved', jobs:'community',
     internships:'community', scholarships:'community', competitions:'community' };
   var activeKey = ACTIVE[page] || '';
