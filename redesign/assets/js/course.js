@@ -1,6 +1,73 @@
 (function() {
   'use strict';
 
+  const API_KEY_STORAGE = 'wh_anthropic_api_key';
+
+  function getApiKey() {
+    return localStorage.getItem(API_KEY_STORAGE);
+  }
+
+  function showApiKeySetup() {
+    const modal = document.createElement('div');
+    modal.id = 'apiKeyModal';
+    modal.style.cssText = `
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 20px;
+    `;
+
+    const card = document.createElement('div');
+    card.style.cssText = `
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    `;
+
+    card.innerHTML = `
+      <h2 style="margin: 0 0 16px; color: var(--green-800); font-family: var(--ff-display);">Setup Auto-Grading</h2>
+      <p style="color: var(--ink-60); margin: 0 0 24px;">To enable AI-powered exercise grading, you'll need a Claude API key.</p>
+      <p style="color: var(--ink-60); font-size: 0.9rem; margin: 0 0 16px;">
+        <strong>Get a free key:</strong> <a href="https://console.anthropic.com/account/keys" target="_blank" style="color: var(--green-800); text-decoration: underline;">console.anthropic.com</a>
+      </p>
+      <input type="password" id="apiKeyInput" placeholder="sk-ant-..." style="width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); font-family: var(--ff-mono); font-size: 0.9rem; margin-bottom: 20px;">
+      <div style="display: flex; gap: 12px;">
+        <button id="saveApiKeyBtn" style="flex: 1; padding: 12px; background: var(--green-800); color: #fff; border: none; border-radius: var(--radius); cursor: pointer; font-weight: 600;">Save Key</button>
+        <button id="skipApiKeyBtn" style="flex: 1; padding: 12px; background: var(--line); color: var(--ink); border: none; border-radius: var(--radius); cursor: pointer; font-weight: 600;">Skip for Now</button>
+      </div>
+      <p style="color: var(--ink-60); font-size: 0.85rem; margin: 16px 0 0; line-height: 1.5;">Your API key is stored locally in your browser only. You can update it anytime by clearing browser data.</p>
+    `;
+
+    modal.appendChild(card);
+    document.body.appendChild(modal);
+
+    document.getElementById('saveApiKeyBtn').addEventListener('click', function() {
+      const key = document.getElementById('apiKeyInput').value.trim();
+      if (key) {
+        localStorage.setItem(API_KEY_STORAGE, key);
+        modal.remove();
+        renderModules();
+        updateProgress();
+        updateCertificate();
+      } else {
+        alert('Please enter an API key');
+      }
+    });
+
+    document.getElementById('skipApiKeyBtn').addEventListener('click', function() {
+      modal.remove();
+      renderModules();
+      updateProgress();
+      updateCertificate();
+    });
+  }
+
   const modules = [
     {
       id: 1,
@@ -126,6 +193,85 @@
     localStorage.setItem('wh_courseProgress', JSON.stringify(allProgress));
   }
 
+  async function gradeExercise(module, userResponse) {
+    const apiKey = getApiKey();
+    if (!apiKey) {
+      return {
+        passed: false,
+        feedback: 'API key not configured. Set it up to enable auto-grading.',
+        score: 0
+      };
+    }
+
+    const gradingPrompt = `You are an expert educator grading a practical exercise for a professional development course.
+
+Exercise: ${module.exercise.title}
+Scenario: ${module.exercise.scenario}
+Task: ${module.exercise.task}
+
+Student Response:
+${userResponse}
+
+Evaluate this response on:
+1. Did they understand and address the core task?
+2. Is there meaningful depth/thought in their answer?
+3. Did they apply the concepts from the module?
+
+Respond ONLY with valid JSON (no markdown, no code blocks):
+{
+  "passed": true/false,
+  "score": 0-100,
+  "feedback": "Specific, encouraging feedback (2-3 sentences). If failed, suggest what to improve."
+}`;
+
+    try {
+      const response = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'x-api-key': apiKey,
+          'anthropic-version': '2023-06-01'
+        },
+        body: JSON.stringify({
+          model: 'claude-3-5-sonnet-20241022',
+          max_tokens: 300,
+          messages: [{
+            role: 'user',
+            content: gradingPrompt
+          }]
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const content = data.content[0].text.trim();
+
+      try {
+        const result = JSON.parse(content);
+        return {
+          passed: result.passed,
+          feedback: result.feedback,
+          score: result.score
+        };
+      } catch (e) {
+        return {
+          passed: false,
+          feedback: 'Error parsing grading response. Please try again.',
+          score: 0
+        };
+      }
+    } catch (error) {
+      return {
+        passed: false,
+        feedback: `Grading error: ${error.message}. Check your API key.`,
+        score: 0
+      };
+    }
+  }
+
   function renderModules() {
     const progress = getCourseProgress();
     moduleListEl.innerHTML = '';
@@ -157,6 +303,9 @@
               <p><strong>Your Task:</strong> ${module.exercise.task}</p>
               <p><strong>💡 Hint:</strong> ${module.exercise.hint}</p>
             </div>
+            <textarea class="module__exercise-input" data-module-id="${module.id}" placeholder="Type your response here..." style="width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); font-family: var(--ff-body); font-size: 1rem; line-height: 1.5; min-height: 120px; margin: 16px 0; resize: vertical;"></textarea>
+            <button class="module__submit-btn" data-module-id="${module.id}" style="padding: 10px 20px; background: var(--green-800); color: #fff; border: none; border-radius: var(--radius); cursor: pointer; font-weight: 600; font-size: 0.95rem;">Submit for Grading</button>
+            <div class="module__grade-result" data-module-id="${module.id}"></div>
           </div>
           <div class="module__reflection">
             <strong>Reflection Prompt:</strong> <em>"${module.reflection}"</em>
@@ -183,6 +332,42 @@
         renderModules();
         updateProgress();
         updateCertificate();
+      });
+
+      const submitBtn = div.querySelector('.module__submit-btn');
+      const resultDiv = div.querySelector('.module__grade-result');
+      const textarea = div.querySelector('.module__exercise-input');
+
+      submitBtn.addEventListener('click', async function() {
+        const response = textarea.value.trim();
+        if (!response) {
+          resultDiv.textContent = 'Please write a response before submitting.';
+          resultDiv.style.color = 'var(--red)';
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Grading...';
+        resultDiv.textContent = '';
+
+        const gradeResult = await gradeExercise(module, response);
+
+        if (gradeResult.passed) {
+          resultDiv.innerHTML = `<div class="module__grade-pass">✓ Passed! ${gradeResult.feedback}</div>`;
+          checkbox.checked = true;
+          checkbox.disabled = true;
+          const p = getCourseProgress();
+          if (!p.completedModules.includes(module.id)) {
+            p.completedModules.push(module.id);
+          }
+          saveCourseProgress(p);
+          updateProgress();
+          updateCertificate();
+        } else {
+          resultDiv.innerHTML = `<div class="module__grade-fail">✗ Try Again. ${gradeResult.feedback}</div>`;
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit for Grading';
+        }
       });
 
       moduleListEl.appendChild(div);
@@ -259,7 +444,11 @@
   window.linkedInShare = linkedInShare;
 
   // Initial render
-  renderModules();
-  updateProgress();
-  updateCertificate();
+  if (!getApiKey()) {
+    showApiKeySetup();
+  } else {
+    renderModules();
+    updateProgress();
+    updateCertificate();
+  }
 })();
