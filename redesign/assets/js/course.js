@@ -11,13 +11,38 @@
         'Give and receive constructive feedback professionally'
       ],
       summary: 'Master the art of clear, empathetic communication—the foundation of all workplace relationships. Learn to express ideas concisely, listen actively, and handle difficult conversations with grace.',
-      exercise: {
-        title: 'Email Rewrite Challenge',
-        scenario: 'Your colleague sent this email: "Hey, the project stuff isn\'t done yet and we have problems with the deadline thing. Let me know asap."',
-        task: 'Rewrite this email to be clear, professional, and respectful. Focus on: specific issue, impact, and concrete next steps.',
-        hint: 'A good email answers: What\'s the problem? Why does it matter? What do you need from the reader?'
-      },
-      reflection: 'Think of a recent miscommunication at work or in your learning space. How could clearer communication have prevented it?'
+      quiz: [
+        {
+          question: 'When writing a professional email about a problem, what should you always include?',
+          options: {
+            a: 'Just the problem without offering solutions',
+            b: 'The specific issue, its impact, and concrete next steps',
+            c: 'Emotional language to express how frustrated you are',
+            d: 'A list of all past problems with this person'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'What is active listening?',
+          options: {
+            a: 'Staying quiet while someone talks',
+            b: 'Fully focusing on the speaker, asking clarifying questions, and reflecting back what you heard',
+            c: 'Thinking about your response while they speak',
+            d: 'Taking detailed notes without making eye contact'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'When giving constructive feedback, you should focus on:',
+          options: {
+            a: 'The person\'s character and personality',
+            b: 'Specific behaviors and their impact, with suggestions for improvement',
+            c: 'Criticism disguised as jokes',
+            d: 'Only pointing out mistakes without solutions'
+          },
+          correct: 'b'
+        }
+      ]
     },
     {
       id: 2,
@@ -28,13 +53,38 @@
         'Navigate conflict and find win-win solutions'
       ],
       summary: 'Great teams aren\'t built on talent alone—they\'re built on trust, respect, and shared purpose. Learn to collaborate across differences, support your teammates, and resolve conflicts constructively.',
-      exercise: {
-        title: 'Conflict Resolution Scenario',
-        scenario: 'Two teammates disagree on project approach. Alex wants a quick solution in 2 weeks. Jordan wants to do it thoroughly in 6 weeks. Both are right in their own way.',
-        task: 'Write out how you\'d facilitate this conversation as a mediator. What questions would you ask? How would you find middle ground?',
-        hint: 'Look for underlying concerns (speed, quality, resources, risk) rather than just positions. Can you reframe the problem so both win?'
-      },
-      reflection: 'Describe a team project where collaboration went well. What specific behaviors made it successful?'
+      quiz: [
+        {
+          question: 'When two teammates disagree on project approach, what\'s the best first step?',
+          options: {
+            a: 'Go with your idea and ignore theirs',
+            b: 'Ask each person why their approach matters to them and listen for underlying concerns',
+            c: 'Let the loudest person decide',
+            d: 'Avoid the conflict entirely'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'In a remote team setting, what\'s most important for collaboration?',
+          options: {
+            a: 'Only communicating through video calls',
+            b: 'Clear documentation, regular check-ins, and respectful async communication',
+            c: 'Working at the exact same time as everyone else',
+            d: 'Assuming everyone works the same way you do'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'How should you handle a conflict with a teammate?',
+          options: {
+            a: 'Talk badly about them to other team members',
+            b: 'Have a private conversation focused on solving the problem, not blaming',
+            c: 'Ignore it and hope it goes away',
+            d: 'Report them immediately without talking to them first'
+          },
+          correct: 'b'
+        }
+      ]
     },
     {
       id: 3,
@@ -45,13 +95,38 @@
         'Recognize burnout signs and practice sustainable productivity'
       ],
       summary: 'Productivity isn\'t about doing more—it\'s about doing what matters most with intention. Learn proven prioritization methods, build focused work habits, and maintain balance to avoid burnout.',
-      exercise: {
-        title: 'Priority Matrix Exercise',
-        scenario: 'You have 5 tasks: (1) urgent email from your boss, (2) important project due next week, (3) quick admin task, (4) learning new skill for growth, (5) help a colleague with their deadline.',
-        task: 'Sort these into: Urgent+Important, Important-Not-Urgent, Urgent-Not-Important, Neither. Then decide: What gets done today? What gets scheduled later? What can be delegated?',
-        hint: 'Urgent ≠ Important. Protect time for Important-Not-Urgent tasks—that\'s where growth happens.'
-      },
-      reflection: 'What\'s your biggest time management challenge right now? What\'s one small change you could make this week?'
+      quiz: [
+        {
+          question: 'Which task should you prioritize first?',
+          options: {
+            a: 'Urgent AND Important (deadline today, affects goals)',
+            b: 'Important but NOT Urgent (builds future success)',
+            c: 'Urgent but NOT Important (feels urgent but doesn\'t matter)',
+            d: 'Neither urgent nor important (low-value busywork)'
+          },
+          correct: 'a'
+        },
+        {
+          question: 'What is "deep work"?',
+          options: {
+            a: 'Working longer hours every day',
+            b: 'Focused, distraction-free time on complex, important tasks',
+            c: 'Multitasking to get more done',
+            d: 'Responding to every message immediately'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'Early signs of burnout include:',
+          options: {
+            a: 'Feeling energized and excited',
+            b: 'Chronic fatigue, loss of motivation, difficulty concentrating',
+            c: 'Having clear work-life boundaries',
+            d: 'Regular vacation time'
+          },
+          correct: 'b'
+        }
+      ]
     },
     {
       id: 4,
@@ -62,13 +137,38 @@
         'Make informed decisions when facing uncertainty'
       ],
       summary: 'Every professional faces unexpected challenges. Develop a structured approach to problem-solving that moves beyond surface-level fixes to real, lasting solutions.',
-      exercise: {
-        title: 'Root Cause Analysis',
-        scenario: 'A course has a 40% dropout rate. Initial reaction: "Students aren\'t motivated." But dive deeper—what are the real causes?',
-        task: 'Ask 5 "Why?" questions to move from surface symptom to root cause. Example: Why are they dropping out? → Heavy workload. Why? → No clear schedule. Why? → No onboarding. What\'s the real fix?',
-        hint: 'Treating the symptom ("add motivation") fails. Fixing the root ("clear schedule from day one") works.'
-      },
-      reflection: 'Think of a problem you solved recently. Could a more structured approach have saved time or led to a better outcome?'
+      quiz: [
+        {
+          question: 'A course has 40% dropout. "Students aren\'t motivated" is a:',
+          options: {
+            a: 'Root cause (the real problem)',
+            b: 'Symptom (surface observation, not the real cause)',
+            c: 'Solution',
+            d: 'Not relevant to the problem'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'The best way to find root cause is to:',
+          options: {
+            a: 'Assume the first explanation is correct',
+            b: 'Ask "Why?" repeatedly to dig deeper: Why did it happen? Why did that happen?',
+            c: 'Treat the symptom and hope it fixes the problem',
+            d: 'Ignore the problem and move on'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'When making decisions under uncertainty, you should:',
+          options: {
+            a: 'Guess and hope for the best',
+            b: 'Gather available information, consider options, and accept some risk',
+            c: 'Wait until you have perfect information (which never comes)',
+            d: 'Let others decide for you'
+          },
+          correct: 'b'
+        }
+      ]
     },
     {
       id: 5,
@@ -79,13 +179,38 @@
         'Stay resourceful when plans fall apart'
       ],
       summary: 'The only constant in modern work is change. Build mental resilience, adopt a growth mindset, and learn to see challenges as chances to develop new capabilities.',
-      exercise: {
-        title: 'Failure Debrief',
-        scenario: 'You worked for 3 weeks on a project proposal. Your manager rejected it. Your first reaction: frustration. Now what?',
-        task: 'Write a "failure debrief": What assumptions were wrong? What did you learn? What\'ll you do differently next time? How does this actually make you stronger?',
-        hint: 'Reframe failure as feedback, not judgment. "I failed" → "I learned." Growth mindset is a choice you make in moments like this.'
-      },
-      reflection: 'Recall a time when you had to adapt quickly. How did you handle it? What did you learn about yourself?'
+      quiz: [
+        {
+          question: 'A growth mindset means believing:',
+          options: {
+            a: 'Your abilities are fixed and can\'t change',
+            b: 'You can develop new skills and abilities through effort and learning',
+            c: 'Failure defines who you are permanently',
+            d: 'Challenges are threats to avoid'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'When you fail at something, the most productive response is:',
+          options: {
+            a: 'Give up because you\'re not good enough',
+            b: 'Blame others for the failure',
+            c: 'Analyze what went wrong, extract lessons, and try again differently',
+            d: 'Pretend it never happened'
+          },
+          correct: 'c'
+        },
+        {
+          question: 'How should you respond to unexpected change in your work?',
+          options: {
+            a: 'Resist it and hope things go back to normal',
+            b: 'See it as an opportunity to learn new skills and adapt your approach',
+            c: 'Panic and freeze',
+            d: 'Blame the organization for the change'
+          },
+          correct: 'b'
+        }
+      ]
     },
     {
       id: 6,
@@ -96,18 +221,43 @@
         'Present yourself authentically in interviews and networking'
       ],
       summary: 'Your brand is how the world knows you. Learn to tell your story clearly, build a professional presence that reflects your values, and position yourself for opportunities.',
-      exercise: {
-        title: 'Your 30-Second Story',
-        scenario: 'You\'re at a networking event. Someone asks: "What do you do?" You have 30 seconds before they move on.',
-        task: 'Craft your elevator pitch. It should answer: What are you skilled at? What do you care about? What\'s unique about your approach? Make it authentic, not robotic.',
-        hint: 'Structure: "I [skill/role] because I\'m passionate about [impact]. Right now I\'m focused on [current goal]."'
-      },
-      reflection: 'How would someone who knows you describe your professional strengths? Does your LinkedIn profile and resume tell that story?'
+      quiz: [
+        {
+          question: 'Your professional brand should include:',
+          options: {
+            a: 'Only your job title and company',
+            b: 'Your skills, values, unique perspective, and what you care about',
+            c: 'Exaggerations about your achievements',
+            d: 'Only technical skills, nothing personal'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'When networking or interviewing, you should:',
+          options: {
+            a: 'Tell a generic story that applies to everyone',
+            b: 'Share a specific story that shows your skills and values authentically',
+            c: 'Never mention personal experiences',
+            d: 'Pretend to be someone you\'re not'
+          },
+          correct: 'b'
+        },
+        {
+          question: 'Your LinkedIn profile should:',
+          options: {
+            a: 'Be outdated and rarely updated',
+            b: 'Reflect your professional identity, accomplishments, and what you\'re working toward',
+            c: 'Copy someone else\'s profile exactly',
+            d: 'Only list job titles without context'
+          },
+          correct: 'b'
+        }
+      ]
     }
   ];
 
   const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
-  if (!user) return; // auth.js already redirected, this is belt-and-braces
+  if (!user) return;
 
   const moduleListEl = document.getElementById('moduleList');
   const progressLabelEl = document.getElementById('progressLabel');
@@ -126,63 +276,6 @@
     localStorage.setItem('wh_courseProgress', JSON.stringify(allProgress));
   }
 
-  async function gradeExercise(module, userResponse) {
-    const gradingPrompt = `You are an expert educator grading a practical exercise for a professional development course.
-
-Exercise: ${module.exercise.title}
-Scenario: ${module.exercise.scenario}
-Task: ${module.exercise.task}
-
-Student Response:
-${userResponse}
-
-Evaluate this response on:
-1. Did they understand and address the core task?
-2. Is there meaningful depth/thought in their answer?
-3. Did they apply the concepts from the module?
-
-Respond ONLY with valid JSON (no markdown, no code blocks):
-{
-  "passed": true/false,
-  "score": 0-100,
-  "feedback": "Specific, encouraging feedback (2-3 sentences). If failed, suggest what to improve."
-}`;
-
-    try {
-      const response = await fetch('https://945a16ce-0bee-40a2-b955-2021797d6bd5-00-1n98zc0eiy1kr.picard.replit.dev/api/grade', {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify({
-          gradingPrompt: gradingPrompt
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error(`Server error: ${response.status}`);
-      }
-
-      const result = await response.json();
-
-      if (result.error) {
-        throw new Error(result.error);
-      }
-
-      return {
-        passed: result.passed !== undefined ? result.passed : true,
-        feedback: result.feedback || 'Response received',
-        score: result.score || 0
-      };
-    } catch (error) {
-      return {
-        passed: false,
-        feedback: `Grading error: ${error.message}. Check that the server is running.`,
-        score: 0
-      };
-    }
-  }
-
   function renderModules() {
     const progress = getCourseProgress();
     moduleListEl.innerHTML = '';
@@ -191,10 +284,42 @@ Respond ONLY with valid JSON (no markdown, no code blocks):
       const isComplete = progress.completedModules.includes(module.id);
       const div = document.createElement('div');
       div.className = 'module' + (isComplete ? ' module--complete' : '');
+
+      let quizHTML = `
+        <div class="module__quiz">
+          <strong>Quiz: ${module.title}</strong>
+      `;
+
+      module.quiz.forEach((q, idx) => {
+        quizHTML += `
+          <div class="module__question">
+            <p class="module__question-text"><strong>Q${idx + 1}:</strong> ${q.question}</p>
+            <div class="module__options">
+        `;
+        Object.entries(q.options).forEach(([key, text]) => {
+          quizHTML += `
+            <label class="module__option">
+              <input type="radio" name="q_${module.id}_${idx}" value="${key}" data-module="${module.id}" data-question="${idx}">
+              <span><strong>${key.toUpperCase()}.</strong> ${text}</span>
+            </label>
+          `;
+        });
+        quizHTML += `
+            </div>
+          </div>
+        `;
+      });
+
+      quizHTML += `
+          <button class="module__submit-btn" data-module-id="${module.id}">Submit Quiz</button>
+          <div class="module__quiz-result" data-module-id="${module.id}"></div>
+        </div>
+      `;
+
       div.innerHTML = `
         <div class="module__header">
           <label class="module__check">
-            <input type="checkbox" ${isComplete ? 'checked' : ''} data-module-id="${module.id}">
+            <input type="checkbox" ${isComplete ? 'checked' : ''} data-module-id="${module.id}" disabled>
             <span class="module__check-box"></span>
           </label>
           <h3 class="module__title">${module.title}</h3>
@@ -207,66 +332,41 @@ Respond ONLY with valid JSON (no markdown, no code blocks):
             </ul>
           </div>
           <p class="module__summary">${module.summary}</p>
-          <div class="module__exercise">
-            <strong>Practical Exercise: ${module.exercise.title}</strong>
-            <div class="module__exercise-content">
-              <p><strong>Scenario:</strong> ${module.exercise.scenario}</p>
-              <p><strong>Your Task:</strong> ${module.exercise.task}</p>
-              <p><strong>💡 Hint:</strong> ${module.exercise.hint}</p>
-            </div>
-            <textarea class="module__exercise-input" data-module-id="${module.id}" placeholder="Type your response here..." style="width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); font-family: var(--ff-body); font-size: 1rem; line-height: 1.5; min-height: 120px; margin: 16px 0; resize: vertical;"></textarea>
-            <button class="module__submit-btn" data-module-id="${module.id}" style="padding: 10px 20px; background: var(--green-800); color: #fff; border: none; border-radius: var(--radius); cursor: pointer; font-weight: 600; font-size: 0.95rem;">Submit for Grading</button>
-            <div class="module__grade-result" data-module-id="${module.id}"></div>
-          </div>
-          <div class="module__reflection">
-            <strong>Reflection Prompt:</strong> <em>"${module.reflection}"</em>
-          </div>
+          ${quizHTML}
         </div>
       `;
 
-      const checkbox = div.querySelector('input[type="checkbox"]');
-      checkbox.addEventListener('change', function() {
-        const moduleId = parseInt(this.dataset.moduleId);
-        const p = getCourseProgress();
-
-        if (this.checked) {
-          if (!p.completedModules.includes(moduleId)) {
-            p.completedModules.push(moduleId);
-          }
-        } else {
-          p.completedModules = p.completedModules.filter(id => id !== moduleId);
-          p.certificateId = null;
-          p.certificateIssuedAt = null;
-        }
-
-        saveCourseProgress(p);
-        renderModules();
-        updateProgress();
-        updateCertificate();
-      });
-
       const submitBtn = div.querySelector('.module__submit-btn');
-      const resultDiv = div.querySelector('.module__grade-result');
-      const textarea = div.querySelector('.module__exercise-input');
+      const resultDiv = div.querySelector('.module__quiz-result');
+      const checkbox = div.querySelector('input[type="checkbox"]');
 
-      submitBtn.addEventListener('click', async function() {
-        const response = textarea.value.trim();
-        if (!response) {
-          resultDiv.textContent = 'Please write a response before submitting.';
-          resultDiv.style.color = 'var(--red)';
+      submitBtn.addEventListener('click', function() {
+        const answers = {};
+        module.quiz.forEach((q, idx) => {
+          const selected = div.querySelector(`input[name="q_${module.id}_${idx}"]:checked`);
+          answers[idx] = selected ? selected.value : null;
+        });
+
+        const unanswered = Object.values(answers).some(a => a === null);
+        if (unanswered) {
+          resultDiv.innerHTML = '<div class="module__quiz-fail">Please answer all questions before submitting.</div>';
           return;
         }
 
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Grading...';
-        resultDiv.textContent = '';
+        let correct = 0;
+        module.quiz.forEach((q, idx) => {
+          if (answers[idx] === q.correct) correct++;
+        });
 
-        const gradeResult = await gradeExercise(module, response);
+        const percentage = (correct / module.quiz.length) * 100;
+        const passed = percentage >= 80;
 
-        if (gradeResult.passed) {
-          resultDiv.innerHTML = `<div class="module__grade-pass">✓ Passed! ${gradeResult.feedback}</div>`;
+        if (passed) {
+          resultDiv.innerHTML = `<div class="module__quiz-pass">✓ Passed! You got ${correct}/${module.quiz.length} correct. Well done!</div>`;
           checkbox.checked = true;
-          checkbox.disabled = true;
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Completed ✓';
+
           const p = getCourseProgress();
           if (!p.completedModules.includes(module.id)) {
             p.completedModules.push(module.id);
@@ -275,9 +375,7 @@ Respond ONLY with valid JSON (no markdown, no code blocks):
           updateProgress();
           updateCertificate();
         } else {
-          resultDiv.innerHTML = `<div class="module__grade-fail">✗ Try Again. ${gradeResult.feedback}</div>`;
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Submit for Grading';
+          resultDiv.innerHTML = `<div class="module__quiz-fail">You got ${correct}/${module.quiz.length} correct. Need 80% to pass. Try again!</div>`;
         }
       });
 
