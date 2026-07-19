@@ -665,6 +665,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .course-progress__fill{height:100%;width:0%;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .3s var(--ease)}
 
 .module-list{display:flex;flex-direction:column;gap:20px}
+.module-single{display:flex;flex-direction:column;gap:20px}
+
+.module-nav{display:flex;gap:16px;justify-content:space-between;margin-top:24px}
+.module-nav a{flex:1;text-align:center}
 .module{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;transition:border-color .3s var(--ease);cursor:pointer}
 .module:hover{border-color:var(--green-800)}
 .module--complete{background:rgba(15,45,29,.04);border-color:var(--green-800)}

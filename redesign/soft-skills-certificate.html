@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Certificate - Wissen-Haus</title>
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="softskills">
+<main id="main">
+
+<section class="section section--tight" style="padding-top:clamp(48px,6vw,84px)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Congratulations!</span>
+      <h1 class="display-lg mt-s">You've Completed All 6 Modules</h1>
+      <p class="lead mt-m">Your certificate is ready to download and add to LinkedIn.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="certificateSection">
+  <div class="wrap">
+    <div class="certificate" id="certificate"></div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div style="text-align:center;margin-top:32px">
+      <a href="community.html" class="btn">← Back to Community Hub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/streak.js"></script>
+<script>
+  const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
+  if (!user) { window.location.href = 'login.html'; } else {
+    const allProgress = JSON.parse(localStorage.getItem('wh_courseProgress') || '{}');
+    const progress = allProgress[user.email] || { completedModules: [], certificateId: null, certificateIssuedAt: null };
+
+    if (progress.completedModules.length !== 6) {
+      document.getElementById('certificateSection').innerHTML = '<div class="wrap"><p style="text-align:center;color:var(--red);font-size:1.1rem;">You haven\'t completed all modules yet. <a href="soft-skills-course.html">Continue learning →</a></p></div>';
+    } else {
+      if (!progress.certificateId) {
+        progress.certificateId = 'WH-SSC-' + Date.now().toString(36).toUpperCase().slice(-8);
+        progress.certificateIssuedAt = new Date().toISOString();
+        allProgress[user.email] = progress;
+        localStorage.setItem('wh_courseProgress', JSON.stringify(allProgress));
+      }
+
+      const issuedDate = new Date(progress.certificateIssuedAt);
+      const dateStr = issuedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      document.getElementById('certificate').innerHTML = `
+        <div style="text-align: center; padding: 48px 32px; border: 3px solid var(--green-800); border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(15, 45, 29, 0.03), rgba(200, 160, 80, 0.03))">
+          <div style="color: var(--green-800); font-size: 2.4rem; font-weight: 900; margin-bottom: 8px">✓</div>
+          <h2 style="color: var(--ink); font-family: var(--ff-display); font-size: 2rem; margin: 0 0 8px">Certificate of Completion</h2>
+          <p style="color: var(--ink-60); margin: 0 0 24px; font-size: 1rem">This is to certify that</p>
+          <h3 style="color: var(--green-800); font-size: 1.8rem; margin: 0 0 24px; font-family: var(--ff-display)">${user.name}</h3>
+          <p style="color: var(--ink); margin: 0 0 16px; font-size: 1.1rem">has successfully completed the course</p>
+          <h4 style="color: var(--ink); font-size: 1.4rem; margin: 0 0 24px">Soft Skills for the Modern Workplace</h4>
+          <p style="color: var(--ink-60); margin: 0 0 32px">Issued on ${dateStr}</p>
+          <div style="border-top: 2px solid var(--green-800); padding-top: 16px; margin: 32px 0; display: flex; justify-content: space-around; align-items: flex-end">
+            <div>
+              <div style="color: var(--green-800); font-weight: 900; font-size: 1.2rem">Wissen-Haus</div>
+              <div style="color: var(--ink-60); font-size: 0.9rem">Youth Empowerment Foundation</div>
+            </div>
+            <div style="text-align: right">
+              <div style="color: var(--ink-60); font-size: 0.85rem; margin-bottom: 8px">Certificate ID</div>
+              <div style="color: var(--green-800); font-family: var(--ff-mono); font-weight: 600">${progress.certificateId}</div>
+            </div>
+          </div>
+          <div style="margin-top: 32px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap">
+            <button onclick="linkedInShare()" style="padding: 12px 24px; background: #0A66C2; color: #fff; border: none; border-radius: var(--radius); cursor: pointer; font-weight: 600; font-size: 1rem">Add to LinkedIn</button>
+            <button onclick="window.print()" style="padding: 12px 24px; background: var(--green-800); color: #fff; border: none; border-radius: var(--radius); cursor: pointer; font-weight: 600; font-size: 1rem">Print / Save as PDF</button>
+          </div>
+        </div>
+      `;
+
+      window.linkedInShare = function() {
+        const url = encodeURIComponent(window.location.href);
+        const certId = progress.certificateId;
+        const linkedInUrl = `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=Soft%20Skills%20for%20the%20Modern%20Workplace&organizationName=Wissen-Haus%20Youth%20Empowerment%20Foundation&issueYear=${new Date().getFullYear()}&issueMonth=${String(new Date().getMonth() + 1).padStart(2, '0')}&certUrl=${url}&certId=${certId}`;
+        window.open(linkedInUrl, '_blank');
+      };
+    }
+  }
+</script>
+</body>
+</html>
