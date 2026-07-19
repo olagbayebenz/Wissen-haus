@@ -365,6 +365,8 @@ strong{font-weight:600}
 /* ---------- Chips row / pills ---------- */
 .pillrow{display:flex;flex-wrap:wrap;gap:.6rem}
 .pillrow .p{font-family:var(--ff-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:var(--pill);padding:.5em .95em;color:var(--green-800);background:var(--paper)}
+.pillrow a.p{text-decoration:none;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+.pillrow a.p:hover{background:var(--green-800);color:#fff;border-color:var(--green-800)}
 
 /* progression steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
