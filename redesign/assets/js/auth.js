@@ -9,7 +9,9 @@
     const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
 
     if (!user) {
-      window.location.href = 'login.html';
+      // Redirect to community landing page for community hub, login for others
+      const redirectUrl = currentPage === 'community' ? 'community-landing.html' : 'login.html';
+      window.location.href = redirectUrl;
       return;
     }
 
