@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Library - Wissen-Haus</title>
+<meta name="description" content="Free and premium courses to build career-ready skills: Career Launch Blueprint, AI, Financial Literacy, Workplace Readiness, and Soft Skills.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+.course-card { border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s; display: flex; flex-direction: column; }
+.course-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-4px); }
+.course-card-header { padding: 24px; background: linear-gradient(135deg, rgba(15, 45, 29, 0.05), rgba(200, 160, 80, 0.05)); border-bottom: 2px solid var(--line); }
+.course-badge { display: inline-block; padding: 4px 12px; background: var(--green-800); color: white; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+.course-badge.free { background: #10B981; }
+.course-badge.premium { background: #F59E0B; }
+.course-title { color: var(--green-800); font-size: 1.4rem; font-weight: 700; margin: 12px 0; }
+.course-tagline { color: var(--ink-60); font-size: 0.95rem; line-height: 1.5; }
+.course-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.course-description { color: var(--ink-60); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px; flex: 1; }
+.course-modules { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.module-tag { padding: 4px 10px; background: #f0f0f0; color: var(--ink-60); font-size: 0.8rem; border-radius: 4px; }
+.course-features { list-style: none; padding: 0; margin: 16px 0; color: var(--ink-60); font-size: 0.9rem; }
+.course-features li { padding: 6px 0; display: flex; gap: 8px; }
+.course-features li:before { content: "✓"; color: var(--green-800); font-weight: 600; flex-shrink: 0; }
+.course-card-footer { padding: 0 24px 24px; display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-start { flex: 1; min-width: 140px; }
+.filter-pills { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
+.filter-pill { padding: 10px 20px; border: 1px solid var(--line); border-radius: 20px; background: white; color: var(--ink); font-weight: 500; cursor: pointer; transition: all 0.2s; }
+.filter-pill.active { background: var(--green-800); color: white; border-color: var(--green-800); }
+.filter-pill:hover { border-color: var(--green-800); }
+.price-badge { font-size: 0.9rem; font-weight: 600; color: var(--green-800); }
+.price-badge.free { color: #10B981; }
+.price-badge.premium { color: #F59E0B; }
+</style>
+</head>
+<body data-page="community">
+<noscript><div style="background:#0F2D1D;color:#fff;padding:12px 20px;text-align:center;font-family:sans-serif"><a href="index.html" style="color:#fff;margin:0 8px">Home</a><a href="community.html" style="color:#fff;margin:0 8px">Community</a></div></noscript>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="section section--tight" style="padding-top:clamp(48px,6vw,84px)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Learning Library</span>
+      <h1 class="display-lg mt-s">Build Career-Ready Skills</h1>
+      <p class="lead mt-m">Free and premium courses designed for Nigerian youth. Master skills that matter: career readiness, AI, finance, and workplace success.</p>
+      <div style="margin-top:32px">
+        <a href="community.html" class="btn btn--outline">← Back to Community</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER SECTION -->
+<section class="section section--tight" style="padding:clamp(24px,3vw,40px) 0;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="filter-pills">
+      <button class="filter-pill active" onclick="filterCourses('all')">All Courses</button>
+      <button class="filter-pill" onclick="filterCourses('free')">Free</button>
+      <button class="filter-pill" onclick="filterCourses('premium')">Premium (£10/year)</button>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES GRID -->
+<section class="section">
+  <div class="wrap">
+    <div class="courses-grid" id="coursesGrid"></div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section panel-dark">
+  <div class="wrap">
+    <div class="section-head mb-l reveal">
+      <span class="eyebrow eyebrow--light">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="reveal">
+        <h4 style="color:var(--green-800);margin-bottom:12px">Do I need to pay for courses?</h4>
+        <p style="color:var(--ink-60);line-height:1.8">We offer both free and premium courses. Our Soft Skills course is free for all members. The other 4 courses require a £10/year membership.</p>
+      </div>
+      <div class="reveal" data-d="1">
+        <h4 style="color:var(--green-800);margin-bottom:12px">Can I download certificates?</h4>
+        <p style="color:var(--ink-60);line-height:1.8">Yes! After completing all modules in any course, you'll earn a certificate that you can download as PDF or add directly to your LinkedIn profile.</p>
+      </div>
+      <div class="reveal" data-d="1">
+        <h4 style="color:var(--green-800);margin-bottom:12px">How long does each course take?</h4>
+        <p style="color:var(--ink-60);line-height:1.8">Each course has 10 modules, averaging 40 minutes per module. You can learn at your own pace—there's no time limit.</p>
+      </div>
+      <div class="reveal" data-d="2">
+        <h4 style="color:var(--green-800);margin-bottom:12px">What if I don't pass a module quiz?</h4>
+        <p style="color:var(--ink-60);line-height:1.8">You can retake module quizzes as many times as needed. You need 80% to pass and move to the next module.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/streak.js"></script>
+<script src="assets/js/courseData.js"></script>
+
+<script>
+const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
+const membershipExpiry = localStorage.getItem('wh_membershipExpiry');
+const hasMembership = membershipExpiry && new Date(membershipExpiry) > new Date();
+
+const coursesData = [
+  {
+    id: 'soft-skills',
+    title: 'Soft Skills for the Modern Workplace',
+    tagline: 'Master communication, teamwork, time management, and professional branding.',
+    description: 'Learn the 6 essential soft skills that matter in any career. This course covers communication, teamwork, time management, problem-solving, adaptability, and professional branding.',
+    modules: 6,
+    type: 'free',
+    price: 'Free',
+    features: ['6 modules', 'Certificate', 'LinkedIn integration', 'No membership required'],
+    url: 'soft-skills-course.html'
+  },
+  {
+    id: 'career-launch',
+    title: 'Career Launch Blueprint',
+    tagline: 'Everything you need before graduating: resumes, interviews, networking, and your 5-year plan.',
+    description: 'Master 10 essential career readiness skills including resume writing, interview prep, networking, salary negotiation, personal branding, and first-job success strategies.',
+    modules: 10,
+    type: 'premium',
+    price: '£10/year',
+    features: ['10 modules', 'Certificate', 'LinkedIn integration', '£10/year membership'],
+    url: 'career-launch-course.html'
+  },
+  {
+    id: 'ai',
+    title: 'AI for Students & Young Professionals',
+    tagline: 'Learn to work smarter with ChatGPT, prompt engineering, and AI workflows.',
+    description: 'Discover how to leverage AI tools in your work and studies. Master prompt engineering, AI for writing, research, coding, data analysis, and ethical AI use.',
+    modules: 10,
+    type: 'premium',
+    price: '£10/year',
+    features: ['10 modules', 'Certificate', 'LinkedIn integration', '£10/year membership'],
+    url: 'ai-course.html'
+  },
+  {
+    id: 'financial-literacy',
+    title: 'Financial Literacy for Young Adults',
+    tagline: 'Make your first salary count: budgeting, saving, investing, and personal finance.',
+    description: 'Build lasting financial security. Learn budgeting, saving strategies, investment basics, debt management, retirement planning, and how to build long-term wealth.',
+    modules: 10,
+    type: 'premium',
+    price: '£10/year',
+    features: ['10 modules', 'Certificate', 'LinkedIn integration', '£10/year membership'],
+    url: 'financial-literacy-course.html'
+  },
+  {
+    id: 'workplace-readiness',
+    title: 'Workplace Readiness',
+    tagline: 'Thrive in your first five years: office dynamics, productivity, influence, and promotions.',
+    description: 'Master the professional skills for workplace success. Learn office dynamics, communication, time management, relationship building, and leadership for advancement.',
+    modules: 10,
+    type: 'premium',
+    price: '£10/year',
+    features: ['10 modules', 'Certificate', 'LinkedIn integration', '£10/year membership'],
+    url: 'workplace-readiness-course.html'
+  }
+];
+
+let currentFilter = 'all';
+
+function filterCourses(filter) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-pill').forEach(pill => pill.classList.remove('active'));
+  event.target.classList.add('active');
+  renderCourses();
+}
+
+function renderCourses() {
+  const grid = document.getElementById('coursesGrid');
+
+  const filtered = currentFilter === 'all'
+    ? coursesData
+    : coursesData.filter(course => course.type === currentFilter);
+
+  grid.innerHTML = filtered.map(course => {
+    const isPremium = course.type === 'premium';
+    const canAccess = !isPremium || hasMembership;
+    const buttonText = canAccess ? 'Start Course' : 'Upgrade to Premium';
+    const buttonUrl = canAccess ? course.url : '#upgrade';
+
+    return `
+      <div class="course-card reveal">
+        <div class="course-card-header">
+          <div class="course-badge ${course.type}">${course.type === 'free' ? 'Free Course' : 'Premium Course'}</div>
+          <h2 class="course-title">${course.title}</h2>
+          <p class="course-tagline">${course.tagline}</p>
+        </div>
+        <div class="course-card-body">
+          <p class="course-description">${course.description}</p>
+          <div class="course-modules">
+            <div class="module-tag">📚 ${course.modules} Modules</div>
+            <div class="module-tag">📜 Certificate</div>
+            <div class="module-tag">🔗 LinkedIn Ready</div>
+          </div>
+          <ul class="course-features">
+            ${course.features.map(f => `<li>${f}</li>`).join('')}
+          </ul>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;">
+            <span class="price-badge ${course.type}">${course.price}</span>
+          </div>
+        </div>
+        <div class="course-card-footer">
+          <a href="${buttonUrl}" class="btn btn-start" onclick="${buttonUrl === '#upgrade' ? 'event.preventDefault(); showUpgradeModal(); return false;' : ''}">${buttonText} →</a>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function showUpgradeModal() {
+  alert('Please upgrade to Premium (£10/year) to access premium courses. You can upgrade from the community hub or by visiting your account settings.');
+}
+
+renderCourses();
+</script>
+</body>
+</html>
