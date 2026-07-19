@@ -9,31 +9,40 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <style>
-.courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
-.course-card { border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s; display: flex; flex-direction: column; }
-.course-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-4px); }
-.course-card-header { padding: 24px; background: linear-gradient(135deg, rgba(15, 45, 29, 0.05), rgba(200, 160, 80, 0.05)); border-bottom: 2px solid var(--line); }
-.course-badge { display: inline-block; padding: 4px 12px; background: var(--green-800); color: white; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+.course-showcase { margin-bottom: 80px; padding: 60px 0; border-bottom: 1px solid var(--line); }
+.course-showcase:last-child { border-bottom: none; }
+.course-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 40px; }
+.course-header-content h2 { color: var(--green-800); font-size: 2rem; font-weight: 900; margin: 0 0 16px; }
+.course-tagline { color: var(--ink-60); font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px; }
+.course-badge { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: white; margin-bottom: 16px; }
 .course-badge.free { background: #10B981; }
 .course-badge.premium { background: #F59E0B; }
-.course-title { color: var(--green-800); font-size: 1.4rem; font-weight: 700; margin: 12px 0; }
-.course-tagline { color: var(--ink-60); font-size: 0.95rem; line-height: 1.5; }
-.course-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-.course-description { color: var(--ink-60); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px; flex: 1; }
-.course-modules { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
-.module-tag { padding: 4px 10px; background: #f0f0f0; color: var(--ink-60); font-size: 0.8rem; border-radius: 4px; }
-.course-features { list-style: none; padding: 0; margin: 16px 0; color: var(--ink-60); font-size: 0.9rem; }
-.course-features li { padding: 6px 0; display: flex; gap: 8px; }
-.course-features li:before { content: "✓"; color: var(--green-800); font-weight: 600; flex-shrink: 0; }
-.course-card-footer { padding: 0 24px 24px; display: flex; gap: 12px; flex-wrap: wrap; }
-.btn-start { flex: 1; min-width: 140px; }
-.filter-pills { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
-.filter-pill { padding: 10px 20px; border: 1px solid var(--line); border-radius: 20px; background: white; color: var(--ink); font-weight: 500; cursor: pointer; transition: all 0.2s; }
-.filter-pill.active { background: var(--green-800); color: white; border-color: var(--green-800); }
-.filter-pill:hover { border-color: var(--green-800); }
-.price-badge { font-size: 0.9rem; font-weight: 600; color: var(--green-800); }
-.price-badge.free { color: #10B981; }
-.price-badge.premium { color: #F59E0B; }
+.course-details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 32px 0; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.detail-item { text-align: center; }
+.detail-value { color: var(--green-800); font-size: 1.8rem; font-weight: 900; display: block; margin-bottom: 4px; }
+.detail-label { color: var(--ink-60); font-size: 0.9rem; }
+.course-description { color: var(--ink-60); font-size: 1rem; line-height: 1.8; margin-bottom: 32px; max-width: 600px; }
+.course-action { display: flex; gap: 16px; align-items: center; margin-bottom: 60px; }
+.btn-course { padding: 14px 32px; font-size: 1rem; }
+.price-tag { color: var(--green-800); font-weight: 600; font-size: 1.1rem; }
+.course-sections { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.section-block h4 { color: var(--green-800); font-size: 1.1rem; font-weight: 600; margin: 0 0 16px; }
+.section-block ul { list-style: none; padding: 0; margin: 0; }
+.section-block li { padding: 8px 0; color: var(--ink-60); font-size: 0.95rem; line-height: 1.6; display: flex; gap: 8px; }
+.section-block li:before { content: "→"; color: var(--green-800); font-weight: 600; flex-shrink: 0; }
+.module-preview { background: #f9f9f9; padding: 16px; border-radius: var(--radius); margin: 8px 0; }
+.module-preview strong { color: var(--ink); }
+.module-preview .desc { color: var(--ink-60); font-size: 0.9rem; margin-top: 4px; }
+.features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.feature-item { display: flex; gap: 12px; }
+.feature-icon { color: var(--green-800); font-size: 1.2rem; flex-shrink: 0; }
+.feature-text { color: var(--ink-60); font-size: 0.95rem; }
+@media (max-width: 768px) {
+  .course-header { grid-template-columns: 1fr; }
+  .course-sections { grid-template-columns: 1fr; }
+  .course-details { grid-template-columns: 1fr 1fr; }
+  .course-action { flex-wrap: wrap; }
+}
 </style>
 </head>
 <body data-page="community">
@@ -47,7 +56,7 @@
     <div class="reveal">
       <span class="eyebrow">Learning Library</span>
       <h1 class="display-lg mt-s">Build Career-Ready Skills</h1>
-      <p class="lead mt-m">Free and premium courses designed for Nigerian youth. Master skills that matter: career readiness, AI, finance, and workplace success.</p>
+      <p class="lead mt-m">Free and premium courses designed for Nigerian youth. Learn at your own pace, earn certificates, and add them to LinkedIn.</p>
       <div style="margin-top:32px">
         <a href="community.html" class="btn btn--outline">← Back to Community</a>
       </div>
@@ -55,48 +64,434 @@
   </div>
 </section>
 
-<!-- FILTER SECTION -->
-<section class="section section--tight" style="padding:clamp(24px,3vw,40px) 0;border-top:1px solid var(--line)">
-  <div class="wrap">
-    <div class="filter-pills">
-      <button class="filter-pill active" onclick="filterCourses('all')">All Courses</button>
-      <button class="filter-pill" onclick="filterCourses('free')">Free</button>
-      <button class="filter-pill" onclick="filterCourses('premium')">Premium (£10/year)</button>
-    </div>
-  </div>
-</section>
-
-<!-- COURSES GRID -->
+<!-- COURSES -->
 <section class="section">
   <div class="wrap">
-    <div class="courses-grid" id="coursesGrid"></div>
+
+    <!-- COURSE 1: SOFT SKILLS (FREE) -->
+    <div class="course-showcase reveal">
+      <div class="course-header">
+        <div class="course-header-content">
+          <div class="course-badge free">Free Course</div>
+          <h2>Soft Skills for the Modern Workplace</h2>
+          <p class="course-tagline">Master the 6 skills that matter in any career: communication, teamwork, time management, problem-solving, adaptability, and professional branding.</p>
+          <p class="course-description">In today's workplace, hard skills get you the interview, but soft skills keep you employed and help you advance. This course breaks down the 6 essential professional competencies every young person needs to succeed, no matter what field they're in.</p>
+
+          <div class="course-details">
+            <div class="detail-item">
+              <span class="detail-value">6</span>
+              <span class="detail-label">Modules</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">30m</span>
+              <span class="detail-label">Per Module</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">3h</span>
+              <span class="detail-label">Total Time</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">✓</span>
+              <span class="detail-label">Certificate</span>
+            </div>
+          </div>
+
+          <div class="course-action">
+            <a href="soft-skills-course.html" class="btn btn--lg btn-course">Start Free Course →</a>
+            <span class="price-tag">No membership needed</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="course-sections">
+            <div class="section-block">
+              <h4>What You'll Learn</h4>
+              <ul>
+                <li><strong>Communication Skills</strong> — Write clearly, listen actively, give feedback</li>
+                <li><strong>Teamwork & Collaboration</strong> — Work across differences, resolve conflicts</li>
+                <li><strong>Time Management</strong> — Prioritize effectively, protect deep work</li>
+              </ul>
+            </div>
+            <div class="section-block">
+              <h4>Continued</h4>
+              <ul>
+                <li><strong>Problem-Solving</strong> — Find root causes, make smart decisions</li>
+                <li><strong>Adaptability</strong> — Embrace change, learn from failure</li>
+                <li><strong>Professional Branding</strong> — Tell your story, build your presence</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px;">
+            <h4 style="color: var(--green-800); margin: 0 0 12px;">Features</h4>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <div class="feature-text">3-question quizzes (80% to pass)</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <div class="feature-text">LinkedIn-ready certificate</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <div class="feature-text">Print/save as PDF</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <div class="feature-text">Learn at your own pace</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 2: CAREER LAUNCH BLUEPRINT (PREMIUM) -->
+    <div class="course-showcase reveal" data-d="1">
+      <div class="course-header">
+        <div class="course-header-content">
+          <div class="course-badge premium">Premium Course</div>
+          <h2>Career Launch Blueprint</h2>
+          <p class="course-tagline">Everything you need before graduating: master CV writing, interviewing, networking, salary negotiation, and build your 5-year career plan.</p>
+          <p class="course-description">This comprehensive course takes you from graduation to your first year of professional success. Learn proven strategies for landing interviews, negotiating salary, navigating workplace culture, and building a career roadmap that aligns with your values and goals.</p>
+
+          <div class="course-details">
+            <div class="detail-item">
+              <span class="detail-value">10</span>
+              <span class="detail-label">Modules</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">40m</span>
+              <span class="detail-label">Per Module</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">6h+</span>
+              <span class="detail-label">Total Time</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">✓</span>
+              <span class="detail-label">Certificate</span>
+            </div>
+          </div>
+
+          <div class="course-action">
+            <a href="career-launch-course.html" class="btn btn--lg btn-course">Start Course →</a>
+            <span class="price-tag">£10/year membership</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="course-sections">
+            <div class="section-block">
+              <h4>10 Modules Cover</h4>
+              <ul>
+                <li>Crafting Your Professional Resume</li>
+                <li>Mastering the Interview Process</li>
+                <li>Networking Like a Pro</li>
+                <li>Salary Negotiation Essentials</li>
+                <li>Building Your Personal Brand</li>
+              </ul>
+            </div>
+            <div class="section-block">
+              <h4>Plus</h4>
+              <ul>
+                <li>Understanding Workplace Culture</li>
+                <li>Developing Your 5-Year Plan</li>
+                <li>Remote Work Skills & Setup</li>
+                <li>Managing Offers & Making Decisions</li>
+                <li>Your First 100 Days on the Job</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px;">
+            <h4 style="color: var(--green-800); margin: 0 0 12px;">Ideal For</h4>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Final year students preparing for job market</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Recent grads making career decisions</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Career changers starting fresh</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Anyone building their career strategy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 3: AI FOR STUDENTS (PREMIUM) -->
+    <div class="course-showcase reveal" data-d="2">
+      <div class="course-header">
+        <div class="course-header-content">
+          <div class="course-badge premium">Premium Course</div>
+          <h2>AI for Students & Young Professionals</h2>
+          <p class="course-tagline">Learn to work smarter with AI: master ChatGPT, prompt engineering, and build your AI workflow for academic and professional success.</p>
+          <p class="course-description">AI is reshaping every industry. This course teaches you how to harness AI tools to boost productivity, enhance creativity, and accelerate learning. From prompt engineering to AI-assisted coding and data analysis, you'll build practical skills that matter in today's workplace.</p>
+
+          <div class="course-details">
+            <div class="detail-item">
+              <span class="detail-value">10</span>
+              <span class="detail-label">Modules</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">40m</span>
+              <span class="detail-label">Per Module</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">6h+</span>
+              <span class="detail-label">Total Time</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">✓</span>
+              <span class="detail-label">Certificate</span>
+            </div>
+          </div>
+
+          <div class="course-action">
+            <a href="ai-course.html" class="btn btn--lg btn-course">Start Course →</a>
+            <span class="price-tag">£10/year membership</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="course-sections">
+            <div class="section-block">
+              <h4>10 Modules Cover</h4>
+              <ul>
+                <li>Introduction to AI & LLMs</li>
+                <li>Prompt Engineering Fundamentals</li>
+                <li>AI for Writing & Communication</li>
+                <li>AI for Research & Learning</li>
+                <li>AI for Coding & Technical Work</li>
+              </ul>
+            </div>
+            <div class="section-block">
+              <h4>Plus</h4>
+              <ul>
+                <li>AI for Data Analysis & Visualization</li>
+                <li>AI for Creative Projects</li>
+                <li>AI Ethics & Responsible Use</li>
+                <li>Building Your AI Workflow</li>
+                <li>The Future of Work & AI Careers</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px;">
+            <h4 style="color: var(--green-800); margin: 0 0 12px;">Ideal For</h4>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Students wanting to stay ahead of tech trends</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Professionals boosting productivity</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Anyone curious about AI's real-world applications</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Creatives and technologists alike</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 4: FINANCIAL LITERACY (PREMIUM) -->
+    <div class="course-showcase reveal" data-d="1">
+      <div class="course-header">
+        <div class="course-header-content">
+          <div class="course-badge premium">Premium Course</div>
+          <h2>Financial Literacy for Young Adults</h2>
+          <p class="course-tagline">Make your first salary count: master budgeting, saving, investing, and personal finance habits that build long-term wealth.</p>
+          <p class="course-description">Financial literacy isn't taught in school, but it should be. This course gives you the knowledge to make smart money decisions from your first paycheck onwards. Learn budgeting strategies, investment fundamentals, debt management, and how to build lasting financial security.</p>
+
+          <div class="course-details">
+            <div class="detail-item">
+              <span class="detail-value">10</span>
+              <span class="detail-label">Modules</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">40m</span>
+              <span class="detail-label">Per Module</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">6h+</span>
+              <span class="detail-label">Total Time</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">✓</span>
+              <span class="detail-label">Certificate</span>
+            </div>
+          </div>
+
+          <div class="course-action">
+            <a href="financial-literacy-course.html" class="btn btn--lg btn-course">Start Course →</a>
+            <span class="price-tag">£10/year membership</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="course-sections">
+            <div class="section-block">
+              <h4>10 Modules Cover</h4>
+              <ul>
+                <li>Money Mindset & Financial Foundations</li>
+                <li>Creating Your First Budget</li>
+                <li>Managing Your First Salary</li>
+                <li>Understanding Debt & Credit</li>
+                <li>Emergency Funds & Savings Strategies</li>
+              </ul>
+            </div>
+            <div class="section-block">
+              <h4>Plus</h4>
+              <ul>
+                <li>Investment Basics for Beginners</li>
+                <li>Retirement Planning Starts Now</li>
+                <li>Insurance Essentials</li>
+                <li>Taxes & Financial Planning in Nigeria</li>
+                <li>Building Long-Term Wealth</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px;">
+            <h4 style="color: var(--green-800); margin: 0 0 12px;">Ideal For</h4>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">First-time earners managing their paycheck</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Anyone wanting financial independence</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Students preparing for adulting</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Young professionals building wealth</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 5: WORKPLACE READINESS (PREMIUM) -->
+    <div class="course-showcase reveal" data-d="2">
+      <div class="course-header">
+        <div class="course-header-content">
+          <div class="course-badge premium">Premium Course</div>
+          <h2>Workplace Readiness</h2>
+          <p class="course-tagline">Thrive during your first five years at work: master office dynamics, productivity, influence, and promotion strategies.</p>
+          <p class="course-description">Your first five years at work are crucial. This course teaches you how to navigate office politics, build strong relationships, deliver results that matter, and position yourself for growth. From day one on the job to your first promotion, you'll have a playbook for success.</p>
+
+          <div class="course-details">
+            <div class="detail-item">
+              <span class="detail-value">10</span>
+              <span class="detail-label">Modules</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">40m</span>
+              <span class="detail-label">Per Module</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">6h+</span>
+              <span class="detail-label">Total Time</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-value">✓</span>
+              <span class="detail-label">Certificate</span>
+            </div>
+          </div>
+
+          <div class="course-action">
+            <a href="workplace-readiness-course.html" class="btn btn--lg btn-course">Start Course →</a>
+            <span class="price-tag">£10/year membership</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="course-sections">
+            <div class="section-block">
+              <h4>10 Modules Cover</h4>
+              <ul>
+                <li>Office Dynamics & Professional Etiquette</li>
+                <li>Communication in the Workplace</li>
+                <li>Time Management & Productivity</li>
+                <li>Building Professional Relationships</li>
+                <li>Problem-Solving & Decision-Making</li>
+              </ul>
+            </div>
+            <div class="section-block">
+              <h4>Plus</h4>
+              <ul>
+                <li>Feedback, Criticism & Growth</li>
+                <li>Meetings, Presentations & Speaking</li>
+                <li>Conflict Resolution at Work</li>
+                <li>Performance Reviews & Conversations</li>
+                <li>Leadership Mindset & Advancement</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px;">
+            <h4 style="color: var(--green-800); margin: 0 0 12px;">Ideal For</h4>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">New employees in their first role</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Early-career professionals seeking advancement</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Anyone navigating workplace challenges</div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">→</div>
+                <div class="feature-text">Those aspiring to leadership roles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- FAQ SECTION -->
-<section class="section panel-dark">
+<!-- CTA SECTION -->
+<section class="section section--tight">
   <div class="wrap">
-    <div class="section-head mb-l reveal">
-      <span class="eyebrow eyebrow--light">FAQ</span>
-      <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="grid grid-2">
-      <div class="reveal">
-        <h4 style="color:var(--green-800);margin-bottom:12px">Do I need to pay for courses?</h4>
-        <p style="color:var(--ink-60);line-height:1.8">We offer both free and premium courses. Our Soft Skills course is free for all members. The other 4 courses require a £10/year membership.</p>
-      </div>
-      <div class="reveal" data-d="1">
-        <h4 style="color:var(--green-800);margin-bottom:12px">Can I download certificates?</h4>
-        <p style="color:var(--ink-60);line-height:1.8">Yes! After completing all modules in any course, you'll earn a certificate that you can download as PDF or add directly to your LinkedIn profile.</p>
-      </div>
-      <div class="reveal" data-d="1">
-        <h4 style="color:var(--green-800);margin-bottom:12px">How long does each course take?</h4>
-        <p style="color:var(--ink-60);line-height:1.8">Each course has 10 modules, averaging 40 minutes per module. You can learn at your own pace—there's no time limit.</p>
-      </div>
-      <div class="reveal" data-d="2">
-        <h4 style="color:var(--green-800);margin-bottom:12px">What if I don't pass a module quiz?</h4>
-        <p style="color:var(--ink-60);line-height:1.8">You can retake module quizzes as many times as needed. You need 80% to pass and move to the next module.</p>
-      </div>
+    <div style="text-align: center; padding: 60px 20px; background: linear-gradient(135deg, rgba(15, 45, 29, 0.05), rgba(200, 160, 80, 0.05)); border-radius: var(--radius-lg);">
+      <h2 style="color: var(--green-800); margin: 0 0 16px;">Ready to get started?</h2>
+      <p style="color: var(--ink-60); font-size: 1.05rem; margin: 0 0 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        The Soft Skills course is free for all members. The 4 flagship courses require a £10/year membership.
+      </p>
+      <a href="community.html" class="btn" style="margin-bottom: 16px;">Go to Community Hub</a>
+      <p style="color: var(--ink-60); font-size: 0.9rem; margin: 0;">All certificates are LinkedIn-ready and can be earned at your own pace.</p>
     </div>
   </div>
 </section>
@@ -106,127 +501,5 @@
 <script src="assets/js/auth.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/streak.js"></script>
-<script src="assets/js/courseData.js"></script>
-
-<script>
-const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
-const membershipExpiry = localStorage.getItem('wh_membershipExpiry');
-const hasMembership = membershipExpiry && new Date(membershipExpiry) > new Date();
-
-const coursesData = [
-  {
-    id: 'soft-skills',
-    title: 'Soft Skills for the Modern Workplace',
-    tagline: 'Master communication, teamwork, time management, and professional branding.',
-    description: 'Learn the 6 essential soft skills that matter in any career. This course covers communication, teamwork, time management, problem-solving, adaptability, and professional branding.',
-    modules: 6,
-    type: 'free',
-    price: 'Free',
-    features: ['6 modules', 'Certificate', 'LinkedIn integration', 'No membership required'],
-    url: 'soft-skills-course.html'
-  },
-  {
-    id: 'career-launch',
-    title: 'Career Launch Blueprint',
-    tagline: 'Everything you need before graduating: resumes, interviews, networking, and your 5-year plan.',
-    description: 'Master 10 essential career readiness skills including resume writing, interview prep, networking, salary negotiation, personal branding, and first-job success strategies.',
-    modules: 10,
-    type: 'premium',
-    price: '£10/year',
-    features: ['10 modules', 'Certificate', 'LinkedIn integration', '£10/year membership'],
-    url: 'career-launch-course.html'
-  },
-  {
-    id: 'ai',
-    title: 'AI for Students & Young Professionals',
-    tagline: 'Learn to work smarter with ChatGPT, prompt engineering, and AI workflows.',
-    description: 'Discover how to leverage AI tools in your work and studies. Master prompt engineering, AI for writing, research, coding, data analysis, and ethical AI use.',
-    modules: 10,
-    type: 'premium',
-    price: '£10/year',
-    features: ['10 modules', 'Certificate', 'LinkedIn integration', '£10/year membership'],
-    url: 'ai-course.html'
-  },
-  {
-    id: 'financial-literacy',
-    title: 'Financial Literacy for Young Adults',
-    tagline: 'Make your first salary count: budgeting, saving, investing, and personal finance.',
-    description: 'Build lasting financial security. Learn budgeting, saving strategies, investment basics, debt management, retirement planning, and how to build long-term wealth.',
-    modules: 10,
-    type: 'premium',
-    price: '£10/year',
-    features: ['10 modules', 'Certificate', 'LinkedIn integration', '£10/year membership'],
-    url: 'financial-literacy-course.html'
-  },
-  {
-    id: 'workplace-readiness',
-    title: 'Workplace Readiness',
-    tagline: 'Thrive in your first five years: office dynamics, productivity, influence, and promotions.',
-    description: 'Master the professional skills for workplace success. Learn office dynamics, communication, time management, relationship building, and leadership for advancement.',
-    modules: 10,
-    type: 'premium',
-    price: '£10/year',
-    features: ['10 modules', 'Certificate', 'LinkedIn integration', '£10/year membership'],
-    url: 'workplace-readiness-course.html'
-  }
-];
-
-let currentFilter = 'all';
-
-function filterCourses(filter) {
-  currentFilter = filter;
-  document.querySelectorAll('.filter-pill').forEach(pill => pill.classList.remove('active'));
-  event.target.classList.add('active');
-  renderCourses();
-}
-
-function renderCourses() {
-  const grid = document.getElementById('coursesGrid');
-
-  const filtered = currentFilter === 'all'
-    ? coursesData
-    : coursesData.filter(course => course.type === currentFilter);
-
-  grid.innerHTML = filtered.map(course => {
-    const isPremium = course.type === 'premium';
-    const canAccess = !isPremium || hasMembership;
-    const buttonText = canAccess ? 'Start Course' : 'Upgrade to Premium';
-    const buttonUrl = canAccess ? course.url : '#upgrade';
-
-    return `
-      <div class="course-card reveal">
-        <div class="course-card-header">
-          <div class="course-badge ${course.type}">${course.type === 'free' ? 'Free Course' : 'Premium Course'}</div>
-          <h2 class="course-title">${course.title}</h2>
-          <p class="course-tagline">${course.tagline}</p>
-        </div>
-        <div class="course-card-body">
-          <p class="course-description">${course.description}</p>
-          <div class="course-modules">
-            <div class="module-tag">📚 ${course.modules} Modules</div>
-            <div class="module-tag">📜 Certificate</div>
-            <div class="module-tag">🔗 LinkedIn Ready</div>
-          </div>
-          <ul class="course-features">
-            ${course.features.map(f => `<li>${f}</li>`).join('')}
-          </ul>
-          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;">
-            <span class="price-badge ${course.type}">${course.price}</span>
-          </div>
-        </div>
-        <div class="course-card-footer">
-          <a href="${buttonUrl}" class="btn btn-start" onclick="${buttonUrl === '#upgrade' ? 'event.preventDefault(); showUpgradeModal(); return false;' : ''}">${buttonText} →</a>
-        </div>
-      </div>
-    `;
-  }).join('');
-}
-
-function showUpgradeModal() {
-  alert('Please upgrade to Premium (£10/year) to access premium courses. You can upgrade from the community hub or by visiting your account settings.');
-}
-
-renderCourses();
-</script>
 </body>
 </html>
