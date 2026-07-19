@@ -168,3 +168,10 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
 </body>
 </html>
+<script>
+// Show login form if coming from signin link
+if (window.location.hash === '#signin') {
+  document.getElementById('signupSection').style.display = 'none';
+  document.getElementById('loginSection').style.display = 'block';
+}
+</script>
