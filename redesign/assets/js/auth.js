@@ -21,6 +21,13 @@
 
     // Check membership for paid pages
     if (paidPages.includes(currentPage)) {
+      // Grant free membership to founder email
+      if (user.email === 'olagbayebenz@gmail.com') {
+        const expiryDate = new Date();
+        expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+        localStorage.setItem('wh_membershipExpiry', expiryDate.toISOString());
+      }
+
       const membershipExpiry = localStorage.getItem('wh_membershipExpiry');
       const now = new Date();
 
