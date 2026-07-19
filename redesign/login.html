@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign Up - Wissen-Haus Community Hub</title>
+<meta name="description" content="Join the Wissen-Haus community to access opportunities, scholarships, internships and more.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+.auth-container{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--paper);padding:20px}
+.auth-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:48px;max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.auth-card h1{font-size:1.8rem;margin:0 0 12px;color:var(--ink)}
+.auth-card p{color:var(--ink-60);margin:0 0 32px;line-height:1.5}
+.auth-form{display:flex;flex-direction:column;gap:16px}
+.auth-form label{font-size:.9rem;font-weight:500;color:var(--ink);display:block;margin-bottom:6px}
+.auth-form input{padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);font-family:inherit;font-size:1rem;transition:border-color .2s}
+.auth-form input:focus{outline:none;border-color:var(--green-800);box-shadow:0 0 0 3px rgba(15,45,29,.1)}
+.auth-form button{padding:14px;background:var(--green-800);color:#fff;border:none;border-radius:var(--radius);font-weight:600;cursor:pointer;font-size:1rem;transition:background .2s}
+.auth-form button:hover{background:var(--green-900)}
+.auth-form button:disabled{opacity:.6;cursor:not-allowed}
+.auth-toggle{text-align:center;margin-top:20px;color:var(--ink-60);font-size:.9rem}
+.auth-toggle a{color:var(--green-800);cursor:pointer;text-decoration:underline}
+.auth-error{background:#fee;color:#c33;padding:12px;border-radius:var(--radius);font-size:.9rem;margin-bottom:16px;display:none}
+.auth-error.show{display:block}
+.auth-success{color:var(--green-800);font-size:.9rem;margin-top:8px}
+</style>
+<noscript><style>.auth-container{display:none}</style><div style="background:#0F2D1D;color:#fff;padding:20px;text-align:center"><h2>JavaScript Required</h2><p>Please enable JavaScript to access the Community Hub.</p></div></noscript>
+</head>
+<body>
+<div class="auth-container">
+  <div class="auth-card">
+    <img src="assets/img/logo.png" alt="Wissen-Haus" style="height:48px;margin-bottom:24px">
+
+    <div id="signupForm">
+      <h1>Join the Community</h1>
+      <p>Sign up for free to access opportunities, scholarships, internships and more.</p>
+      <form class="auth-form" id="signup">
+        <div class="auth-error" id="signupError"></div>
+        <div>
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" name="name" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" name="email" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" name="password" placeholder="At least 6 characters" required minlength="6">
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+      <div class="auth-toggle">
+        Already have an account? <a onclick="toggleForms()">Sign in</a>
+      </div>
+    </div>
+
+    <div id="loginForm" style="display:none">
+      <h1>Welcome Back</h1>
+      <p>Sign in to your account to access the Community Hub.</p>
+      <form class="auth-form" id="login">
+        <div class="auth-error" id="loginError"></div>
+        <div>
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" name="email" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="password" placeholder="Your password" required>
+        </div>
+        <button type="submit">Sign In</button>
+      </form>
+      <div class="auth-toggle">
+        Don't have an account? <a onclick="toggleForms()">Sign up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleForms() {
+  const signup = document.getElementById('signupForm');
+  const login = document.getElementById('loginForm');
+  signup.style.display = signup.style.display === 'none' ? 'block' : 'none';
+  login.style.display = login.style.display === 'none' ? 'block' : 'none';
+  document.getElementById('signupError').classList.remove('show');
+  document.getElementById('loginError').classList.remove('show');
+}
+
+document.getElementById('signup').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('signupName').value.trim();
+  const email = document.getElementById('signupEmail').value.trim();
+  const password = document.getElementById('signupPassword').value;
+  const error = document.getElementById('signupError');
+
+  if (!name || !email || !password) {
+    error.textContent = 'All fields are required';
+    error.classList.add('show');
+    return;
+  }
+
+  const users = JSON.parse(localStorage.getItem('wh_users') || '{}');
+  if (users[email]) {
+    error.textContent = 'Email already registered';
+    error.classList.add('show');
+    return;
+  }
+
+  users[email] = { name, password, joinedAt: new Date().toISOString() };
+  localStorage.setItem('wh_users', JSON.stringify(users));
+  localStorage.setItem('wh_currentUser', JSON.stringify({ email, name }));
+  localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
+
+  window.location.href = 'community.html';
+});
+
+document.getElementById('login').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPassword').value;
+  const error = document.getElementById('loginError');
+
+  const users = JSON.parse(localStorage.getItem('wh_users') || '{}');
+  const user = users[email];
+
+  if (!user || user.password !== password) {
+    error.textContent = 'Invalid email or password';
+    error.classList.add('show');
+    return;
+  }
+
+  localStorage.setItem('wh_currentUser', JSON.stringify({ email, name: user.name }));
+  localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
+
+  window.location.href = 'community.html';
+});
+</script>
+</body>
+</html>
