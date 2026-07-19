@@ -658,6 +658,52 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .ig-post:hover .ig-post__ic{opacity:1;transform:none}
 .ig-post__ic svg{width:17px;height:17px;color:var(--green-800)}
 
+/* ---------- Soft Skills Course ---------- */
+.course-progress{margin-bottom:32px}
+.course-progress__label{font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:8px;display:block}
+.course-progress__bar{height:12px;background:var(--paper);border:1px solid var(--line);border-radius:var(--pill);overflow:hidden}
+.course-progress__fill{height:100%;width:0%;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .3s var(--ease)}
+
+.module-list{display:flex;flex-direction:column;gap:20px}
+.module{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;transition:border-color .3s var(--ease);cursor:pointer}
+.module:hover{border-color:var(--green-800)}
+.module--complete{background:rgba(15,45,29,.04);border-color:var(--green-800)}
+
+.module__header{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.module__check{display:flex;align-items:center;cursor:pointer;position:relative}
+.module__check input{display:none}
+.module__check-box{width:24px;height:24px;border:2px solid var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease);background:#fff}
+.module__check input:checked ~ .module__check-box{background:var(--green-800);border-color:var(--green-800);color:#fff;font-weight:900;font-size:1.2rem}
+.module__check input:checked ~ .module__check-box::after{content:'✓';color:#fff;font-weight:900}
+
+.module__title{margin:0;font-size:1.3rem;color:var(--ink);font-family:var(--ff-display)}
+.module__body{padding-left:40px}
+.module__objectives{margin-bottom:16px}
+.module__objectives strong{display:block;margin-bottom:8px;color:var(--ink);font-weight:600}
+.module__objectives ul{margin:0;padding-left:20px;color:var(--ink-60);line-height:1.6}
+.module__objectives li{margin-bottom:6px}
+
+.module__summary{color:var(--ink-60);line-height:1.6;margin:16px 0}
+.module__reflection{background:rgba(200,160,80,.08);padding:12px 16px;border-left:3px solid var(--gold);border-radius:4px;font-size:.95rem;color:var(--ink-60);line-height:1.5;margin:16px 0 0}
+
+.certificate{background:var(--paper);padding:48px 32px;border:3px solid var(--green-800);border-radius:var(--radius-lg);text-align:center;animation:slideUp .6s var(--ease)}
+.certificate h2{color:var(--ink);font-family:var(--ff-display);font-size:2rem;margin:0 0 8px}
+.certificate h3{color:var(--green-800);font-size:1.8rem;margin:0 0 24px;font-family:var(--ff-display)}
+.certificate h4{color:var(--ink);font-size:1.4rem;margin:0 0 24px}
+
+.certificate button{padding:12px 24px;border:none;border-radius:var(--radius);cursor:pointer;font-weight:600;font-size:1rem;transition:transform .2s,box-shadow .2s}
+.certificate button:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.certificate button:first-of-type{background:#0A66C2;color:#fff}
+.certificate button:last-of-type{background:var(--green-800);color:#fff}
+
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+@media print{
+  .site-header,.site-footer,#streakBadge,.module-list,.course-progress,body > *:not(#main){display:none!important}
+  .certificate{border:1px solid #000;page-break-inside:avoid}
+  .certificate button{display:none}
+}
+
 /* reduce motion */
 @media(prefers-reduced-motion:reduce){
   .site-header{animation:none;transform:none}

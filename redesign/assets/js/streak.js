@@ -2,7 +2,7 @@
 (function() {
   'use strict';
 
-  const protectedPages = ['community', 'jobs', 'internships', 'scholarships', 'competitions'];
+  const protectedPages = ['community', 'jobs', 'internships', 'scholarships', 'competitions', 'softskills'];
   const currentPage = document.body.getAttribute('data-page');
 
   if (!protectedPages.includes(currentPage)) return;

@@ -3,7 +3,7 @@
   'use strict';
 
   const currentPage = document.body.getAttribute('data-page');
-  const protectedPages = ['community', 'jobs', 'internships', 'scholarships', 'competitions'];
+  const protectedPages = ['community', 'jobs', 'internships', 'scholarships', 'competitions', 'softskills'];
 
   if (protectedPages.includes(currentPage)) {
     const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
