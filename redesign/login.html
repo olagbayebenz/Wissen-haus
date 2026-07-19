@@ -29,12 +29,14 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
 .auth-toggle{text-align:center;margin-top:24px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-60);font-size:0.9rem}
 .auth-toggle a{color:var(--green-800);cursor:pointer;font-weight:600;text-decoration:none}
 .auth-toggle a:hover{text-decoration:underline}
-#loginForm{display:none}
+#loginSection{display:none}
 </style>
 </head>
 <body>
 
-<a href="index.html" style="position:fixed;top:20px;left:20px;color:#fff;font-weight:600;text-decoration:none;padding:8px 16px;background:rgba(255,255,255,0.2);border-radius:var(--radius);transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">← Home</a><div class="auth-wrapper">
+<a href="index.html" style="position:fixed;top:20px;left:20px;color:#fff;font-weight:600;text-decoration:none;padding:8px 16px;background:rgba(255,255,255,0.2);border-radius:var(--radius);transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">← Home</a>
+
+<div class="auth-wrapper">
   <div class="auth-card">
     <!-- Logo & Branding -->
     <div class="auth-logo">
@@ -105,6 +107,14 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
 </div>
 
 <script>
+// Show login form if coming from signin link
+window.addEventListener('load', function() {
+  if (window.location.hash === '#signin') {
+    document.getElementById('signupSection').style.display = 'none';
+    document.getElementById('loginSection').style.display = 'block';
+  }
+});
+
 function toggleForms() {
   document.getElementById('signupSection').style.display = 
     document.getElementById('signupSection').style.display === 'none' ? 'block' : 'none';
@@ -168,10 +178,3 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
 </body>
 </html>
-<script>
-// Show login form if coming from signin link
-if (window.location.hash === '#signin') {
-  document.getElementById('signupSection').style.display = 'none';
-  document.getElementById('loginSection').style.display = 'block';
-}
-</script>
