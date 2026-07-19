@@ -45,13 +45,15 @@
 
     items.forEach(item => {
       const tags = (item.tags || []).map(t => escapeHtml(t)).join(', ');
+      const companyHtml = item.company && item.company !== 'N/A' ? `<p>${escapeHtml(item.company)}</p>` : '';
+      const taglineHtml = item.datePosted ? `<span class="tag-line">${escapeHtml(item.eligibilityLabel || 'Open')} · Posted ${formatDate(item.datePosted)}</span>` : `<span class="tag-line">${escapeHtml(item.eligibilityLabel || 'Open')}</span>`;
       const html = `
         <article class="card reveal in">
           <div class="card__body">
             <span class="tl-tag">${escapeHtml(item.type.charAt(0).toUpperCase() + item.type.slice(1))}</span>
             <h3>${escapeHtml(item.title)}</h3>
-            <p>${escapeHtml(item.company)}</p>
-            <span class="tag-line">${escapeHtml(item.eligibilityLabel || 'Open')} · Posted ${formatDate(item.datePosted || item.firstSeenAt)}</span>
+            ${companyHtml}
+            ${taglineHtml}
             <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener" class="textlink">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </article>
