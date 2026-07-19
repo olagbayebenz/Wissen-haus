@@ -24,6 +24,7 @@
 .auth-error{background:#fee;color:#c33;padding:12px;border-radius:var(--radius);font-size:.9rem;margin-bottom:16px;display:none}
 .auth-error.show{display:block}
 .auth-success{color:var(--green-800);font-size:.9rem;margin-top:8px}
+.auth-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 </style>
 <noscript><style>.auth-container{display:none}</style><div style="background:#0F2D1D;color:#fff;padding:20px;text-align:center"><h2>JavaScript Required</h2><p>Please enable JavaScript to access the Community Hub.</p></div></noscript>
 </head>
@@ -37,9 +38,15 @@
       <p>Sign up for free to access opportunities, scholarships, internships and more.</p>
       <form class="auth-form" id="signup">
         <div class="auth-error" id="signupError"></div>
-        <div>
-          <label for="signupName">Full Name</label>
-          <input type="text" id="signupName" name="name" placeholder="Your name" required>
+        <div class="auth-row">
+          <div>
+            <label for="signupFirstName">First Name</label>
+            <input type="text" id="signupFirstName" name="firstName" placeholder="First name" required>
+          </div>
+          <div>
+            <label for="signupLastName">Last Name</label>
+            <input type="text" id="signupLastName" name="lastName" placeholder="Last name" required>
+          </div>
         </div>
         <div>
           <label for="signupEmail">Email</label>
@@ -90,12 +97,13 @@ function toggleForms() {
 
 document.getElementById('signup').addEventListener('submit', function(e) {
   e.preventDefault();
-  const name = document.getElementById('signupName').value.trim();
+  const firstName = document.getElementById('signupFirstName').value.trim();
+  const lastName = document.getElementById('signupLastName').value.trim();
   const email = document.getElementById('signupEmail').value.trim();
   const password = document.getElementById('signupPassword').value;
   const error = document.getElementById('signupError');
 
-  if (!name || !email || !password) {
+  if (!firstName || !lastName || !email || !password) {
     error.textContent = 'All fields are required';
     error.classList.add('show');
     return;
@@ -108,9 +116,10 @@ document.getElementById('signup').addEventListener('submit', function(e) {
     return;
   }
 
-  users[email] = { name, password, joinedAt: new Date().toISOString() };
+  const fullName = firstName + ' ' + lastName;
+  users[email] = { firstName, lastName, name: fullName, password, joinedAt: new Date().toISOString() };
   localStorage.setItem('wh_users', JSON.stringify(users));
-  localStorage.setItem('wh_currentUser', JSON.stringify({ email, name }));
+  localStorage.setItem('wh_currentUser', JSON.stringify({ email, name: fullName }));
   localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
 
   window.location.href = 'community.html';
