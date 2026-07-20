@@ -11,11 +11,9 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
 .auth-wrapper{width:100%;max-width:500px}
 .auth-card{background:#fff;border-radius:var(--radius-lg);padding:60px 40px;box-shadow:0 20px 60px rgba(15,45,29,.3)}
 .auth-logo{text-align:center;margin-bottom:40px}
-.auth-logo a{text-decoration:none;cursor:pointer;display:inline-block;transition:transform .2s}
-.auth-logo a:hover{transform:scale(1.05)}
-.auth-logo img{height:160px;margin:0 auto -5px;display:block}
-.auth-logo h1{color:var(--green-800);font-size:1.8rem;margin:0;font-weight:900;display:none}
-.auth-logo p{color:var(--ink-60);margin:8px 0 0;font-size:0.95rem;font-weight:700}
+.auth-logo img{height:60px;margin-bottom:16px}
+.auth-logo h1{color:var(--green-800);font-size:1.8rem;margin:0;font-weight:900}
+.auth-logo p{color:var(--ink-60);margin:8px 0 0;font-size:0.95rem}
 .auth-section h2{color:var(--ink);font-size:1.3rem;margin:0 0 24px;font-weight:700}
 .form-group{margin-bottom:20px}
 .form-group label{display:block;color:var(--ink);font-weight:500;margin-bottom:8px;font-size:0.9rem}
@@ -51,11 +49,9 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
 <div class="auth-wrapper">
   <div class="auth-card">
     <div class="auth-logo">
-      <a href="index.html">
-        <img src="assets/img/logo.png" alt="Wissen-Haus">
-        <h1>Wissen-Haus</h1>
-      </a>
-      <p>"Empower Your Future"</p>
+      <img src="assets/img/logo.png" alt="Wissen-Haus">
+      <h1>Wissen-Haus</h1>
+      <p>Community Hub</p>
     </div>
 
     <div id="signupSection" class="auth-section">
@@ -99,7 +95,7 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
     </div>
 
     <div id="loginSection" class="auth-section">
-<h2>Welcome Back</h2>
+      <h2>Welcome Back</h2>
       <form id="loginForm">
         <div class="form-error" id="loginError"></div>
 
@@ -124,14 +120,12 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
       <div class="auth-toggle">
         Don't have an account? <a onclick="toggleForms()">Sign Up</a>
       </div>
-
-      <div style="text-align:center;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)">
-        <a href="index.html" style="color:var(--green-800);font-size:0.85rem;text-decoration:none">← Back to Home</a>
-      </div>
     </div>
   </div>
 </div>
-</div>
+    <div style="text-align:center;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)">
+      <a href="index.html" style="color:var(--green-800);font-size:0.85rem;text-decoration:none">← Back to Home</a>
+    </div>
 
 <div id="forgotModal" class="modal-overlay">
   <div class="modal-box">

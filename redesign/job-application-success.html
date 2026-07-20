@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application Submitted - Wissen-Haus</title>
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+  .success-wrapper { max-width: 600px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+  .success-icon { font-size: 4rem; margin-bottom: 24px; display: block; animation: bounce 2s infinite; }
+  @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .success-header h1 { font-size: 2.2rem; color: var(--green-800); margin-bottom: 12px; }
+  .success-header p { font-size: 1.1rem; color: var(--ink-60); margin-bottom: 40px; line-height: 1.6; }
+  .success-card { background: var(--green-50); border: 2px solid var(--green-800); border-radius: 16px; padding: 32px; margin-bottom: 32px; text-align: left; }
+  .success-card h2 { font-size: 1.2rem; color: var(--green-800); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .success-card h2::before { content: "✓"; background: var(--green-800); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; }
+  .next-step { display: flex; gap: 16px; margin-bottom: 16px; }
+  .next-step__num { background: var(--red); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+  .next-step__text { color: var(--ink-60); line-height: 1.6; }
+  .next-step__text strong { color: var(--ink); display: block; margin-bottom: 4px; }
+  .faq-section { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: left; }
+  .faq-item { margin-bottom: 20px; }
+  .faq-item:last-child { margin-bottom: 0; }
+  .faq-question { font-weight: 600; color: var(--green-800); margin-bottom: 8px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+  .faq-question::after { content: "▼"; font-size: 0.8rem; transition: transform 0.2s; }
+  .faq-question.open::after { transform: rotate(180deg); }
+  .faq-answer { color: var(--ink-60); line-height: 1.6; max-height: 0; overflow: hidden; transition: max-height 0.2s; }
+  .faq-answer.show { max-height: 500px; }
+  .action-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 40px; }
+  .action-buttons .btn { width: 100%; }
+  @media (max-width: 560px) {
+    .success-wrapper { padding: 40px 20px; }
+    .success-header h1 { font-size: 1.8rem; }
+    .action-buttons { flex-direction: column; }
+  }
+</style>
+</head>
+<body data-page="careers">
+
+<main id="main">
+
+<div class="success-wrapper">
+  <span class="success-icon">🎉</span>
+
+  <div class="success-header">
+    <h1>Thank You for Applying!</h1>
+    <p>Your application has been successfully submitted. We're excited to review your profile and experience.</p>
+  </div>
+
+  <!-- WHAT HAPPENS NEXT -->
+  <div class="success-card">
+    <h2>What Happens Next</h2>
+    <div class="next-step">
+      <div class="next-step__num">1</div>
+      <div class="next-step__text">
+        <strong>Application Review</strong>
+        Our team will carefully review your application and supporting documents.
+      </div>
+    </div>
+    <div class="next-step">
+      <div class="next-step__num">2</div>
+      <div class="next-step__text">
+        <strong>Email Confirmation</strong>
+        You'll receive an email confirming receipt of your application within 24 hours.
+      </div>
+    </div>
+    <div class="next-step">
+      <div class="next-step__num">3</div>
+      <div class="next-step__text">
+        <strong>Interview Invitation</strong>
+        If selected, we'll reach out to schedule a conversation with you (typically within 5-7 days).
+      </div>
+    </div>
+    <div class="next-step">
+      <div class="next-step__num">4</div>
+      <div class="next-step__text">
+        <strong>Final Decision</strong>
+        We'll communicate our decision and next steps with all candidates.
+      </div>
+    </div>
+  </div>
+
+  <!-- FREQUENTLY ASKED QUESTIONS -->
+  <div class="faq-section">
+    <h3 style="margin-bottom: 20px; color: var(--green-800);">Frequently Asked Questions</h3>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <span>How long will the review process take?</span>
+      </div>
+      <div class="faq-answer">
+        <p>Our team typically reviews all applications within 5-7 business days. We'll contact qualified candidates to schedule an interview. If we don't contact you after this period, we encourage you to apply for other opportunities.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <span>Will I receive updates on my application status?</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes! You'll receive email updates at key milestones: (1) confirmation of receipt, (2) interview invitation (if selected), and (3) final decision. We respect your time and will keep you informed throughout the process.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <span>What if I have questions about the role?</span>
+      </div>
+      <div class="faq-answer">
+        <p>Great question! You can reach out to us at <a href="mailto:careers@wissenhaus.org" style="color: var(--red); font-weight: 600;">careers@wissenhaus.org</a> with any questions about the position, our organization, or the application process. We're happy to help!</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <span>Can I apply for multiple roles?</span>
+      </div>
+      <div class="faq-answer">
+        <p>Absolutely! If you're interested in multiple roles, feel free to submit separate applications for each position. Just make sure to tailor your responses to highlight relevant skills for each role.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        <span>What if I don't hear back?</span>
+      </div>
+      <div class="faq-answer">
+        <p>If you haven't heard from us within 10 business days, please check your spam folder or reach out to <a href="mailto:careers@wissenhaus.org" style="color: var(--red); font-weight: 600;">careers@wissenhaus.org</a>. We're committed to acknowledging every application.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY JOIN US -->
+  <div style="background: var(--red-50); border-radius: 12px; padding: 24px; margin-bottom: 40px; text-align: left;">
+    <h3 style="color: var(--red); margin-bottom: 16px;">Why Join Wissen-Haus?</h3>
+    <ul style="list-style: none; padding: 0; color: var(--ink-60); line-height: 1.8;">
+      <li style="margin-bottom: 12px;"><strong style="color: var(--ink);">🌍 Global Impact</strong> - Help young Nigerians access world-class opportunities and build their futures</li>
+      <li style="margin-bottom: 12px;"><strong style="color: var(--ink);">🤝 Community</strong> - Join a passionate team dedicated to bridging the skills gap in Nigeria</li>
+      <li style="margin-bottom: 12px;"><strong style="color: var(--ink);">📚 Growth</strong> - Develop new skills and expand your network while contributing to meaningful work</li>
+      <li><strong style="color: var(--ink);">💙 Purpose</strong> - Be part of a movement empowering the next generation of African leaders</li>
+    </ul>
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="action-buttons">
+    <a href="careers.html#openings" class="btn btn--ghost btn--lg">
+      ← Back to Open Roles
+    </a>
+    <a href="community.html" class="btn btn--lg mag">
+      Explore Wissen-Haus Community
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+
+  <!-- CONTACT INFO -->
+  <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--line); text-align: center;">
+    <p style="color: var(--ink-60); margin-bottom: 12px;">Have questions? We'd love to hear from you!</p>
+    <a href="contact.html" class="textlink">Get in Touch
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+<script>
+  function toggleFAQ(element) {
+    const answer = element.nextElementSibling;
+    element.classList.toggle('open');
+    answer.classList.toggle('show');
+  }
+</script>
+</body>
+</html>

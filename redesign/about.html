@@ -17,90 +17,208 @@
 
 <main id="main">
 
+<style>
+  .about-hero {
+    padding: clamp(48px, 6vw, 84px) 20px 60px;
+    text-align: center;
+  }
+
+  .about-hero__content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .about-hero__eyebrow {
+    display: block;
+    color: #16a34a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .about-hero__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #0f2d1d;
+    font-weight: 900;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .about-hero__subtitle {
+    font-size: 1.15rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .about-sections {
+    padding: 60px 20px;
+  }
+
+  .about-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-section-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .about-section-card:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-section-card:nth-child(even) .about-card__image {
+    order: -1;
+  }
+
+  @media (max-width: 768px) {
+    .about-section-card {
+      grid-template-columns: 1fr;
+    }
+
+    .about-section-card:nth-child(even) .about-card__image {
+      order: 0;
+    }
+  }
+
+  .about-card__image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #0f2d1d 0%, #1a4d32 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .about-card__content {
+    padding: 40px;
+  }
+
+  .about-card__number {
+    background: #16a34a;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .about-card__title {
+    font-size: 1.8rem;
+    color: #0f2d1d;
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+
+  .about-card__description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .about-card__link {
+    color: #0f2d1d;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s;
+  }
+
+  .about-card__link:hover {
+    gap: 12px;
+  }
+
+  .about-card__link svg {
+    width: 20px;
+    height: 20px;
+  }
+</style>
+
 <!-- PAGE HERO -->
-<section class="section section--tight" style="padding-top:clamp(48px,6vw,84px)">
-  <div class="wrap">
-    <div class="split">
-      <div class="reveal">
-        <span class="eyebrow">About the Foundation</span>
-        <h1 class="display-lg mt-s">The bridge between the classroom and the world.</h1>
-        <p class="lead mt-m">We founded Wissen-Haus Youth Empowerment Foundation with a simple yet profound mission: to bridge the skills gap in Nigeria.</p>
-      </div>
-      <div class="split__media reveal" data-d="1"><img src="assets/img/about-hero.jpg" alt="Wissen-Haus students and mentors"></div>
-    </div>
+<section class=”about-hero”>
+  <div class=”about-hero__content”>
+    <span class=”about-hero__eyebrow”>About Wissen-Haus</span>
+    <h1 class=”about-hero__title”>Bridging the skills gap in Nigeria.</h1>
+    <p class=”about-hero__subtitle”>Explore our story, meet our founder, discover impact stories from our community, and get in touch with us.</p>
   </div>
 </section>
 
-<div class="pattern-edge" aria-hidden="true"></div>
+<!-- ABOUT SECTIONS -->
+<section class=”about-sections”>
+  <div class=”about-grid”>
+    <!-- Our Story -->
+    <div class=”about-section-card reveal”>
+      <div class=”about-card__image”>INSERT IMAGE</div>
+      <div class=”about-card__content”>
+        <div class=”about-card__number”>01</div>
+        <h2 class=”about-card__title”>Our Story</h2>
+        <p class=”about-card__description”>Discover the Wissen-Haus journey, our mission, and the values that drive everything we do. Learn how we're bridging the gap between the classroom and the world.</p>
+        <a href=”about-story.html” class=”about-card__link”>Read our story
+          <svg viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2.2”><path d=”M5 12h14M13 6l6 6-6 6” stroke-linecap=”round” stroke-linejoin=”round”/></svg>
+        </a>
+      </div>
+    </div>
 
-<!-- JOURNEY -->
-<section class="section panel-dark">
-  <div class="wrap">
-    <div class="split">
-      <div class="reveal">
-        <span class="section-index">01 · Our Journey</span>
-        <h2 class="mt-s">The Foundation's Journey</h2>
-      </div>
-      <div class="reveal" data-d="1">
-        <p class="lead">Our journey began as a collective effort to equip young people with the practical knowledge and global exposure they need to thrive. By combining career guidance bootcamps with the <em>Opportunity Blueprint</em> podcast, we are creating a bridge between the classroom and the world, ensuring that every young Nigerian has the tools to achieve economic independence and make a lasting impact.</p>
+    <!-- Meet the Founder -->
+    <div class=”about-section-card reveal” data-d=”1”>
+      <div class=”about-card__image”>INSERT IMAGE</div>
+      <div class=”about-card__content”>
+        <div class=”about-card__number”>02</div>
+        <h2 class=”about-card__title”>Meet the Founder</h2>
+        <p class=”about-card__description”>Learn about Benz Olagbaye, Founder and Executive Director of Wissen-Haus, and the vision that inspired the foundation's creation.</p>
+        <a href=”founder.html” class=”about-card__link”>Meet Benz
+          <svg viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2.2”><path d=”M5 12h14M13 6l6 6-6 6” stroke-linecap=”round” stroke-linejoin=”round”/></svg>
+        </a>
       </div>
     </div>
-    <div class="stats mt-l reveal" data-d="1">
-      <div class="stat"><div class="num" data-count="15000" data-suffix="+">15,000+</div><div class="lbl" style="color:#fff">Students Reached</div></div>
-      <div class="stat"><div class="num" data-count="200" data-suffix="+">200+</div><div class="lbl" style="color:#fff">Mentors Involved</div></div>
-      <div class="stat"><div class="num" data-count="120" data-suffix="+">120+</div><div class="lbl" style="color:#fff">School Partnerships</div></div>
-      <div class="stat"><div class="num" data-count="15" data-suffix="+">15+</div><div class="lbl" style="color:#fff">Years of Impact</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- VALUES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head mb-l reveal">
-      <span class="eyebrow">What Drives Us</span>
-      <h2>Built on practical skills, real mentorship and global reach.</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="feature reveal">
-        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.2 5.5L20 9l-4.4 3.6L17 18l-5-3-5 3 1.4-5.4L4 9l5.8-.5z"/></svg></div>
-        <h3>Practical Skills</h3>
-        <p>Hands-on career guidance and vocational training that translate directly into economic independence.</p>
-      </div>
-      <div class="feature reveal" data-d="1">
-        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3.2 3.2 0 0 1 0 6M17.5 20a5.5 5.5 0 0 0-3-4.9"/></svg></div>
-        <h3>Real Mentorship</h3>
-        <p>A network of 200+ mentors and alumni guiding students through every decision that shapes their future.</p>
-      </div>
-      <div class="feature reveal" data-d="2">
-        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z"/></svg></div>
-        <h3>Global Exposure</h3>
-        <p>Connecting Nigerian youth to international opportunities, trends and the wider world of work.</p>
+    <!-- Impact Stories -->
+    <div class=”about-section-card reveal”>
+      <div class=”about-card__image”>INSERT IMAGE</div>
+      <div class=”about-card__content”>
+        <div class=”about-card__number”>03</div>
+        <h2 class=”about-card__title”>Impact Stories</h2>
+        <p class=”about-card__description”>Read inspiring stories from Wissen-Haus members who are transforming their lives and making a difference in their communities.</p>
+        <a href=”impact-stories.html” class=”about-card__link”>Explore stories
+          <svg viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2.2”><path d=”M5 12h14M13 6l6 6-6 6” stroke-linecap=”round” stroke-linejoin=”round”/></svg>
+        </a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- MEET THE FOUNDER -->
-<section class="section" id="founder">
-  <div class="wrap">
-    <div class="section-head mb-l reveal"><span class="eyebrow">Meet the Founder</span></div>
-    <div class="founder">
-      <div class="founder__media reveal--left">
-        <img src="assets/img/founder.jpg" alt="Benz Olagbaye, Founder of Wissen-Haus Youth Empowerment Foundation">
-        <div class="founder__cap"><b>Benz Olagbaye</b><span>Founder &amp; Executive Director</span></div>
-      </div>
-      <div class="founder__body reveal--right">
-        <span class="quote-mark">“</span>
-        <p class="founder__lead">Hi, I'm Benz Olagbaye, Founder of Wissen-Haus Youth Empowerment Foundation.</p>
-        <p>Born and raised in Nigeria and now based in the UK, I've seen how access to education, mentorship, and opportunities can change lives. That belief inspired me to create Wissen-Haus, a foundation dedicated to empowering young people through skills development, mentorship, and community impact.</p>
-        <p>I believe that when young people are empowered, entire communities thrive. 🌱✨</p>
-        <div class="founder__sign">
-          <span class="founder__name">Benz Olagbaye</span>
-          <span class="founder__role">Founder &amp; Executive Director</span>
-        </div>
-        <a href="partner.html" class="btn btn--lg mt-m mag">Start Now
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <!-- Contact -->
+    <div class=”about-section-card reveal” data-d=”1”>
+      <div class=”about-card__image”>INSERT IMAGE</div>
+      <div class=”about-card__content”>
+        <div class=”about-card__number”>04</div>
+        <h2 class=”about-card__title”>Get in Touch</h2>
+        <p class=”about-card__description”>Have questions or want to collaborate? Reach out to our team. We'd love to hear from you about partnerships, volunteering, and more.</p>
+        <a href=”contact.html” class=”about-card__link”>Contact us
+          <svg viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2.2”><path d=”M5 12h14M13 6l6 6-6 6” stroke-linecap=”round” stroke-linejoin=”round”/></svg>
+        </a>
       </div>
     </div>
   </div>
