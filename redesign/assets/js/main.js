@@ -13,7 +13,6 @@
       ['about.html', 'About Overview', 'Explore all about sections'],
       ['about-story.html', 'Our Story', 'The Wissen-Haus journey'],
       ['founder.html', 'Meet the Founder', 'Learn about Benz Olagbaye'],
-      ['impact-stories.html', 'Impact Stories', 'Alumni success journeys'],
       ['contact.html', 'Contact', 'Get in touch with us']
     ]},
     { key: 'programmes', label: 'Programmes', menu: [
@@ -37,7 +36,7 @@
     ]}
   ];
   // which nav group is "active" for a given page
-  var ACTIVE = { about:'about', 'about-story':'about', founder:'about', impact:'about', 'impact-stories':'about', contact:'about', programmes:'programmes',
+  var ACTIVE = { about:'about', 'about-story':'about', founder:'about', impact:'about', 'impact-stories':'programmes', contact:'about', programmes:'programmes',
     community:'community', careers:'careers', policy:'policy',
     volunteer:'involved', partner:'involved', donate:'involved', jobs:'community',
     internships:'community', scholarships:'community', competitions:'community' };
