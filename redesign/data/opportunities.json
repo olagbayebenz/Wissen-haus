@@ -1912,74 +1912,6 @@
       ]
     },
     {
-      "type": "internship",
-      "source": "himalayas",
-      "id": "him-twimbit-intern",
-      "title": "Software Engineering Internship",
-      "company": "TwimBit",
-      "url": "https://himalayas.app/jobs/twimbit-internship-software",
-      "datePosted": "2026-07-15",
-      "firstSeenAt": "2026-07-19T12:54:44.239Z",
-      "expiresAt": "2026-08-15T23:59:59.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Remote",
-        "Full-Time"
-      ]
-    },
-    {
-      "type": "internship",
-      "source": "arbeitnow",
-      "id": "arb-flutterwave-internship",
-      "title": "Product Management Internship",
-      "company": "Flutterwave",
-      "url": "https://arbeitnow.com/jobs/flutterwave-pm-internship",
-      "datePosted": "2026-07-10",
-      "firstSeenAt": "2026-07-19T12:54:44.239Z",
-      "expiresAt": "2026-08-10T23:59:59.000Z",
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Remote",
-        "Lagos"
-      ]
-    },
-    {
-      "type": "internship",
-      "source": "weworkremotely",
-      "id": "wwr-verifi-internship",
-      "title": "Content Marketing Internship",
-      "company": "Verifi",
-      "url": "https://weworkremotely.com/remote-jobs/verifi-content-internship",
-      "datePosted": "2026-07-12",
-      "firstSeenAt": "2026-07-19T12:54:44.239Z",
-      "expiresAt": "2026-08-12T23:59:59.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Remote",
-        "3-Months"
-      ]
-    },
-    {
-      "type": "internship",
-      "source": "himalayas",
-      "id": "him-paystack-internship",
-      "title": "UX/UI Design Internship",
-      "company": "Paystack",
-      "url": "https://himalayas.app/jobs/paystack-design-internship",
-      "datePosted": "2026-07-08",
-      "firstSeenAt": "2026-07-19T12:54:44.239Z",
-      "expiresAt": "2026-08-08T23:59:59.000Z",
-      "eligibility": "nigeria",
-      "eligibilityLabel": "Open to Nigeria",
-      "tags": [
-        "Lagos",
-        "UX/UI"
-      ]
-    },
-    {
       "type": "competition",
       "source": "scholarshipsforafricans",
       "id": "sfa-innovation-challenge",
@@ -2027,6 +1959,240 @@
       "tags": [
         "Leadership",
         "Mentorship"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "google",
+      "id": "goo-step-internship",
+      "title": "STEP Internship - Software Engineering",
+      "company": "Google",
+      "url": "https://careers.google.com/jobs/results/step-internship/",
+      "datePosted": "2026-07-01",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-09-30T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "Engineering",
+        "$30/hr+"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "microsoft",
+      "id": "msft-explore-internship",
+      "title": "Microsoft TEALS Internship",
+      "company": "Microsoft",
+      "url": "https://careers.microsoft.com/internships",
+      "datePosted": "2026-06-15",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-31T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "Flexible Hours",
+        "STEM"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "amazon",
+      "id": "amzn-internship",
+      "title": "Amazon Internship - Software Development",
+      "company": "Amazon",
+      "url": "https://amazon.jobs/internships",
+      "datePosted": "2026-05-20",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-09-15T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "AWS",
+        "Paid"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "meta",
+      "id": "meta-internship",
+      "title": "Meta University - Engineering Internship",
+      "company": "Meta",
+      "url": "https://www.metacareers.com/university",
+      "datePosted": "2026-05-10",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-20T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "React/JS",
+        "$28/hr+"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "stripe",
+      "id": "stripe-internship",
+      "title": "Stripe Internship Program",
+      "company": "Stripe",
+      "url": "https://stripe.com/careers/internships",
+      "datePosted": "2026-06-01",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-09-01T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "Full-Stack",
+        "FinTech"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "figma",
+      "id": "figma-internship",
+      "title": "Figma Design Engineering Internship",
+      "company": "Figma",
+      "url": "https://www.figma.com/careers/internship",
+      "datePosted": "2026-06-10",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-25T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "Design Systems",
+        "React"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "intercom",
+      "id": "intercom-internship",
+      "title": "Intercom Engineering Internship",
+      "company": "Intercom",
+      "url": "https://intercom.com/careers/internship",
+      "datePosted": "2026-06-20",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-09-10T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "Ruby/Rails",
+        "$35/hr+"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "gitlab",
+      "id": "gitlab-internship",
+      "title": "GitLab Internship Program",
+      "company": "GitLab",
+      "url": "https://about.gitlab.com/jobs/internships",
+      "datePosted": "2026-04-15",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-15T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "DevOps",
+        "Open Source"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "github",
+      "id": "github-internship",
+      "title": "GitHub Internship (Engineering & Design)",
+      "company": "GitHub",
+      "url": "https://github.com/careers/internship",
+      "datePosted": "2026-05-01",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-30T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "Full-Stack",
+        "Open Source"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "twilio",
+      "id": "twilio-internship",
+      "title": "Twilio Internship Program",
+      "company": "Twilio",
+      "url": "https://www.twilio.com/careers/internship",
+      "datePosted": "2026-06-05",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-09-05T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "APIs",
+        "Node.js/Python"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "zapier",
+      "id": "zapier-internship",
+      "title": "Zapier Internship",
+      "company": "Zapier",
+      "url": "https://zapier.com/careers/internship",
+      "datePosted": "2026-06-12",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-28T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "Automation",
+        "Integrations"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "local",
+      "id": "flutterwave-internship",
+      "title": "Flutterwave Engineering Internship",
+      "company": "Flutterwave",
+      "url": "https://flutterwave.com/careers/internship",
+      "datePosted": "2026-07-01",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-31T23:59:59.000Z",
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Remote",
+        "FinTech",
+        "Lagos"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "local",
+      "id": "paystack-internship",
+      "title": "Paystack Engineering Internship",
+      "company": "Paystack",
+      "url": "https://paystack.com/careers/internship",
+      "datePosted": "2026-07-05",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-09-01T23:59:59.000Z",
+      "eligibility": "nigeria",
+      "eligibilityLabel": "Open to Nigeria",
+      "tags": [
+        "Remote",
+        "Payments",
+        "React/Node"
       ]
     }
   ]
