@@ -16,7 +16,7 @@
   badge.id = 'streakBadge';
   badge.style.cssText = `
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     background: linear-gradient(135deg, var(--green-800), var(--green-900));
     color: #fff;
