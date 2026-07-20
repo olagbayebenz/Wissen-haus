@@ -20,7 +20,7 @@
     <div class="reveal">
       <span class="eyebrow">Certificate Course</span>
       <h1 class="display-lg mt-s">Soft Skills for the Modern Workplace</h1>
-      <p class="lead mt-m">Master the 6 skills that matter in any career: communication, teamwork, time management, problem-solving, adaptability, and professional branding. Complete all modules, earn your certificate, and add it straight to LinkedIn.</p>
+      <p class="lead mt-m">Master the 10 essential soft skills that matter in any career: communication, teamwork, time management, problem-solving, adaptability, professional branding, conflict resolution, emotional intelligence, leadership, and stress management. Complete all modules, earn your certificate, and add it straight to LinkedIn.</p>
       <div style="margin-top:32px">
         <a href="soft-skills-module-1.html" class="btn">Start Course →</a>
       </div>
@@ -36,7 +36,7 @@
     </div>
     <div class="grid grid-2">
       <div class="reveal">
-        <h4 style="color:var(--green-800);margin-bottom:12px">6 Essential Modules</h4>
+        <h4 style="color:var(--green-800);margin-bottom:12px">10 Essential Modules</h4>
         <ul style="color:var(--ink-60);line-height:1.8">
           <li><strong>Communication Skills</strong> — Write clearly, listen actively, give feedback</li>
           <li><strong>Teamwork & Collaboration</strong> — Work across differences, resolve conflicts</li>
@@ -44,12 +44,16 @@
           <li><strong>Problem-Solving</strong> — Find root causes, make smart decisions</li>
           <li><strong>Adaptability</strong> — Embrace change, learn from failure</li>
           <li><strong>Professional Branding</strong> — Tell your story, build your presence</li>
+          <li><strong>Conflict Resolution</strong> — Navigate disagreements, find win-win solutions</li>
+          <li><strong>Emotional Intelligence</strong> — Understand emotions, build stronger relationships</li>
+          <li><strong>Leadership & Influence</strong> — Inspire others, lead from any position</li>
+          <li><strong>Stress Management</strong> — Build resilience, thrive under pressure</li>
         </ul>
       </div>
       <div class="reveal" data-d="1">
         <h4 style="color:var(--green-800);margin-bottom:12px">How It Works</h4>
         <p style="color:var(--ink-60);line-height:1.8;margin-bottom:16px">Each module includes a short overview of the topic, learning objectives, and a 3-question quiz to test your knowledge.</p>
-        <p style="color:var(--ink-60);line-height:1.8;margin-bottom:16px"><strong>Pass (80%+) each module</strong> to move forward. Complete all 6 to earn your certificate and add it to LinkedIn.</p>
+        <p style="color:var(--ink-60);line-height:1.8;margin-bottom:16px"><strong>Pass (80%+) each module</strong> to move forward. Complete all 10 to earn your certificate and add it to LinkedIn.</p>
         <p style="color:var(--ink-60);line-height:1.8"><strong>Time commitment:</strong> ~30 minutes per module</p>
       </div>
     </div>
@@ -60,7 +64,7 @@
 <section class="section section--tight" style="padding:clamp(24px,3vw,40px) 0;border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="course-progress">
-      <div class="course-progress__label" id="progressLabel">0 of 6 modules complete</div>
+      <div class="course-progress__label" id="progressLabel">0 of 10 modules complete</div>
       <div class="course-progress__bar">
         <div class="course-progress__fill" id="progressFill"></div>
       </div>
@@ -102,7 +106,11 @@
     { id: 3, title: 'Time Management & Productivity', description: 'Prioritize effectively and maintain sustainable productivity.' },
     { id: 4, title: 'Problem-Solving & Critical Thinking', description: 'Identify root causes and make informed decisions.' },
     { id: 5, title: 'Adaptability & Growth Mindset', description: 'Embrace change and extract lessons from failure.' },
-    { id: 6, title: 'Professional Branding & Your Story', description: 'Craft your narrative and build professional presence.' }
+    { id: 6, title: 'Professional Branding & Your Story', description: 'Craft your narrative and build professional presence.' },
+    { id: 7, title: 'Conflict Resolution', description: 'Navigate disagreements and find win-win solutions.' },
+    { id: 8, title: 'Emotional Intelligence', description: 'Understand emotions and build stronger relationships.' },
+    { id: 9, title: 'Leadership & Influence', description: 'Inspire others and lead from any position.' },
+    { id: 10, title: 'Stress Management & Resilience', description: 'Build resilience and thrive under pressure.' }
   ];
 
   function getCourseProgress() {
@@ -113,8 +121,8 @@
   function updateProgress() {
     const progress = getCourseProgress();
     const completed = progress.completedModules.length;
-    document.getElementById('progressLabel').textContent = `${completed} of 6 modules complete`;
-    document.getElementById('progressFill').style.width = (completed / 6) * 100 + '%';
+    document.getElementById('progressLabel').textContent = `${completed} of 10 modules complete`;
+    document.getElementById('progressFill').style.width = (completed / 10) * 100 + '%';
   }
 
   function renderModules() {
@@ -128,7 +136,7 @@
       article.className = 'card' + (isComplete ? ' card--complete' : '');
       article.innerHTML = `
         <div class="card__body">
-          <span class="card__num">MODULE ${mod.id}/6</span>
+          <span class="card__num">MODULE ${mod.id}/10</span>
           ${isComplete ? '<span style="color:var(--green-800);margin-top:8px;display:inline-block">✓ Completed</span>' : ''}
           <h3>${mod.title}</h3>
           <p>${mod.description}</p>
