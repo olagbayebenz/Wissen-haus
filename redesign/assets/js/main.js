@@ -17,9 +17,9 @@
     ]},
     { key: 'programmes', label: 'Programmes', menu: [
       ['programmes.html', 'All Programmes', 'The full overview'],
-      ['programmes.html#bootcamp', 'Career Bootcamp', 'Skills for JS3-SS1 students'],
-      ['programmes.html#podcast', 'Opportunity Blueprint', 'Our flagship podcast'],
-      ['programmes.html#impact-content', 'Impact Content', 'Social-impact storytelling'],
+      ['bootcamp.html', 'Career Bootcamp', 'Skills for JS3-SS1 students'],
+      ['podcast.html', 'Opportunity Blueprint', 'Our flagship podcast'],
+      ['impact-content.html', 'Impact Content', 'Social-impact storytelling'],
       ['programmes.html#events', 'Events', 'Bootcamps, cafés & more']
     ]},
     { key: 'community', label: 'Community', menu: [
@@ -37,6 +37,7 @@
   ];
   // which nav group is "active" for a given page
   var ACTIVE = { about:'about', 'about-story':'about', founder:'about', impact:'about', 'impact-stories':'programmes', contact:'about', programmes:'programmes',
+    bootcamp:'programmes', podcast:'programmes', 'impact-content':'programmes',
     community:'community', careers:'careers', policy:'policy',
     volunteer:'involved', partner:'involved', donate:'involved', jobs:'community',
     internships:'community', scholarships:'community', competitions:'community' };
