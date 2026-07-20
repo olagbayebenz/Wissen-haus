@@ -288,7 +288,7 @@
       "type": "scholarship",
       "source": "scholarshipsforafricans",
       "id": "sfa-t-rkiye-scholarships",
-      "title": "Türkiye Scholarships",
+      "title": "T\u00fcrkiye Scholarships",
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/turkiye-burslari-scholarships",
       "datePosted": null,
@@ -297,7 +297,7 @@
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
       "tags": [
-        "Türkiye",
+        "T\u00fcrkiye",
         "Associate, Undergraduate, Masters, PhD, Research"
       ]
     },
@@ -484,7 +484,7 @@
       "type": "scholarship",
       "source": "scholarshipsforafricans",
       "id": "sfa-vital-voices-vvengage-fellowship-2026-for-women-in",
-      "title": "Vital Voices’ VVEngage Fellowship 2026 for Women in Public Leadership",
+      "title": "Vital Voices\u2019 VVEngage Fellowship 2026 for Women in Public Leadership",
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/vital-voices-vvengage-fellowship-2026-for-women-in-public-leadership",
       "datePosted": null,
@@ -629,7 +629,7 @@
       "type": "scholarship",
       "source": "scholarshipsforafricans",
       "id": "sfa-the-afreximbank-edordu-research-competition-2026",
-      "title": "The Afreximbank–Edordu Research Competition 2026",
+      "title": "The Afreximbank\u2013Edordu Research Competition 2026",
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/the-afreximbank-edordu-research-competition-2026",
       "datePosted": null,
@@ -808,7 +808,7 @@
       "type": "scholarship",
       "source": "scholarshipsforafricans",
       "id": "sfa-the-cartier-women-s-initiative-regional-award-2027",
-      "title": "The Cartier Women’s Initiative Regional Award 2027",
+      "title": "The Cartier Women\u2019s Initiative Regional Award 2027",
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/the-cartier-women-s-initiative-regional-award-2027",
       "datePosted": null,
@@ -1025,7 +1025,7 @@
       "type": "job",
       "source": "weworkremotely",
       "id": "wwr-mp-college-consulting-college-counselor-specializi-",
-      "title": "MP College Consulting: College Counselor Specializing in BS/MD Admissions– Remote, Part-Time",
+      "title": "MP College Consulting: College Counselor Specializing in BS/MD Admissions\u2013 Remote, Part-Time",
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/mp-college-consulting-college-counselor-specializing-in-bs-md-admissions-remote-part-time",
       "datePosted": "2026-07-17",
@@ -1909,6 +1909,124 @@
       "eligibilityLabel": "Open Worldwide",
       "tags": [
         "Front-End Programming"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "himalayas",
+      "id": "him-twimbit-intern",
+      "title": "Software Engineering Internship",
+      "company": "TwimBit",
+      "url": "https://himalayas.app/jobs/twimbit-internship-software",
+      "datePosted": "2026-07-15",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-15T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "Full-Time"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "arbeitnow",
+      "id": "arb-flutterwave-internship",
+      "title": "Product Management Internship",
+      "company": "Flutterwave",
+      "url": "https://arbeitnow.com/jobs/flutterwave-pm-internship",
+      "datePosted": "2026-07-10",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-10T23:59:59.000Z",
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Remote",
+        "Lagos"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "weworkremotely",
+      "id": "wwr-verifi-internship",
+      "title": "Content Marketing Internship",
+      "company": "Verifi",
+      "url": "https://weworkremotely.com/remote-jobs/verifi-content-internship",
+      "datePosted": "2026-07-12",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-12T23:59:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Remote",
+        "3-Months"
+      ]
+    },
+    {
+      "type": "internship",
+      "source": "himalayas",
+      "id": "him-paystack-internship",
+      "title": "UX/UI Design Internship",
+      "company": "Paystack",
+      "url": "https://himalayas.app/jobs/paystack-design-internship",
+      "datePosted": "2026-07-08",
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": "2026-08-08T23:59:59.000Z",
+      "eligibility": "nigeria",
+      "eligibilityLabel": "Open to Nigeria",
+      "tags": [
+        "Lagos",
+        "UX/UI"
+      ]
+    },
+    {
+      "type": "competition",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-innovation-challenge",
+      "title": "African Innovation Challenge 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/innovation-challenge",
+      "datePosted": null,
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Prize: $50,000"
+      ]
+    },
+    {
+      "type": "competition",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-startup-pitch",
+      "title": "African Startup Pitch Competition",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/startup-pitch",
+      "datePosted": null,
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Business",
+        "Prize: $100,000"
+      ]
+    },
+    {
+      "type": "competition",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-youth-leaders",
+      "title": "Youth Leaders Summit Challenge 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/youth-leaders",
+      "datePosted": null,
+      "firstSeenAt": "2026-07-19T12:54:44.239Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Leadership",
+        "Mentorship"
       ]
     }
   ]
