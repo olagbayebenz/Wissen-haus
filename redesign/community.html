@@ -240,7 +240,60 @@
 
 </main>
 
+<script>
+  // Handle section button highlighting
+  function initSectionNavigation() {
+    const navButtons = document.querySelectorAll('.pillrow a.p[href^="#"], .pillrow a.p[href$=".html"]');
 
+    function updateActiveButton(target) {
+      navButtons.forEach(btn => {
+        btn.classList.remove('active', 'p--active');
+      });
+
+      if (target) {
+        target.classList.add('active', 'p--active');
+      }
+    }
+
+    // Handle clicks
+    navButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        // For anchor links, prevent default and handle smoothly
+        if (this.getAttribute('href').startsWith('#')) {
+          e.preventDefault();
+          updateActiveButton(this);
+          const sectionId = this.getAttribute('href').substring(1);
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            window.location.hash = sectionId;
+          }
+        } else {
+          updateActiveButton(this);
+        }
+      });
+    });
+
+    // Set active button on page load based on URL hash
+    function setActiveFromHash() {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        const activeBtn = document.querySelector(`.pillrow a.p[href="#${hash}"]`);
+        if (activeBtn) {
+          updateActiveButton(activeBtn);
+        }
+      } else {
+        // Default to first button
+        updateActiveButton(navButtons[0]);
+      }
+    }
+
+    setActiveFromHash();
+    window.addEventListener('hashchange', setActiveFromHash);
+  }
+
+  document.addEventListener('DOMContentLoaded', initSectionNavigation);
+</script>
 
 <script src="assets/js/auth.js"></script>
 <script src="assets/js/main.js"></script>
