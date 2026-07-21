@@ -32,7 +32,21 @@
       "Read(//tmp/**)",
       "Bash(git commit -m ' *)",
       "Bash(cp redesign/*.html .)",
-      "Bash(cp -r redesign/assets ./)"
+      "Bash(cp -r redesign/assets ./)",
+      "Bash(curl -s http://localhost:8000/about.html)",
+      "Bash(curl -s http://localhost:8000/programmes.html)",
+      "Bash(curl -s http://localhost:8000/bootcamp.html)",
+      "Bash(curl -s http://localhost:8000/donate.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/assets/css/styles.css)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/assets/js/main.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/assets/img/logo.png)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/sitemap.xml)",
+      "Bash(pkill -f \"python3 -m http.server\")",
+      "Bash(python3 -c ' *)",
+      "Bash(pkill -9 -f \"python3 -m http.server\")",
+      "Bash(pkill -9 -f \"http.server\")",
+      "Bash(python3 -m http.server 8000)",
+      "Bash(curl -s -H \"Cache-Control: no-cache\" http://localhost:8000/bootcamp.html)"
     ]
   }
 }

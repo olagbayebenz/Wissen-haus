@@ -10,7 +10,6 @@
   /* ---------- Nav model (edit here, applies to every page) ---------- */
   var NAV = [
     { key: 'about', label: 'About', menu: [
-      ['about.html', 'About Overview', 'Explore all about sections'],
       ['about-story.html', 'Our Story', 'The Wissen-Haus journey'],
       ['founder.html', 'Meet the Founder', 'Learn about Benz Olagbaye'],
       ['contact.html', 'Contact', 'Get in touch with us']
@@ -94,7 +93,7 @@
           '<a href="https://www.instagram.com/wissen_haus" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>' +
           '<a href="https://www.linkedin.com/company/wissen-haus-empowerment-foundation" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21h-4z"/></svg></a>' +
         '</div></div>' +
-      '<div class="footer-col"><h5>Explore</h5><a href="about.html">About Us</a><a href="programmes.html">Programmes</a><a href="community.html">Community Hub</a><a href="jobs.html">Remote Jobs</a><a href="internships.html">Internships</a><a href="scholarships.html">Scholarships</a><a href="competitions.html">Competitions</a><a href="impact-stories.html">Impact Stories</a><a href="policy-research.html">Policy &amp; Research</a></div>' +
+      '<div class="footer-col"><h5>Explore</h5><a href="about-story.html">About Us</a><a href="programmes.html">Programmes</a><a href="community.html">Community Hub</a><a href="jobs.html">Remote Jobs</a><a href="internships.html">Internships</a><a href="scholarships.html">Scholarships</a><a href="competitions.html">Competitions</a><a href="impact-stories.html">Impact Stories</a><a href="policy-research.html">Policy &amp; Research</a></div>' +
       '<div class="footer-col"><h5>Get Involved</h5><a href="volunteer.html">Volunteer</a><a href="careers.html">Careers</a><a href="partner.html">Partner With Us</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a></div>' +
       '<div class="footer-col"><h5>Contact</h5><a href="#">Ibadan, Nigeria</a><a href="mailto:info@wissenhaus.org">info@wissenhaus.org</a><a href="tel:+234800947736">+234 800 WISSEN</a></div>' +
     '</div></div>' +
