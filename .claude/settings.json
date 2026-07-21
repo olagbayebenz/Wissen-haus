@@ -46,7 +46,17 @@
       "Bash(pkill -9 -f \"python3 -m http.server\")",
       "Bash(pkill -9 -f \"http.server\")",
       "Bash(python3 -m http.server 8000)",
-      "Bash(curl -s -H \"Cache-Control: no-cache\" http://localhost:8000/bootcamp.html)"
+      "Bash(curl -s -H \"Cache-Control: no-cache\" http://localhost:8000/bootcamp.html)",
+      "Bash(curl -s http://localhost:8000/index.html)",
+      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\n\" http://localhost:8000/about.html)",
+      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\n\" http://localhost:8000/about-story.html)",
+      "Bash(python3 -m http.server 8001)",
+      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\n\" http://localhost:8001/impact-content.html)",
+      "Bash(git commit -m 'Fix Instagram footer link to open in new tab *)",
+      "Bash(git commit -m 'Add dynamic Instagram feed widget to homepage *)",
+      "Bash(git commit -m 'Update Featured Programmes cards to link directly to landing pages *)",
+      "Bash(npm install *)",
+      "Bash(git commit -m 'Fix broken forms and clean up unused pages *)"
     ]
   }
 }
