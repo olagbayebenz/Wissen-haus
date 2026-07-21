@@ -156,12 +156,23 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
 </div>
 
 <script>
-window.addEventListener('load', function() {
+// Show correct form on page load
+function initializeForm() {
+  const signupSection = document.getElementById('signupSection');
+  const loginSection = document.getElementById('loginSection');
+
   if (window.location.hash === '#signin') {
-    document.getElementById('signupSection').style.display = 'none';
-    document.getElementById('loginSection').style.display = 'block';
+    signupSection.style.display = 'none';
+    loginSection.style.display = 'block';
+  } else {
+    signupSection.style.display = 'block';
+    loginSection.style.display = 'none';
   }
-});
+}
+
+// Call on load and when hash changes
+window.addEventListener('load', initializeForm);
+window.addEventListener('hashchange', initializeForm);
 
 function togglePasswordVisibility(inputId) {
   const input = document.getElementById(inputId);
