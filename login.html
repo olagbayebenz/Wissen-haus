@@ -294,7 +294,8 @@ document.getElementById('signupForm').addEventListener('submit', async function(
     // Redirect to community
     window.location.href = 'community.html';
   } catch (err) {
-    error.textContent = err.message || 'Registration failed';
+    console.error('Signup error:', err, 'Backend URL:', API_CONFIG.baseUrl);
+    error.textContent = `Error: ${err.message || 'Registration failed'}. Backend: ${API_CONFIG.baseUrl}`;
     error.classList.add('show');
   } finally {
     submitBtn.disabled = false;
@@ -338,7 +339,8 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     // Redirect to community
     window.location.href = 'community.html';
   } catch (err) {
-    error.textContent = err.message || 'Login failed';
+    console.error('Login error:', err, 'Backend URL:', API_CONFIG.baseUrl);
+    error.textContent = `Error: ${err.message || 'Login failed'}. Backend: ${API_CONFIG.baseUrl}`;
     error.classList.add('show');
   } finally {
     submitBtn.disabled = false;
