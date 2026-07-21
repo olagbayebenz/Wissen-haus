@@ -1,7 +1,6 @@
 // Environment-aware API configuration
 const API_CONFIG = (() => {
   const hostname = window.location.hostname;
-  const bypassSecret = 'BoPWioFfAtObrjgZGXhej1Y2nSLoTbRu';
 
   if (hostname === 'localhost' || hostname === '127.0.0.1') {
     return {
@@ -9,12 +8,10 @@ const API_CONFIG = (() => {
       headers: {}
     };
   } else {
-    // Production: use Vercel backend with bypass header
+    // Production: use Railway backend
     return {
-      baseUrl: 'https://wissenhaus-backend-6bh66oejo-olagbayebenz-7030s-projects.vercel.app/api',
-      headers: {
-        'x-vercel-protection-bypass': bypassSecret
-      }
+      baseUrl: 'https://wissenhaus-backend-production.up.railway.app/api',
+      headers: {}
     };
   }
 })();
