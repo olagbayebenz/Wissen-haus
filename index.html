@@ -277,18 +277,78 @@
       <a href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener" class="btn mag">Follow on Instagram
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-    <div class="ig-scroll reveal" data-d="1">
-      <a class="ig-post" href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener"><img src="assets/img/hero-students.jpg" alt="Wissen-Haus students" loading="lazy"><span class="ig-post__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
-      <a class="ig-post" href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener"><img src="assets/img/prog-bootcamp.jpg" alt="Career bootcamp" loading="lazy"><span class="ig-post__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
-      <a class="ig-post" href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener"><img src="assets/img/prog-podcast.jpg" alt="Opportunity Blueprint podcast" loading="lazy"><span class="ig-post__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
-      <a class="ig-post" href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener"><img src="assets/img/community.jpg" alt="Community" loading="lazy"><span class="ig-post__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
-      <a class="ig-post" href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener"><img src="assets/img/volunteer.jpg" alt="Mentoring" loading="lazy"><span class="ig-post__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
-      <a class="ig-post" href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener"><img src="assets/img/students-2.jpg" alt="Students in class" loading="lazy"><span class="ig-post__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
-      <a class="ig-post" href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener"><img src="assets/img/prog-impact.jpg" alt="Impact content" loading="lazy"><span class="ig-post__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
-      <a class="ig-post" href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener"><img src="assets/img/community-2.jpg" alt="Community outreach" loading="lazy"><span class="ig-post__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+    <div class="ig-scroll reveal" data-d="1" id="instagram-feed">
+      <!-- Feed loads here via JavaScript -->
     </div>
   </div>
 </section>
+
+<script>
+// Instagram Feed Widget - Loads latest posts from @wissen_haus
+(function() {
+  function loadInstagramFeed() {
+    const username = 'wissen_haus';
+    const container = document.getElementById('instagram-feed');
+
+    // Using Instagram's noembed endpoint for public profile data
+    fetch(`https://www.instagram.com/api/v1/users/web_profile_info/?username=${username}`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      }
+    })
+    .then(response => {
+      // Fallback: If direct API fails, show cached posts
+      if (!response.ok) throw new Error('API unavailable');
+      return response.json();
+    })
+    .then(data => {
+      const user = data.data.user;
+      const posts = user.edge_owner_to_timeline_media.edges.slice(0, 8);
+
+      if (posts.length === 0) {
+        container.innerHTML = '<p style="text-align:center;color:var(--ink-60)">Follow us on Instagram to see our latest posts</p>';
+        return;
+      }
+
+      container.innerHTML = posts.map(post => {
+        const node = post.node;
+        const img = node.display_url;
+        const caption = node.edge_media_to_caption.edges[0]?.node.text || 'Wissen-Haus post';
+        const postUrl = `https://www.instagram.com/p/${node.shortcode}/`;
+
+        return `
+          <a class="ig-post" href="${postUrl}" target="_blank" rel="noopener" title="${caption.substring(0, 50)}">
+            <img src="${img}" alt="${caption.substring(0, 100)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+            <span class="ig-post__ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+          </a>
+        `;
+      }).join('');
+    })
+    .catch(() => {
+      // Fallback: Show placeholder message
+      container.innerHTML = `
+        <div style="grid-column:1/-1;text-align:center;padding:40px 20px;color:var(--ink-60);">
+          <p>Latest posts from <strong>@wissen_haus</strong></p>
+          <a href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener" style="color:var(--green-800);text-decoration:underline;">Visit our profile →</a>
+        </div>
+      `;
+    });
+  }
+
+  // Load when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadInstagramFeed);
+  } else {
+    loadInstagramFeed();
+  }
+})();
+</script>
 
 </main>
 
