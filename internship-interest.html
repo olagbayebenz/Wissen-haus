@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Express Interest - Internship</title>
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+  .interest-wrapper { max-width: 700px; margin: 0 auto; padding: 40px 20px; }
+  .interest-header { text-align: center; margin-bottom: 40px; }
+  .interest-header h1 { font-size: 2rem; margin-bottom: 8px; }
+  .interest-header p { color: var(--ink-60); }
+  .form-section { margin-bottom: 32px; }
+  .form-section h3 { font-size: 1.2rem; margin-bottom: 20px; color: var(--green-800); border-bottom: 2px solid var(--green-100); padding-bottom: 12px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-weight: 600; color: var(--green-800); margin-bottom: 8px; font-size: 0.95rem; }
+  .form-group .required { color: var(--red); }
+  .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 8px; font-size: 1rem; font-family: inherit; transition: border-color 0.2s; }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--green-800); box-shadow: 0 0 0 3px rgba(15, 45, 29, 0.1); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-actions { display: flex; gap: 12px; margin-top: 40px; }
+  .btn-submit { flex: 1; }
+  .btn-cancel { flex: 1; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--green-800); text-decoration: none; font-weight: 600; margin-bottom: 24px; }
+  .back-link:hover { gap: 10px; }
+</style>
+</head>
+<body data-page="careers">
+
+<main id="main">
+
+<div class="interest-wrapper">
+  <a href="#" id="backLink" class="back-link">← Back to Internship</a>
+
+  <div class="interest-header">
+    <h1>Express Interest</h1>
+    <p id="internshipTitle">Internship Application</p>
+  </div>
+
+  <form id="interestForm">
+    <!-- PERSONAL INFORMATION -->
+    <div class="form-section">
+      <h3>Personal Information</h3>
+
+      <div class="form-group">
+        <label>Full Name <span class="required">*</span></label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>School/University <span class="required">*</span></label>
+        <input type="text" id="school" name="school" placeholder="Currently enrolled or recent graduate" required>
+      </div>
+
+      <div class="form-group">
+        <label>Field of Study <span class="required">*</span></label>
+        <input type="text" id="fieldOfStudy" name="fieldOfStudy" placeholder="e.g., Communications, Data Science, etc." required>
+      </div>
+    </div>
+
+    <!-- INTERNSHIP DETAILS -->
+    <div class="form-section">
+      <h3>Internship Details</h3>
+
+      <div class="form-group">
+        <label>Availability <span class="required">*</span></label>
+        <select id="availability" name="availability" required>
+          <option value="">Select...</option>
+          <option value="full-time">Full-time (available to start immediately)</option>
+          <option value="part-time">Part-time (flexible hours)</option>
+          <option value="after-school">After school/weekend</option>
+          <option value="after-exams">After exams (flexible start date)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Expected Duration <span class="required">*</span></label>
+        <select id="duration" name="duration" required>
+          <option value="">Select...</option>
+          <option value="3-months">3 months</option>
+          <option value="6-months">6 months</option>
+          <option value="flexible">Flexible</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Why are you interested in this internship? <span class="required">*</span></label>
+        <textarea id="motivation" name="motivation" placeholder="Tell us what excites you about this role and how it aligns with your goals..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>What skills do you bring to this role? <span class="required">*</span></label>
+        <textarea id="skills" name="skills" placeholder="Highlight relevant experience, technical skills, or soft skills..." required></textarea>
+      </div>
+    </div>
+
+    <!-- ADDITIONAL INFORMATION -->
+    <div class="form-section">
+      <h3>Additional Information</h3>
+
+      <div class="form-group">
+        <label>Portfolio / LinkedIn / Website</label>
+        <input type="url" id="portfolio" name="portfolio" placeholder="Optional: Share a link to showcase your work">
+      </div>
+
+      <div class="form-group">
+        <label>How did you hear about this internship?</label>
+        <select id="source" name="source">
+          <option value="">Select...</option>
+          <option value="website">Wissen-Haus Website</option>
+          <option value="social-media">Social Media</option>
+          <option value="referral">Referral from friend</option>
+          <option value="school">School/University</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Anything else we should know?</label>
+        <textarea id="additional" name="additional" placeholder="Any additional information..."></textarea>
+      </div>
+    </div>
+
+    <!-- FORM ACTIONS -->
+    <div class="form-actions">
+      <button type="button" class="btn btn--ghost btn--lg btn-cancel" onclick="history.back()">Cancel</button>
+      <button type="submit" class="btn btn--lg mag btn-submit">Submit Interest</button>
+    </div>
+  </form>
+</div>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Get internship from URL
+  function getInternship() {
+    const params = new URLSearchParams(window.location.search);
+    const internship = params.get('internship');
+    const names = {
+      programme: 'Programme Intern',
+      content: 'Content & Media Intern',
+      research: 'Research Intern'
+    };
+    document.getElementById('internshipTitle').textContent = (names[internship] || 'Internship') + ' - Wissen-Haus';
+    document.getElementById('backLink').href = internship ? `internship-${internship}.html` : 'careers.html#internships';
+  }
+
+  // Handle form submission
+  document.getElementById('interestForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Redirect to success page
+    window.location.href = 'internship-interest-success.html';
+  });
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    getInternship();
+  });
+</script>
+</body>
+</html>

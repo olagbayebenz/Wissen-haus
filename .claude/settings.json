@@ -30,7 +30,9 @@
       "Bash(curl -s -A \"Mozilla/5.0\" -o /dev/null -w \"%{http_code}\\\\n\" \"https://opportunitydesk.org/\")",
       "Bash(curl -sL -A \"Mozilla/5.0\" \"https://www.youthop.com/scholarships/feed\" -o /tmp/yo_sch.xml -w \"final_code=%{http_code} url=%{url_effective}\\\\n\")",
       "Read(//tmp/**)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(cp redesign/*.html .)",
+      "Bash(cp -r redesign/assets ./)"
     ]
   }
 }

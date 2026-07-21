@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thread - Wissen-Haus</title>
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+.thread-wrapper { max-width: 700px; margin: 0 auto; }
+.thread-header { border-bottom: 2px solid var(--line); padding-bottom: 24px; margin-bottom: 32px; }
+.thread-category-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 12px; color: white; }
+.thread-title { color: var(--ink); font-size: 2rem; margin: 12px 0; }
+.thread-meta { color: var(--ink-60); font-size: 0.95rem; }
+.post { border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; }
+.post-author { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.post-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--green-800); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; }
+.post-author-name { font-weight: 600; color: var(--ink); }
+.post-author-time { color: var(--ink-60); font-size: 0.9rem; }
+.post-content { color: var(--ink); line-height: 1.6; white-space: pre-wrap; word-wrap: break-word; }
+.post-op { background: linear-gradient(135deg, rgba(15, 45, 29, 0.05), rgba(200, 160, 80, 0.05)); }
+.reply-form { border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; margin-top: 32px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; color: var(--ink); font-weight: 500; margin-bottom: 8px; }
+.form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); font-family: inherit; font-size: 1rem; min-height: 100px; }
+.form-submit { padding: 12px 24px; background: var(--green-800); color: white; border: none; border-radius: var(--radius); font-weight: 600; cursor: pointer; }
+.form-submit:hover { background: var(--green-900); }
+.back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--green-800); text-decoration: none; margin-bottom: 24px; font-weight: 500; }
+.back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body data-page="community">
+<main id="main">
+
+<section class="section">
+  <div class="wrap">
+    <div class="thread-wrapper">
+      <a href="community-threads.html" class="back-link">← Back to Discussions</a>
+      <div id="threadContent"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/streak.js"></script>
+
+<script>
+const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
+if (!user) {
+  window.location.href = 'login.html';
+} else {
+  const threadId = new URLSearchParams(window.location.search).get('id');
+  const CATEGORY_COLORS = {
+    general: '#0F2D1D',
+    jobs: '#0A66C2',
+    courses: '#8B5CF6',
+    wins: '#10B981',
+    advice: '#F59E0B'
+  };
+
+  function getThreads() {
+    return JSON.parse(localStorage.getItem('wh_communityThreads') || '[]');
+  }
+
+  function saveThreads(threads) {
+    localStorage.setItem('wh_communityThreads', JSON.stringify(threads));
+  }
+
+  function getInitials(name) {
+    return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+  }
+
+  function formatDate(dateStr) {
+    return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function renderThread() {
+    const threads = getThreads();
+    const thread = threads.find(t => t.id === threadId);
+
+    if (!thread) {
+      document.getElementById('threadContent').innerHTML = '<p style="text-align: center; color: var(--ink-60);">Thread not found</p>';
+      return;
+    }
+
+    thread.views = (thread.views || 0) + 1;
+    saveThreads(threads);
+
+    let html = `
+      <div class="thread-header">
+        <div class="thread-category-badge" style="background: ${CATEGORY_COLORS[thread.category]}">${thread.category.toUpperCase()}</div>
+        <h1 class="thread-title">${escapeHtml(thread.title)}</h1>
+        <div class="thread-meta">Started by <strong>${escapeHtml(thread.authorName)}</strong> on ${formatDate(thread.createdAt)}</div>
+      </div>
+      <div style="margin-bottom: 32px;">
+    `;
+
+    thread.posts.forEach((post, idx) => {
+      const isOP = idx === 0;
+      html += `
+        <div class="post ${isOP ? 'post-op' : ''}">
+          <div class="post-author">
+            <div class="post-avatar">${getInitials(post.authorName)}</div>
+            <div class="post-author-info">
+              <div class="post-author-name">${escapeHtml(post.authorName)}</div>
+              <div class="post-author-time">${formatDate(post.createdAt)}</div>
+            </div>
+          </div>
+          <div class="post-content">${escapeHtml(post.content)}</div>
+        </div>
+      `;
+    });
+
+    html += `
+      </div>
+      <div class="reply-form">
+        <h3>Add Your Reply</h3>
+        <form id="replyForm">
+          <div class="form-group">
+            <textarea id="replyContent" placeholder="Share your thoughts..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Post Reply</button>
+        </form>
+      </div>
+    `;
+
+    document.getElementById('threadContent').innerHTML = html;
+
+    document.getElementById('replyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const content = document.getElementById('replyContent').value.trim();
+
+      if (!content) return;
+
+      const threads = getThreads();
+      const thread = threads.find(t => t.id === threadId);
+      if (thread) {
+        thread.posts.push({
+          id: Date.now().toString(),
+          authorName: user.name,
+          authorEmail: user.email,
+          content: content,
+          createdAt: new Date().toISOString()
+        });
+        saveThreads(threads);
+        document.getElementById('replyContent').value = '';
+        renderThread();
+      }
+    });
+  }
+
+  renderThread();
+}
+</script>
+</body>
+</html>
