@@ -27,7 +27,7 @@
         data.submittedAt = new Date().toISOString();
 
         // Send to backend
-        const response = await fetch('http://localhost:3000/api/submissions', {
+        const response = await fetch(`${API_CONFIG.baseUrl}/submissions`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

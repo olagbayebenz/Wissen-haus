@@ -155,6 +155,7 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
   </div>
 </div>
 
+<script src="assets/js/config.js"></script>
 <script>
 // Show correct form on page load
 function initializeForm() {
@@ -270,7 +271,7 @@ document.getElementById('signupForm').addEventListener('submit', async function(
     error.classList.remove('show');
 
     const fullName = firstName + ' ' + lastName;
-    const response = await fetch('http://localhost:3000/api/auth/register', {
+    const response = await fetch(`${API_CONFIG.baseUrl}/auth/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: fullName, email, password })
@@ -310,7 +311,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     submitBtn.textContent = 'Signing in...';
     error.classList.remove('show');
 
-    const response = await fetch('http://localhost:3000/api/auth/login', {
+    const response = await fetch(`${API_CONFIG.baseUrl}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
