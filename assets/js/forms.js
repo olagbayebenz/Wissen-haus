@@ -27,12 +27,15 @@
         data.submittedAt = new Date().toISOString();
 
         // Send to backend
+        const headers = {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem('wh_authToken') || ''}`,
+          ...API_CONFIG.headers
+        };
+
         const response = await fetch(`${API_CONFIG.baseUrl}/submissions`, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem('wh_authToken') || ''}`
-          },
+          headers,
           body: JSON.stringify(data)
         });
 

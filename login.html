@@ -273,7 +273,10 @@ document.getElementById('signupForm').addEventListener('submit', async function(
     const fullName = firstName + ' ' + lastName;
     const response = await fetch(`${API_CONFIG.baseUrl}/auth/register`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        ...API_CONFIG.headers
+      },
       body: JSON.stringify({ name: fullName, email, password })
     });
 
@@ -313,7 +316,10 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
     const response = await fetch(`${API_CONFIG.baseUrl}/auth/login`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        ...API_CONFIG.headers
+      },
       body: JSON.stringify({ email, password })
     });
 
