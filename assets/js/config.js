@@ -7,10 +7,9 @@ const API_CONFIG = (() => {
       baseUrl: 'http://localhost:3000/api'
     };
   } else {
-    // Production: assume API is at the same domain
-    const protocol = window.location.protocol;
+    // Production: use Vercel backend
     return {
-      baseUrl: `${protocol}//${hostname}/api`
+      baseUrl: 'https://wissenhaus-backend-6bh66oejo-olagbayebenz-7030s-projects.vercel.app/api'
     };
   }
 })();
