@@ -232,65 +232,100 @@ document.getElementById('forgotForm').addEventListener('submit', function(e) {
   resultMsg.innerHTML = `<strong>Password Reset</strong><br><br>Your password is:<br><strong style="font-size:1.1rem;color:var(--green-800)">${user.password}</strong><br><br><small>Keep this secure and consider changing it after login.</small>`;
 });
 
-document.getElementById('signupForm').addEventListener('submit', function(e) {
+document.getElementById('signupForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const firstName = document.getElementById('firstName').value.trim();
   const lastName = document.getElementById('lastName').value.trim();
-  const username = document.getElementById('signupUsername').value.trim();
   const email = document.getElementById('signupEmail').value.trim();
   const password = document.getElementById('signupPassword').value;
   const error = document.getElementById('signupError');
+  const submitBtn = event.target.querySelector('button[type="submit"]');
 
-  if (!firstName || !lastName || !username || !email || !password) {
+  if (!firstName || !lastName || !email || !password) {
     error.textContent = 'All fields are required';
     error.classList.add('show');
     return;
   }
 
-  const users = JSON.parse(localStorage.getItem('wh_users') || '{}');
-  
-  if (users[email]) {
-    error.textContent = 'Email already registered';
+  if (password.length < 6) {
+    error.textContent = 'Password must be at least 6 characters';
     error.classList.add('show');
     return;
   }
 
-  // Check if username already exists
-  for (let existingEmail in users) {
-    if (users[existingEmail].username === username) {
-      error.textContent = 'Username already taken';
-      error.classList.add('show');
-      return;
+  try {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Signing up...';
+    error.classList.remove('show');
+
+    const fullName = firstName + ' ' + lastName;
+    const response = await fetch('http://localhost:3000/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: fullName, email, password })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Registration failed');
     }
+
+    // Store token and user info
+    localStorage.setItem('wh_authToken', data.token);
+    localStorage.setItem('wh_currentUser', JSON.stringify(data.user));
+    localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
+
+    // Redirect to community
+    window.location.href = 'community.html';
+  } catch (err) {
+    error.textContent = err.message || 'Registration failed';
+    error.classList.add('show');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Create Account';
   }
-
-  const fullName = firstName + ' ' + lastName;
-  users[email] = { firstName, lastName, username, name: fullName, password, joinedAt: new Date().toISOString() };
-  localStorage.setItem('wh_users', JSON.stringify(users));
-  localStorage.setItem('wh_currentUser', JSON.stringify({ email, name: fullName }));
-  localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
-
-  window.location.href = 'community.html';
 });
 
-document.getElementById('loginForm').addEventListener('submit', function(e) {
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const identifier = document.getElementById('loginUsername').value.trim();
+  const email = document.getElementById('loginUsername').value.trim();
   const password = document.getElementById('loginPassword').value;
   const error = document.getElementById('loginError');
+  const submitBtn = event.target.querySelector('button[type="submit"]');
 
-  const user = findUserByUsernameOrEmail(identifier);
+  try {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Signing in...';
+    error.classList.remove('show');
 
-  if (!user || user.password !== password) {
-    error.textContent = 'Invalid username/email or password';
+    const response = await fetch('http://localhost:3000/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Login failed');
+    }
+
+    // Store tokens and user info
+    localStorage.setItem('wh_authToken', data.token);
+    localStorage.setItem('wh_refreshToken', data.refreshToken);
+    localStorage.setItem('wh_currentUser', JSON.stringify(data.user));
+    localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
+
+    // Redirect to community
+    window.location.href = 'community.html';
+  } catch (err) {
+    error.textContent = err.message || 'Login failed';
     error.classList.add('show');
-    return;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Sign In';
   }
-
-  localStorage.setItem('wh_currentUser', JSON.stringify({ email: findEmailByUser(user), name: user.name }));
-  localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
-
-  window.location.href = 'community.html';
 });
 
 function findEmailByUser(targetUser) {
