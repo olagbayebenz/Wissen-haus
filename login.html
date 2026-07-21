@@ -277,14 +277,22 @@ document.getElementById('signupForm').addEventListener('submit', async function(
         'Content-Type': 'application/json',
         ...API_CONFIG.headers
       },
+      credentials: 'omit',
       body: JSON.stringify({ name: fullName, email, password })
     });
 
-    const data = await response.json();
-
     if (!response.ok) {
-      throw new Error(data.error || 'Registration failed');
+      let errorMsg = 'Registration failed';
+      try {
+        const errorData = await response.json();
+        errorMsg = errorData.error || errorMsg;
+      } catch (e) {
+        errorMsg = `HTTP ${response.status}: ${response.statusText}`;
+      }
+      throw new Error(errorMsg);
     }
+
+    const data = await response.json();
 
     // Store token and user info
     localStorage.setItem('wh_authToken', data.token);
@@ -321,14 +329,22 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         'Content-Type': 'application/json',
         ...API_CONFIG.headers
       },
+      credentials: 'omit',
       body: JSON.stringify({ email, password })
     });
 
-    const data = await response.json();
-
     if (!response.ok) {
-      throw new Error(data.error || 'Login failed');
+      let errorMsg = 'Login failed';
+      try {
+        const errorData = await response.json();
+        errorMsg = errorData.error || errorMsg;
+      } catch (e) {
+        errorMsg = `HTTP ${response.status}: ${response.statusText}`;
+      }
+      throw new Error(errorMsg);
     }
+
+    const data = await response.json();
 
     // Store tokens and user info
     localStorage.setItem('wh_authToken', data.token);
