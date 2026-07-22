@@ -155,15 +155,8 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
   </div>
 </div>
 
-<script src="assets/js/config.js"></script>
+<script type="module" src="assets/js/supabase-config.js"></script>
 <script>
-// Fallback if config.js fails
-if (typeof API_CONFIG === 'undefined') {
-  window.API_CONFIG = {
-    baseUrl: 'https://wissenhaus-backend-production-388d.up.railway.app/api',
-    headers: {}
-  };
-}
 
 // Show correct form on page load
 function initializeForm() {
@@ -278,46 +271,38 @@ document.getElementById('signupForm').addEventListener('submit', async function(
     submitBtn.textContent = 'Signing up...';
     error.classList.remove('show');
 
-    const fullName = firstName + ' ' + lastName;
-    const response = await fetch(`${API_CONFIG.baseUrl}/auth/register`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...API_CONFIG.headers
-      },
-      credentials: 'omit',
-      body: JSON.stringify({ name: fullName, email, password })
-    });
-
-    if (!response.ok) {
-      let errorMsg = 'Registration failed';
-      try {
-        const errorData = await response.json();
-        errorMsg = errorData.error || errorMsg;
-      } catch (e) {
-        errorMsg = `HTTP ${response.status}: ${response.statusText}`;
-      }
-      throw new Error(errorMsg);
+    // Wait for Supabase to load
+    if (!window.supabase) {
+      throw new Error('Supabase not initialized');
     }
 
-    const data = await response.json();
+    const { data, error: authError } = await window.supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          first_name: firstName,
+          last_name: lastName
+        }
+      }
+    });
 
-    // Store token and user info
-    localStorage.setItem('wh_authToken', data.token);
-    localStorage.setItem('wh_currentUser', JSON.stringify(data.user));
+    if (authError) throw new Error(authError.message);
+
+    // Store user info
+    const fullName = firstName + ' ' + lastName;
+    localStorage.setItem('wh_currentUser', JSON.stringify({
+      email,
+      name: fullName,
+      id: data.user.id
+    }));
     localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
 
     // Redirect to community
     window.location.href = 'community.html';
   } catch (err) {
-    console.error('Signup error details:', {
-      message: err.message,
-      name: err.name,
-      stack: err.stack,
-      backend: API_CONFIG.baseUrl
-    });
-    const errorMsg = err.message || err.name || 'Unknown error';
-    error.textContent = `Error: ${errorMsg} | Backend: ${API_CONFIG.baseUrl} | Type: ${err.constructor.name}`;
+    console.error('Signup error:', err.message);
+    error.textContent = `Error: ${err.message}`;
     error.classList.add('show');
   } finally {
     submitBtn.disabled = false;
@@ -337,40 +322,35 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     submitBtn.textContent = 'Signing in...';
     error.classList.remove('show');
 
-    const response = await fetch(`${API_CONFIG.baseUrl}/auth/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...API_CONFIG.headers
-      },
-      credentials: 'omit',
-      body: JSON.stringify({ email, password })
-    });
-
-    if (!response.ok) {
-      let errorMsg = 'Login failed';
-      try {
-        const errorData = await response.json();
-        errorMsg = errorData.error || errorMsg;
-      } catch (e) {
-        errorMsg = `HTTP ${response.status}: ${response.statusText}`;
-      }
-      throw new Error(errorMsg);
+    // Wait for Supabase to load
+    if (!window.supabase) {
+      throw new Error('Supabase not initialized');
     }
 
-    const data = await response.json();
+    const { data, error: authError } = await window.supabase.auth.signInWithPassword({
+      email,
+      password
+    });
 
-    // Store tokens and user info
-    localStorage.setItem('wh_authToken', data.token);
-    localStorage.setItem('wh_refreshToken', data.refreshToken);
-    localStorage.setItem('wh_currentUser', JSON.stringify(data.user));
+    if (authError) throw new Error(authError.message);
+
+    // Get user profile data
+    const user = data.user;
+    const userMetadata = user.user_metadata || {};
+
+    // Store user info
+    localStorage.setItem('wh_currentUser', JSON.stringify({
+      email: user.email,
+      name: userMetadata.first_name ? `${userMetadata.first_name} ${userMetadata.last_name || ''}` : user.email,
+      id: user.id
+    }));
     localStorage.setItem('wh_visitDate', new Date().toISOString().split('T')[0]);
 
     // Redirect to community
     window.location.href = 'community.html';
   } catch (err) {
-    console.error('Login error:', err, 'Backend URL:', API_CONFIG.baseUrl);
-    error.textContent = `Error: ${err.message || 'Login failed'}. Backend: ${API_CONFIG.baseUrl}`;
+    console.error('Login error:', err.message);
+    error.textContent = `Error: ${err.message}`;
     error.classList.add('show');
   } finally {
     submitBtn.disabled = false;
