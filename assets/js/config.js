@@ -9,7 +9,7 @@ const API_CONFIG = (() => {
     };
   } else {
     return {
-      baseUrl: 'https://wissenhaus-backend-production.up.railway.app/api',
+      baseUrl: 'https://wissenhaus-backend-production-388d.up.railway.app/api',
       headers: {}
     };
   }
