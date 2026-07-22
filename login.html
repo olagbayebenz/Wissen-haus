@@ -157,6 +157,14 @@ body{background:linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 10
 
 <script src="assets/js/config.js"></script>
 <script>
+// Fallback if config.js fails
+if (typeof API_CONFIG === 'undefined') {
+  window.API_CONFIG = {
+    baseUrl: 'https://wissenhaus-backend-production-388d.up.railway.app/api',
+    headers: {}
+  };
+}
+
 // Show correct form on page load
 function initializeForm() {
   const signupSection = document.getElementById('signupSection');
