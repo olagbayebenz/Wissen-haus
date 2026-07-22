@@ -8,8 +8,9 @@ const API_CONFIG = (() => {
       headers: {}
     };
   } else {
+    // Vercel backend is at same domain under /api
     return {
-      baseUrl: 'https://wissenhaus-backend-production-388d.up.railway.app/api',
+      baseUrl: `${window.location.protocol}//${window.location.host}/api`,
       headers: {}
     };
   }

@@ -1,0 +1,16 @@
+{
+  "name": "wissenhaus",
+  "version": "1.0.0",
+  "description": "Wissen-Haus Youth Empowerment Foundation",
+  "private": true,
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "joi": "^17.11.0",
+    "jwt-simple": "^0.5.6",
+    "pg": "^8.11.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
