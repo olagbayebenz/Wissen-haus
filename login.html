@@ -302,8 +302,14 @@ document.getElementById('signupForm').addEventListener('submit', async function(
     // Redirect to community
     window.location.href = 'community.html';
   } catch (err) {
-    console.error('Signup error:', err, 'Backend URL:', API_CONFIG.baseUrl);
-    error.textContent = `Error: ${err.message || 'Registration failed'}. Backend: ${API_CONFIG.baseUrl}`;
+    console.error('Signup error details:', {
+      message: err.message,
+      name: err.name,
+      stack: err.stack,
+      backend: API_CONFIG.baseUrl
+    });
+    const errorMsg = err.message || err.name || 'Unknown error';
+    error.textContent = `Error: ${errorMsg} | Backend: ${API_CONFIG.baseUrl} | Type: ${err.constructor.name}`;
     error.classList.add('show');
   } finally {
     submitBtn.disabled = false;
