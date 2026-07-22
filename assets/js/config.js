@@ -8,7 +8,6 @@ const API_CONFIG = (() => {
       headers: {}
     };
   } else {
-    // Production: use Railway backend
     return {
       baseUrl: 'https://wissenhaus-backend-production.up.railway.app/api',
       headers: {}
@@ -16,7 +15,6 @@ const API_CONFIG = (() => {
   }
 })();
 
-// Export for use in other scripts
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = API_CONFIG;
 }
