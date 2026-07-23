@@ -83,6 +83,28 @@ document.addEventListener('DOMContentLoaded', async function() {
         return;
       }
 
+      // Trigger backend email sending (async, non-blocking)
+      try {
+        const backendUrl = 'https://wissenhaus-backend.vercel.app/api/submissions';
+        fetch(backendUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            firstName: data.firstName,
+            lastName: data.lastName,
+            email: data.email,
+            phone: data.phone,
+            city: data.city,
+            experience: data.experience,
+            type: applicationType,
+            expertise: expertise.length > 0 ? expertise : undefined,
+            areas: areas.length > 0 ? areas : undefined
+          })
+        }).catch(err => console.log('Backend email notification failed (non-critical):', err));
+      } catch (err) {
+        console.log('Could not reach backend for email:', err);
+      }
+
       // Success message
       alert('Thank you for your application! We will review it and be in touch soon.');
       form.reset();
