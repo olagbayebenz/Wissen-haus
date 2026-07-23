@@ -156,6 +156,11 @@
   `;
 
   const answers = { correct: ['b', 'b', 'b'] };
+  const questionText = [
+  { q: 'What is a key quality of good leaders?', opts: ['Being the smartest person', 'Developing others and inspiring action', 'Doing all the work', 'Keeping information to yourself'] },
+  { q: 'Can you lead without a formal title?', opts: ['No, only managers lead', 'Yes, through influence and initiative', 'Only executives lead', 'Leadership requires authority'] },
+  { q: 'How do you influence others as an individual contributor?', opts: ['You can\'t', 'Show results, develop trust, take initiative', 'Wait for promotion', 'Follow orders only'] }
+];
   const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
 
   function getCourseProgress() {

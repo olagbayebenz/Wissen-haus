@@ -156,6 +156,11 @@
   `;
 
   const answers = { correct: ['b', 'b', 'b'] };
+  const questionText = [
+  { q: 'When addressing workplace conflict, what should you do first?', opts: ['Escalate immediately', 'Cool down and talk privately 1-on-1', 'Complain to others', 'Avoid the situation'] },
+  { q: 'What is key to resolving conflict?', opts: ['Winning the argument', 'Understanding the other person\'s perspective', 'Proving you\'re right', 'Never compromise'] },
+  { q: 'After resolving a conflict, you should:', opts: ['Never mention it again', 'Follow up to ensure solution works', 'Hold a grudge', 'Avoid the person'] }
+];
   const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
 
   function getCourseProgress() {

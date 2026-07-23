@@ -156,6 +156,11 @@
   `;
 
   const answers = { correct: ['b', 'b', 'b'] };
+  const questionText = [
+  { q: 'What is emotional intelligence?', opts: ['High IQ', 'Understanding and managing emotions in yourself and others', 'Avoiding emotions', 'Being unemotional'] },
+  { q: 'Why does EQ matter at work?', opts: ['It doesn\'t', 'Improves relationships, communication, and leadership', 'Only for managers', 'No real impact'] },
+  { q: 'How do you build emotional intelligence?', opts: ['You\'re born with it', 'Self-reflection, empathy practice, feedback seeking', 'Ignore emotions', 'Suppress feelings'] }
+];
   const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
 
   function getCourseProgress() {
