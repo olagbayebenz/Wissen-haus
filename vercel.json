@@ -1,5 +1,0 @@
-{
-  "buildCommand": "true",
-  "outputDirectory": ".",
-  "nodeVersion": "24.x"
-}
