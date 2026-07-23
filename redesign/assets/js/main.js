@@ -16,7 +16,7 @@
     ]},
     { key: 'programmes', label: 'Programmes', menu: [
       ['programmes.html', 'All Programmes', 'The full overview'],
-      ['bootcamp.html', 'Career Bootcamp', 'Skills for JS3-SS1 students'],
+      ['bootcamp.html', 'Career Clarity Trade Fair', 'Skills for JS3-SS1 students'],
       ['podcast.html', 'Opportunity Blueprint', 'Our flagship podcast'],
       ['impact-content.html', 'Impact Content', 'Social-impact storytelling'],
       ['programmes.html#events', 'Events', 'Bootcamps, cafés & more']
