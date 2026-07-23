@@ -198,6 +198,202 @@
     document.getElementById('careerAssessmentForm').reset();
     document.querySelector('.career-form-body').scrollIntoView({ behavior: 'smooth' });
   }
+
+  function generateCareerResults(data) {
+    const resultContainer = document.getElementById('careerResultContainer');
+    const careerGoal = data.careerGoal.toLowerCase();
+    let selectedPath = 'tech';
+
+    if (careerGoal.includes('business') || careerGoal.includes('entrepreneur')) selectedPath = 'business';
+    else if (careerGoal.includes('media') || careerGoal.includes('content')) selectedPath = 'media';
+    else if (careerGoal.includes('health') || careerGoal.includes('medical')) selectedPath = 'healthcare';
+    else if (careerGoal.includes('social') || careerGoal.includes('impact')) selectedPath = 'social';
+
+    const timeline = calculateTimeline(parseInt(data.age), data.currentJob);
+
+    const resultsHTML = `
+      <div class="career-results">
+        <div class="results-header">
+          <h2>Your Personalized Career Roadmap</h2>
+          <p class="results-subtitle">Based on your profile, ${data.name}</p>
+          <button class="btn btn--outline" onclick="resetCareerAssessment()">Take Assessment Again</button>
+        </div>
+
+        <section class="career-section">
+          <h3>🗺️ Your Career Roadmap</h3>
+          <div class="roadmap">
+            <div class="roadmap-item">
+              <div class="roadmap-phase">Phase 1</div>
+              <div class="roadmap-title">Foundation (0-6 months)</div>
+              <ul>
+                <li>Build core skills in your chosen field</li>
+                <li>Complete relevant online courses/certifications</li>
+                <li>Connect with professionals in your field</li>
+                <li>Build a portfolio of 2-3 projects</li>
+              </ul>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-phase">Phase 2</div>
+              <div class="roadmap-title">Growth (6-12 months)</div>
+              <ul>
+                <li>Seek internship or junior role</li>
+                <li>Deepen expertise through real projects</li>
+                <li>Find a mentor in your field</li>
+                <li>Build professional network</li>
+              </ul>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-phase">Phase 3</div>
+              <div class="roadmap-title">Advancement (1-2 years)</div>
+              <ul>
+                <li>Transition to mid-level role</li>
+                <li>Develop leadership skills</li>
+                <li>Consider international opportunities</li>
+                <li>Mentor others in your field</li>
+              </ul>
+            </div>
+          </div>
+          <p class="timeline-estimate"><strong>Expected Timeline:</strong> ${timeline} years to reach your goal</p>
+        </section>
+
+        <section class="career-section">
+          <h3>💼 Discover Career Pathways</h3>
+          <p>Not sure what careers exist? Explore these paths. For each, we explain what the job is, skills needed, salary ranges in Nigeria, and how to get started.</p>
+          <div class="pathways-grid">
+            ${generatePathwayCard('Tech', 'tech', 'Software Engineering, Data Science, Product Management, UX Design', ['Problem-solving', 'Programming', 'System thinking'], '₦1.5M - ₦8M+/year')}
+            ${generatePathwayCard('Business', 'business', 'Management, Finance, Sales, Strategy', ['Leadership', 'Analytics', 'Communication'], '₦1.2M - ₦6M+/year')}
+            ${generatePathwayCard('Media & Content', 'media', 'Journalism, Content Creation, Video Production, Marketing', ['Storytelling', 'Creativity', 'Research'], '₦600K - ₦3M+/year')}
+            ${generatePathwayCard('Entrepreneurship', 'entrepreneurship', 'Startup Founder, Business Owner, Venture Building', ['Innovation', 'Risk management', 'Resilience'], 'Variable (₦0 - unlimited)')}
+            ${generatePathwayCard('Healthcare', 'healthcare', 'Clinical, Research, Healthcare Tech, Public Health', ['Empathy', 'Scientific knowledge', 'Attention to detail'], '₦1.5M - ₦5M+/year')}
+            ${generatePathwayCard('Social Impact', 'social', 'NGO Leadership, Policy, Community Development, CSR', ['Systems thinking', 'Communication', 'Advocacy'], '₦800K - ₦3M+/year')}
+          </div>
+        </section>
+
+        <section class="career-section panel-light">
+          <h3>🌍 See Global Opportunities</h3>
+          <p>Think opportunities only exist abroad? Think again. Here's how to compete globally:</p>
+          <div class="opportunities">
+            <div class="opp-item">
+              <h4>🔗 Remote Jobs</h4>
+              <p>Work for global companies from Nigeria. Remote roles often pay 2-3x more than local positions.</p>
+              <a href="#" class="textlink">Browse remote jobs →</a>
+            </div>
+            <div class="opp-item">
+              <h4>🎓 International Scholarships</h4>
+              <p>Study abroad programs, fully-funded masters, and executive education globally recognized.</p>
+              <a href="#" class="textlink">Find scholarships →</a>
+            </div>
+            <div class="opp-item">
+              <h4>✈️ Visa-Sponsored Roles</h4>
+              <p>Companies actively seeking Nigerian talent with visa sponsorship packages.</p>
+              <a href="#" class="textlink">Explore visa roles →</a>
+            </div>
+            <div class="opp-item">
+              <h4>🚀 Position Yourself</h4>
+              <p>Build skills, portfolio, and network to compete for the world's best opportunities.</p>
+              <a href="#" class="textlink">Create global profile →</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="career-section">
+          <h3>🎯 Skills & Qualifications You Need</h3>
+          <div class="skills-matrix">
+            <div class="skill-category">
+              <h4>Must-Have Skills (Critical)</h4>
+              <div class="skills-list">
+                <span class="skill-badge critical">Communication</span>
+                <span class="skill-badge critical">Problem-solving</span>
+                <span class="skill-badge critical">Adaptability</span>
+                <span class="skill-badge critical">Time management</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Path-Specific Skills</h4>
+              <div class="skills-list" id="pathSpecificSkills">
+                ${getPathSpecificSkills(selectedPath)}
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Recommended Qualifications</h4>
+              <ul>
+                <li>Bachelor's degree or equivalent (not always required)</li>
+                <li>Relevant certifications (Coursera, Google, AWS, etc.)</li>
+                <li>Portfolio of real projects</li>
+                <li>1-2 years of relevant experience</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="career-section">
+          <h3>👥 Get Real Mentorship</h3>
+          <p>Struggling to figure it out alone? Connect with professionals who've been where you are.</p>
+          <div class="mentorship-cta">
+            <div class="mentor-benefit">
+              <h4>✓ Get Answers</h4>
+              <p>Ask real questions to people who've navigated the same path</p>
+            </div>
+            <div class="mentor-benefit">
+              <h4>✓ Learn from Mistakes</h4>
+              <p>Avoid pitfalls by learning from others' experiences</p>
+            </div>
+            <div class="mentor-benefit">
+              <h4>✓ Get Accountability</h4>
+              <p>Have someone who actually cares check your progress</p>
+            </div>
+          </div>
+          <a href="mentor-application.html" class="btn mt-m">Find a Mentor</a>
+        </section>
+
+        <div class="results-footer">
+          <p>This roadmap is personalized to YOU. Your unique background, skills, and goals matter.</p>
+          <button class="btn btn--outline" onclick="resetCareerAssessment()">Start Over</button>
+        </div>
+      </div>
+    `;
+
+    resultContainer.innerHTML = resultsHTML;
+  }
+
+  function generatePathwayCard(title, id, jobs, skills, salary) {
+    return `
+      <div class="pathway-card" data-pathway="${id}">
+        <h4>${title}</h4>
+        <div class="pathway-info">
+          <p><strong>Roles:</strong> ${jobs}</p>
+          <p><strong>Key Skills:</strong> ${skills.join(', ')}</p>
+          <p><strong>Salary Range (Nigeria):</strong> ${salary}</p>
+        </div>
+        <a href="#" class="textlink">Learn more →</a>
+      </div>
+    `;
+  }
+
+  function getPathSpecificSkills(pathway) {
+    const skills = {
+      tech: ['Programming/Coding', 'Data Analysis', 'System Design', 'Cloud Platforms', 'DevOps'],
+      business: ['Financial Analysis', 'Strategic Planning', 'Sales', 'Negotiation', 'Excel/Analytics'],
+      media: ['Content Writing', 'Video Editing', 'SEO/Marketing', 'Storytelling', 'Social Media'],
+      healthcare: ['Clinical Skills', 'Research', 'Empathy', 'Attention to Detail', 'Medical Knowledge'],
+      social: ['Systems Thinking', 'Advocacy', 'Program Management', 'Community Building', 'Policy Knowledge'],
+      entrepreneurship: ['Business Planning', 'Financial Management', 'Sales', 'Leadership', 'Innovation']
+    };
+    return (skills[pathway] || skills.tech).map(skill =>
+      `<span class="skill-badge">${skill}</span>`
+    ).join('');
+  }
+
+  function calculateTimeline(age, currentJob) {
+    if (currentJob.toLowerCase().includes('student') || currentJob.toLowerCase().includes('fresh')) {
+      return '2-3';
+    } else if (currentJob.toLowerCase().includes('intern') || currentJob.toLowerCase().includes('entry')) {
+      return '1-2';
+    } else if (currentJob.toLowerCase().includes('junior') || currentJob.toLowerCase().includes('mid')) {
+      return '1-2';
+    }
+    return '1.5-2.5';
+  }
 </script>
 </body>
 </html>
