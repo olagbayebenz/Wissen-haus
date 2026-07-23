@@ -444,6 +444,218 @@
     background: white;
     border: 2px solid var(--line);
   }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .section-box {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    border: 1px solid var(--line);
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--green-800);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .phase-card {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(184, 134, 11, 0.02) 100%);
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 16px;
+    transition: all 0.3s;
+  }
+
+  .phase-card:hover {
+    border-color: var(--green-800);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.1);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .phase-badge {
+    background: var(--green-800);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    min-width: fit-content;
+  }
+
+  .phase-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .phase-duration {
+    color: var(--ink-60);
+    font-size: 13px;
+  }
+
+  .pathway-grid-improved {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 0;
+  }
+
+  .pathway-card-improved {
+    background: white;
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pathway-card-improved:hover {
+    border-color: var(--green-800);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(34, 197, 94, 0.15);
+  }
+
+  .pathway-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .pathway-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--green-800);
+    margin-bottom: 16px;
+  }
+
+  .pathway-detail {
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+
+  .pathway-detail-label {
+    display: block;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .pathway-detail-value {
+    color: var(--ink-60);
+    line-height: 1.5;
+  }
+
+  .opportunities-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .opportunity-card {
+    background: white;
+    border: 2px solid var(--line);
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .opportunity-card:hover {
+    border-color: var(--green-800);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.1);
+  }
+
+  .opportunity-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .opportunity-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .opportunity-desc {
+    color: var(--ink-60);
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+
+    .pathway-grid-improved {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skill-group-box {
+    background: var(--bg-light);
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .skill-group-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .skill-badges-improved {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-tag {
+    background: white;
+    border: 2px solid var(--green-800);
+    color: var(--green-800);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .skill-tag.critical {
+    background: var(--green-800);
+    color: white;
+  }
 </style>
 </head>
 <body data-page="assessment">
@@ -636,110 +848,171 @@
         <button class="btn" onclick="resetCareerAssessment()">Take Assessment Again</button>
       </div>
 
-      <section class="results-section">
-        <h3>🗺️ Your 3-Phase Roadmap</h3>
-        <div class="roadmap-grid">
-          <div class="roadmap-card">
-            <span class="roadmap-phase-badge">Phase 1</span>
-            <h4>Foundation</h4>
-            <p style="color: var(--ink-60); font-size: 13px; margin-bottom: 12px;">0-6 months</p>
-            <ul>
-              <li>Build core skills in your chosen field</li>
-              <li>Complete relevant online courses</li>
-              <li>Connect with professionals</li>
-              <li>Build a portfolio of 2-3 projects</li>
+      <div class="results-grid">
+        <!-- ROADMAP SECTION -->
+        <div class="section-box">
+          <div class="section-title">🗺️ Your 3-Phase Career Roadmap</div>
+          <p style="color: var(--ink-60); margin-bottom: 28px;">A clear path to reaching your goal. Expected timeline: <strong style="color: var(--green-800);">${timeline} years</strong></p>
+
+          <div class="phase-card">
+            <div class="phase-header">
+              <span class="phase-badge">Phase 1</span>
+              <div>
+                <div class="phase-title">Foundation</div>
+                <div class="phase-duration">0-6 months</div>
+              </div>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Build core skills in your chosen field
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Complete relevant online courses
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Connect with professionals
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Build a portfolio of 2-3 projects
+              </li>
             </ul>
           </div>
-          <div class="roadmap-card">
-            <span class="roadmap-phase-badge">Phase 2</span>
-            <h4>Growth</h4>
-            <p style="color: var(--ink-60); font-size: 13px; margin-bottom: 12px;">6-12 months</p>
-            <ul>
-              <li>Seek internship or junior role</li>
-              <li>Deepen expertise through real projects</li>
-              <li>Find a mentor in your field</li>
-              <li>Build your professional network</li>
+
+          <div class="phase-card">
+            <div class="phase-header">
+              <span class="phase-badge">Phase 2</span>
+              <div>
+                <div class="phase-title">Growth</div>
+                <div class="phase-duration">6-12 months</div>
+              </div>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Seek internship or junior role
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Deepen expertise through real projects
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Find a mentor in your field
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Build your professional network
+              </li>
             </ul>
           </div>
-          <div class="roadmap-card">
-            <span class="roadmap-phase-badge">Phase 3</span>
-            <h4>Advancement</h4>
-            <p style="color: var(--ink-60); font-size: 13px; margin-bottom: 12px;">1-2 years</p>
-            <ul>
-              <li>Transition to mid-level role</li>
-              <li>Develop leadership skills</li>
-              <li>Explore international opportunities</li>
-              <li>Mentor others in your field</li>
+
+          <div class="phase-card">
+            <div class="phase-header">
+              <span class="phase-badge">Phase 3</span>
+              <div>
+                <div class="phase-title">Advancement</div>
+                <div class="phase-duration">1-2 years</div>
+              </div>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Transition to mid-level role
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Develop leadership skills
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Explore international opportunities
+              </li>
+              <li style="font-size: 13px; color: var(--ink-60); padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--green-800); font-weight: bold;">✓</span>
+                Mentor others in your field
+              </li>
             </ul>
           </div>
         </div>
-        <div class="timeline-box">
-          <strong>Expected Timeline:</strong> ${timeline} years to reach your goal
-        </div>
-      </section>
 
-      <section class="results-section">
-        <h3>💼 Discover 6 Career Pathways</h3>
-        <p style="color: var(--ink-60); margin-bottom: 24px;">Not sure what careers exist? Explore these paths and learn what skills you need, what roles exist, and realistic salary ranges in Nigeria.</p>
-        <div class="pathway-grid">
-          ${generatePathwayCard('Tech', 'tech', 'Software Engineer, Data Scientist, Product Manager, UX Designer', ['Problem-solving', 'Programming', 'System Thinking'], '₦1.5M - ₦8M+/year')}
-          ${generatePathwayCard('Business', 'business', 'Manager, Finance Analyst, Sales Lead, Strategist', ['Leadership', 'Analytics', 'Communication'], '₦1.2M - ₦6M+/year')}
-          ${generatePathwayCard('Media & Content', 'media', 'Journalist, Content Creator, Video Producer, Marketer', ['Storytelling', 'Creativity', 'Research'], '₦600K - ₦3M+/year')}
-          ${generatePathwayCard('Entrepreneurship', 'entrepreneurship', 'Founder, Business Owner, Venture Builder', ['Innovation', 'Risk Management', 'Resilience'], 'Variable (₦0 - ∞)')}
-          ${generatePathwayCard('Healthcare', 'healthcare', 'Healthcare Provider, Researcher, Healthcare Tech, Public Health', ['Empathy', 'Scientific Knowledge', 'Attention to Detail'], '₦1.5M - ₦5M+/year')}
-          ${generatePathwayCard('Social Impact', 'social', 'NGO Leader, Policy Expert, Community Developer, CSR Manager', ['Systems Thinking', 'Communication', 'Advocacy'], '₦800K - ₦3M+/year')}
+        <!-- PATHWAYS SECTION -->
+        <div class="section-box">
+          <div class="section-title">💼 Discover 6 Career Pathways</div>
+          <p style="color: var(--ink-60); margin-bottom: 28px;">Explore different career paths with realistic salary ranges in Nigeria and the skills needed.</p>
+          <div class="pathway-grid-improved">
+            ${generatePathwayCardImproved('🖥️ Tech', 'Software Engineer, Data Scientist, Product Manager, UX Designer', '₦1.5M - ₦8M+/year')}
+            ${generatePathwayCardImproved('💼 Business', 'Manager, Finance Analyst, Sales Lead, Strategist', '₦1.2M - ₦6M+/year')}
+            ${generatePathwayCardImproved('📱 Media & Content', 'Journalist, Content Creator, Video Producer, Marketer', '₦600K - ₦3M+/year')}
+            ${generatePathwayCardImproved('🚀 Entrepreneurship', 'Founder, Business Owner, Venture Builder', 'Variable (₦0 - ∞)')}
+            ${generatePathwayCardImproved('🏥 Healthcare', 'Healthcare Provider, Researcher, Healthcare Tech, Public Health', '₦1.5M - ₦5M+/year')}
+            ${generatePathwayCardImproved('🤝 Social Impact', 'NGO Leader, Policy Expert, Community Developer, CSR Manager', '₦800K - ₦3M+/year')}
+          </div>
         </div>
-      </section>
 
-      <section class="opportunities-section">
-        <h3 style="text-align: center; margin-bottom: 30px;">🌍 Global Opportunities Await</h3>
-        <div class="opportunities-grid">
-          <div class="opp-card">
-            <h4>🔗 Remote Jobs</h4>
-            <p>Work for global companies from Nigeria. Remote roles often pay 2-3x more than local positions.</p>
-          </div>
-          <div class="opp-card">
-            <h4>🎓 Scholarships</h4>
-            <p>Study abroad programs, fully-funded masters, and executive education globally recognized.</p>
-          </div>
-          <div class="opp-card">
-            <h4>✈️ Visa-Sponsored Roles</h4>
-            <p>Companies actively seeking Nigerian talent with visa sponsorship packages.</p>
-          </div>
-          <div class="opp-card">
-            <h4>🚀 Build Your Profile</h4>
-            <p>Skills, portfolio, and network to compete for the world's best opportunities.</p>
+        <!-- OPPORTUNITIES SECTION -->
+        <div class="section-box" style="background: var(--bg-light);">
+          <div class="section-title">🌍 Global Opportunities Await</div>
+          <p style="color: var(--ink-60); margin-bottom: 28px;">Access opportunities beyond borders while building your career in Nigeria.</p>
+          <div class="opportunities-box">
+            <div class="opportunity-card">
+              <div class="opportunity-icon">🔗</div>
+              <h4 class="opportunity-title">Remote Jobs</h4>
+              <p class="opportunity-desc">Work for global companies from Nigeria. Remote roles often pay 2-3x more.</p>
+            </div>
+            <div class="opportunity-card">
+              <div class="opportunity-icon">🎓</div>
+              <h4 class="opportunity-title">Scholarships</h4>
+              <p class="opportunity-desc">Study abroad programs and fully-funded masters globally recognized.</p>
+            </div>
+            <div class="opportunity-card">
+              <div class="opportunity-icon">✈️</div>
+              <h4 class="opportunity-title">Visa-Sponsored Roles</h4>
+              <p class="opportunity-desc">Companies seeking Nigerian talent with visa sponsorship packages.</p>
+            </div>
+            <div class="opportunity-card">
+              <div class="opportunity-icon">🚀</div>
+              <h4 class="opportunity-title">Build Your Profile</h4>
+              <p class="opportunity-desc">Skills, portfolio, and network to compete for world-class opportunities.</p>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section class="results-section">
-        <h3>🎯 Skills You Need to Develop</h3>
-        <div class="skill-group">
-          <h4>🔴 Must-Have (Critical)</h4>
-          <div class="skill-badges">
-            <span class="skill-badge critical">Communication</span>
-            <span class="skill-badge critical">Problem-solving</span>
-            <span class="skill-badge critical">Adaptability</span>
-            <span class="skill-badge critical">Time Management</span>
+        <!-- SKILLS SECTION -->
+        <div class="section-box">
+          <div class="section-title">🎯 Skills You Need to Develop</div>
+          <div class="skills-container">
+            <div class="skill-group-box">
+              <div class="skill-group-title">🔴 Must-Have (Critical)</div>
+              <div class="skill-badges-improved">
+                <span class="skill-tag critical">Communication</span>
+                <span class="skill-tag critical">Problem-solving</span>
+                <span class="skill-tag critical">Adaptability</span>
+                <span class="skill-tag critical">Time Management</span>
+              </div>
+            </div>
+            <div class="skill-group-box">
+              <div class="skill-group-title">💡 Path-Specific Skills</div>
+              <div class="skill-badges-improved">
+                ${getPathSpecificSkills(selectedPath)}
+              </div>
+            </div>
           </div>
         </div>
-        <div class="skill-group">
-          <h4>💡 Path-Specific Skills</h4>
-          <div class="skill-badges">
-            ${getPathSpecificSkills(selectedPath)}
-          </div>
-        </div>
-      </section>
 
-      <section class="mentorship-cta">
-        <h3>👥 Get Real Mentorship</h3>
-        <p>Struggling to figure it out alone? Connect with professionals who've been where you are and get the guidance you need.</p>
-        <a href="mentor-application.html" class="btn">Find a Mentor</a>
-      </section>
+        <!-- MENTORSHIP SECTION -->
+        <div class="mentorship-cta">
+          <h3>👥 Get Real Mentorship</h3>
+          <p>Struggling to figure it out alone? Connect with professionals who've been where you are and get personalized guidance.</p>
+          <a href="mentor-application.html" class="btn">Find a Mentor</a>
+        </div>
+      </div>
 
       <div class="reset-button">
-        <button class="btn" onclick="resetCareerAssessment()">Start Over</button>
+        <button class="btn" onclick="resetCareerAssessment()">Take Assessment Again</button>
       </div>
     `;
 
@@ -759,6 +1032,22 @@
     `;
   }
 
+  function generatePathwayCardImproved(title, roles, salary) {
+    return `
+      <div class="pathway-card-improved">
+        <h3 class="pathway-title">${title}</h3>
+        <div class="pathway-detail">
+          <span class="pathway-detail-label">Key Roles</span>
+          <div class="pathway-detail-value">${roles}</div>
+        </div>
+        <div class="pathway-detail">
+          <span class="pathway-detail-label">Nigeria Salary Range</span>
+          <div class="pathway-detail-value"><strong style="color: var(--green-800);">${salary}</strong></div>
+        </div>
+      </div>
+    `;
+  }
+
   function getPathSpecificSkills(pathway) {
     const skills = {
       tech: ['Programming', 'Data Analysis', 'System Design', 'Cloud Platforms', 'DevOps'],
@@ -769,7 +1058,7 @@
       entrepreneurship: ['Business Planning', 'Financial Mgmt', 'Sales', 'Leadership', 'Innovation']
     };
     return (skills[pathway] || skills.tech).map(skill =>
-      `<span class="skill-badge">${skill}</span>`
+      `<span class="skill-tag">${skill}</span>`
     ).join('');
   }
 
