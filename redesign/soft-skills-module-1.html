@@ -157,6 +157,11 @@
   `;
 
   const answers = { correct: ['b', 'b', 'b'] };
+  const questionText = [
+    { q: 'When writing a professional email about a problem, what should you always include?', opts: ['Just the problem without offering solutions', 'The specific issue, its impact, and concrete next steps', 'Emotional language to express how frustrated you are', 'A list of all past problems with this person'] },
+    { q: 'What is active listening?', opts: ['Staying quiet while someone talks', 'Fully focusing on the speaker, asking clarifying questions, and reflecting back what you heard', 'Thinking about your response while they speak', 'Taking detailed notes without making eye contact'] },
+    { q: 'When giving constructive feedback, you should focus on:', opts: ['The person\'s character and personality', 'Specific behaviors and their impact, with suggestions for improvement', 'Criticism disguised as jokes', 'Only pointing out mistakes without solutions'] }
+  ];
   const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
 
   function getCourseProgress() {
@@ -190,8 +195,18 @@
     }
 
     let correct = 0;
+    const wrongQuestions = [];
     userAnswers.forEach((ans, idx) => {
-      if (ans === answers.correct[idx]) correct++;
+      if (ans === answers.correct[idx]) {
+        correct++;
+      } else {
+        wrongQuestions.push({
+          index: idx + 1,
+          question: questionText[idx].q,
+          userAnswer: questionText[idx].opts[ans.charCodeAt(0) - 97],
+          correctAnswer: questionText[idx].opts[answers.correct[idx].charCodeAt(0) - 97]
+        });
+      }
     });
 
     const percentage = (correct / 3) * 100;
@@ -210,7 +225,12 @@
       saveCourseProgress(progress);
       updateProgress();
     } else {
-      resultDiv.innerHTML = `<div class="module__quiz-fail">You got ${correct}/3 correct. Need 80% to pass. Try again!</div>`;
+      let html = `<div class="module__quiz-fail">You got ${correct}/3 correct. Need 80% to pass. Try again!<br><br><strong>Questions You Got Wrong:</strong>`;
+      wrongQuestions.forEach(item => {
+        html += `<div style="margin-top:12px;padding:12px;background:rgba(220,38,38,0.1);border-left:3px solid var(--red);border-radius:4px"><strong>Q${item.index}:</strong> ${item.question}<br><span style="color:var(--red)">Your answer:</span> ${item.userAnswer}<br><span style="color:var(--green-800)">Correct answer:</span> ${item.correctAnswer}</div>`;
+      });
+      html += '</div>';
+      resultDiv.innerHTML = html;
     }
   });
 

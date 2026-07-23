@@ -100,6 +100,11 @@
     </article>
   `;
   const answers = { correct: ['b', 'b', 'b'] };
+  const questionText = [
+    { q: 'When two teammates disagree on project approach, what\'s the best first step?', opts: ['Go with your idea and ignore theirs', 'Ask each person why their approach matters to them and listen for underlying concerns', 'Let the loudest person decide', 'Avoid the conflict entirely'] },
+    { q: 'In a remote team setting, what\'s most important for collaboration?', opts: ['Only communicating through video calls', 'Clear documentation, regular check-ins, and respectful async communication', 'Working at the exact same time as everyone else', 'Assuming everyone works the same way you do'] },
+    { q: 'How should you handle a conflict with a teammate?', opts: ['Talk badly about them to other team members', 'Have a private conversation focused on solving the problem, not blaming', 'Ignore it and hope it goes away', 'Report them immediately without talking to them first'] }
+  ];
   const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
   function getCourseProgress() {
     const allProgress = JSON.parse(localStorage.getItem('wh_courseProgress') || '{}');
@@ -120,7 +125,8 @@
     const userAnswers = [document.querySelector('input[name="q_2_0"]:checked')?.value, document.querySelector('input[name="q_2_1"]:checked')?.value, document.querySelector('input[name="q_2_2"]:checked')?.value];
     if (userAnswers.includes(undefined)) { document.getElementById('quizResult').innerHTML = '<div class="module__quiz-fail">Please answer all questions.</div>'; return; }
     let correct = 0;
-    userAnswers.forEach((ans, idx) => { if (ans === answers.correct[idx]) correct++; });
+    const wrongQuestions = [];
+    userAnswers.forEach((ans, idx) => { if (ans === answers.correct[idx]) correct++; else wrongQuestions.push({ index: idx + 1, question: questionText[idx].q, userAnswer: questionText[idx].opts[ans.charCodeAt(0) - 97], correctAnswer: questionText[idx].opts[answers.correct[idx].charCodeAt(0) - 97] }); });
     if ((correct / 3) * 100 >= 80) {
       document.getElementById('quizResult').innerHTML = `<div class="module__quiz-pass">✓ Passed! ${correct}/3 correct.</div>`;
       this.disabled = true;
@@ -130,7 +136,10 @@
       saveCourseProgress(progress);
       updateProgress();
     } else {
-      document.getElementById('quizResult').innerHTML = `<div class="module__quiz-fail">You got ${correct}/3. Need 80% to pass.</div>`;
+      let html = `<div class="module__quiz-fail">You got ${correct}/3 correct. Need 80% to pass. Try again!<br><br><strong>Questions You Got Wrong:</strong>`;
+      wrongQuestions.forEach(item => { html += `<div style="margin-top:12px;padding:12px;background:rgba(220,38,38,0.1);border-left:3px solid var(--red);border-radius:4px"><strong>Q${item.index}:</strong> ${item.question}<br><span style="color:var(--red)">Your answer:</span> ${item.userAnswer}<br><span style="color:var(--green-800)">Correct answer:</span> ${item.correctAnswer}</div>`; });
+      html += '</div>';
+      document.getElementById('quizResult').innerHTML = html;
     }
   });
   updateProgress();
