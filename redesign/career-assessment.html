@@ -458,6 +458,9 @@
       <span class="eyebrow" style="color: var(--green-800); font-weight: 700;">Career Assessment</span>
       <h1 class="display-lg mt-s">Discover Your Career Path</h1>
       <p class="lead mt-m">Take our quick assessment and get a personalized roadmap tailored to your interests, skills, and aspirations.</p>
+      <p style="color: var(--ink-60); font-size: 14px; margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <strong>For:</strong> Professionals, Graduates, Undergraduates with skills | <strong>Not for:</strong> Secondary school students
+      </p>
     </div>
   </div>
 </section>
@@ -465,6 +468,14 @@
 <!-- FORM SECTION -->
 <section class="section">
   <div class="wrap">
+    <div style="max-width: 650px; margin: 0 auto 30px; padding: 24px; background: rgba(34, 197, 94, 0.08); border-radius: 12px; border-left: 4px solid var(--green-800);">
+      <h3 style="margin: 0 0 12px 0; color: var(--green-800); font-size: 15px;">Who Should Take This Assessment?</h3>
+      <p style="margin: 0 0 10px 0; color: var(--ink-60); font-size: 13px; line-height: 1.6;">✓ <strong>Professionals</strong> looking to pivot, advance, or explore new fields</p>
+      <p style="margin: 0 0 10px 0; color: var(--ink-60); font-size: 13px; line-height: 1.6;">✓ <strong>Graduates</strong> ready to enter the job market or transition careers</p>
+      <p style="margin: 0 0 10px 0; color: var(--ink-60); font-size: 13px; line-height: 1.6;">✓ <strong>Undergraduates with skills</strong> preparing for your first professional role</p>
+      <p style="margin: 0; color: var(--ink-60); font-size: 13px; line-height: 1.6;">✗ <strong>Secondary school students:</strong> Check out our <a href="programmes.html" style="color: var(--green-800); text-decoration: none; font-weight: 600;">programmes</a> designed for your level</p>
+    </div>
+
     <div class="assessment-form-card" id="formCard">
       <form id="careerAssessmentForm">
         <div class="form-row-2">
@@ -620,7 +631,8 @@
     const resultsHTML = `
       <div class="results-welcome">
         <h2>Your Personalized Career Roadmap</h2>
-        <p>Based on your profile, ${data.name}. Here's what's next:</p>
+        <p>Based on your profile, <strong>${data.name}</strong>. Here's your tailored path forward:</p>
+        <p style="font-size: 13px; color: var(--ink-60); margin-top: 12px;">This assessment is designed for professionals, graduates, and undergraduates with existing skills to navigate career transitions, advancement, and global opportunities.</p>
         <button class="btn" onclick="resetCareerAssessment()">Take Assessment Again</button>
       </div>
 
