@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Career Assessment - Wissen-Haus</title>
+<meta name="description" content="Take our career assessment and get a personalized roadmap, discover career pathways, and connect with mentors to guide your journey.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/career-assessment.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body data-page="assessment">
+<noscript><div style="background:#0F2D1D;color:#fff;padding:12px 20px;text-align:center;font-family:sans-serif"><a href="index.html" style="color:#fff;margin:0 8px">Home</a><a href="about.html" style="color:#fff;margin:0 8px">About</a><a href="community.html" style="color:#fff;margin:0 8px">Community</a></div></noscript>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="section section--tight" style="padding-top:clamp(48px,6vw,84px)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Career Assessment</span>
+      <h1 class="display-lg mt-s">Discover Your Career Path</h1>
+      <p class="lead mt-m">Answer a few simple questions and get a personalized roadmap, career pathways, and mentorship to guide your journey.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ASSESSMENT FORM SECTION -->
+<section class="section">
+  <div class="wrap">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="career-form-body">
+        <form id="careerAssessmentForm">
+          <div class="form-row">
+            <div class="field">
+              <label for="assessmentName">Full Name *</label>
+              <input type="text" id="assessmentName" name="name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="assessmentAge">Age *</label>
+              <input type="number" id="assessmentAge" name="age" min="16" max="80" placeholder="Age" required>
+            </div>
+          </div>
+
+          <div class="form-row full">
+            <div class="field">
+              <label for="assessmentCurrentJob">Current Job/Status *</label>
+              <input type="text" id="assessmentCurrentJob" name="currentJob" placeholder="e.g., Software Engineer, Student, Career Changer" required>
+            </div>
+          </div>
+
+          <div class="form-row full">
+            <div class="field">
+              <label for="assessmentCV">Upload Your CV (Optional)</label>
+              <div class="cv-upload-area" onclick="document.getElementById('assessmentCV').click()">
+                <label class="cv-upload-label">
+                  <strong>📎 Click to upload CV</strong><br>
+                  <small>PDF, DOC, or DOCX (Max 5MB)</small>
+                  <input type="file" id="assessmentCV" name="cv" accept=".pdf,.doc,.docx">
+                </label>
+                <div class="cv-file-selected" id="cvFileName"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row full">
+            <div class="field">
+              <label for="assessmentCareerGoal">What would you like to be? *</label>
+              <textarea id="assessmentCareerGoal" name="careerGoal" placeholder="Describe your career goal. E.g., 'I want to become a product manager in a tech startup' or 'I'm interested in healthcare technology'" required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--block" style="margin-top: 24px;">Get Your Roadmap
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS SECTION -->
+<section class="section" id="resultsSection" style="display:none;">
+  <div class="wrap">
+    <div id="careerResultContainer"></div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/career-assessment.js"></script>
+<script>
+  // Override the form submission to show results on same page
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('careerAssessmentForm');
+    if (form) {
+      // Remove modal-specific event listeners by cloning
+      const newForm = form.cloneNode(true);
+      form.parentNode.replaceChild(newForm, form);
+
+      newForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = newForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Analyzing your profile...';
+
+        try {
+          // Collect form data
+          const formData = {
+            name: document.getElementById('assessmentName').value.trim(),
+            age: document.getElementById('assessmentAge').value,
+            currentJob: document.getElementById('assessmentCurrentJob').value.trim(),
+            careerGoal: document.getElementById('assessmentCareerGoal').value.trim(),
+            cvFile: document.getElementById('assessmentCV').files[0]?.name || 'not-provided'
+          };
+
+          // Validate
+          if (!formData.name || !formData.age || !formData.currentJob || !formData.careerGoal) {
+            throw new Error('Please fill in all required fields');
+          }
+
+          // Save to localStorage
+          localStorage.setItem('careerAssessment', JSON.stringify({
+            ...formData,
+            timestamp: new Date().toISOString()
+          }));
+
+          // Show results
+          document.querySelector('.career-form-body').style.display = 'none';
+          document.getElementById('resultsSection').style.display = 'block';
+
+          // Generate results
+          generateCareerResults(formData);
+
+          // Scroll to results
+          document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+
+        } catch (error) {
+          alert('Error: ' + error.message);
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+    }
+  });
+
+  function resetCareerAssessment() {
+    document.querySelector('.career-form-body').style.display = 'block';
+    document.getElementById('resultsSection').style.display = 'none';
+    document.getElementById('careerAssessmentForm').reset();
+    document.querySelector('.career-form-body').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
