@@ -53,13 +53,14 @@
           <div class="form-row full">
             <div class="field">
               <label for="assessmentCV">Upload Your CV (Optional)</label>
-              <div class="cv-upload-area" onclick="document.getElementById('assessmentCV').click()">
+              <div class="cv-upload-area" id="cvUploadArea">
                 <label class="cv-upload-label">
                   <strong>📎 Click to upload CV</strong><br>
                   <small>PDF, DOC, or DOCX (Max 5MB)</small>
                   <input type="file" id="assessmentCV" name="cv" accept=".pdf,.doc,.docx">
                 </label>
                 <div class="cv-file-selected" id="cvFileName"></div>
+                <div class="cv-error" id="cvError" style="color:#e74c3c;font-size:13px;margin-top:8px;"></div>
               </div>
             </div>
           </div>
@@ -92,8 +93,48 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/career-assessment.js"></script>
 <script>
-  // Override the form submission to show results on same page
+  // File upload handler
   document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.getElementById('assessmentCV');
+    const uploadArea = document.getElementById('cvUploadArea');
+    const fileName = document.getElementById('cvFileName');
+    const errorDiv = document.getElementById('cvError');
+    const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+
+    if (fileInput) {
+      fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        errorDiv.textContent = '';
+        fileName.textContent = '';
+
+        if (!file) return;
+
+        // Validate file size
+        if (file.size > MAX_FILE_SIZE) {
+          errorDiv.textContent = '❌ File too large. Maximum size is 5MB.';
+          fileInput.value = '';
+          return;
+        }
+
+        // Validate file type
+        const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        if (!validTypes.includes(file.type)) {
+          errorDiv.textContent = '❌ Invalid file type. Please upload PDF or DOC/DOCX.';
+          fileInput.value = '';
+          return;
+        }
+
+        fileName.textContent = '✓ ' + file.name + ' (' + (file.size / 1024).toFixed(1) + 'KB)';
+      });
+
+      // Make upload area clickable
+      uploadArea.addEventListener('click', function(e) {
+        if (e.target.tagName !== 'INPUT') {
+          fileInput.click();
+        }
+      });
+    }
+
     const form = document.getElementById('careerAssessmentForm');
     if (form) {
       // Remove modal-specific event listeners by cloning
