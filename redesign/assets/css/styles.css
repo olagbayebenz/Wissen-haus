@@ -182,7 +182,7 @@ strong{font-weight:600}
 
 @media(max-width:1040px){
   .nav-links,.nav-cta .btn{display:none}
-  .nav-toggle{display:flex}
+  .nav-toggle{display:flex;margin-left:auto}
   .mobile-menu{position:fixed;inset:67px 0 auto 0;background:var(--green-800);color:#fff;padding:24px var(--gutter) 36px;transform:translateY(-120%);transition:transform .45s var(--ease);z-index:99;border-bottom-left-radius:26px;border-bottom-right-radius:26px;max-height:calc(100vh - 67px);overflow-y:auto}
   .mobile-menu.open{transform:translateY(0)}
 }
