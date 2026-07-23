@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Wissen-Haus Youth Empowerment Foundation",
   "private": true,
-  "scripts": {
-    "migrate": "node api/db/migrate.js"
-  },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0"
   },
