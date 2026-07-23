@@ -109,9 +109,10 @@
         We're finalizing conversations with professionals from the industries you're curious about. Subscribe to get notified the moment the first episode drops.
       </p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px">
-        <input type="email" placeholder="Enter your email" style="padding:12px 16px;border:1px solid var(--line);border-radius:8px;flex:1;min-width:200px;font-family:inherit;font-size:1rem">
-        <button style="background:var(--green-800);color:#fff;border:none;padding:12px 28px;border-radius:8px;font-weight:600;cursor:pointer;font-size:1rem">Notify Me</button>
+        <input type="email" id="podcastNotifyEmail" placeholder="Enter your email" style="padding:12px 16px;border:1px solid var(--line);border-radius:8px;flex:1;min-width:200px;font-family:inherit;font-size:1rem">
+        <button id="podcastNotifyBtn" style="background:var(--green-800);color:#fff;border:none;padding:12px 28px;border-radius:8px;font-weight:600;cursor:pointer;font-size:1rem">Notify Me</button>
       </div>
+      <div id="podcastNotifyMessage" style="display:none;margin-bottom:12px;padding:12px;border-radius:8px;text-align:center;font-size:0.95rem"></div>
       <p style="color:var(--ink-40);font-size:0.9rem">✓ We'll email you when the first episode launches</p>
     </div>
   </div>
@@ -257,5 +258,63 @@
 </main>
 
 <script src="assets/js/main.js"></script>
+<script>
+  document.getElementById('podcastNotifyBtn').addEventListener('click', function() {
+    const emailInput = document.getElementById('podcastNotifyEmail');
+    const email = emailInput.value.trim();
+    const messageDiv = document.getElementById('podcastNotifyMessage');
+    const btn = this;
+
+    // Validate email
+    if (!email) {
+      messageDiv.style.display = 'block';
+      messageDiv.style.background = 'rgba(220, 38, 38, 0.1)';
+      messageDiv.style.color = '#dc2626';
+      messageDiv.textContent = '❌ Please enter your email address';
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      messageDiv.style.display = 'block';
+      messageDiv.style.background = 'rgba(220, 38, 38, 0.1)';
+      messageDiv.style.color = '#dc2626';
+      messageDiv.textContent = '❌ Please enter a valid email address';
+      return;
+    }
+
+    // Save email to localStorage
+    btn.disabled = true;
+    btn.textContent = 'Saving...';
+
+    setTimeout(function() {
+      let subscribers = JSON.parse(localStorage.getItem('podcastSubscribers') || '[]');
+      if (!subscribers.includes(email)) {
+        subscribers.push(email);
+        localStorage.setItem('podcastSubscribers', JSON.stringify(subscribers));
+      }
+
+      messageDiv.style.display = 'block';
+      messageDiv.style.background = 'rgba(34, 197, 94, 0.1)';
+      messageDiv.style.color = '#22c55e';
+      messageDiv.textContent = '✓ Thanks! You\'ll be notified when episodes launch';
+
+      emailInput.value = '';
+      btn.disabled = false;
+      btn.textContent = 'Notify Me';
+
+      setTimeout(function() {
+        messageDiv.style.display = 'none';
+      }, 4000);
+    }, 500);
+  });
+
+  // Allow Enter key to submit
+  document.getElementById('podcastNotifyEmail').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      document.getElementById('podcastNotifyBtn').click();
+    }
+  });
+</script>
 </body>
 </html>
