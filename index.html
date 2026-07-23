@@ -71,7 +71,7 @@
         <p class="lead mt-s reveal" data-d="1">Empowering Nigerian youth with practical skills, mentorship and global exposure, the foundation for real economic independence.</p>
         <p class="lead mt-m reveal" data-d="1">We are dedicated to bridging the skills gap in Nigeria by equipping young people with practical career guidance and global exposure. Our mission is to empower the next generation through economic independence and social impact.</p>
         <div class="hero-cta reveal" data-d="2">
-          <a href="volunteer.html" class="btn btn--lg mag">Join the Community
+          <a href="#" onclick="openAuthModal(); return false;" class="btn btn--lg mag">Join the Community
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="about-story.html" class="textlink" style="align-self:center">Read our story
@@ -348,6 +348,58 @@
 <!-- FOOTER -->
 
 
+<!-- AUTH MODAL -->
+<div id="authModal" class="auth-modal">
+  <div class="auth-modal__content">
+    <button id="closeAuthModal" class="auth-modal__close">&times;</button>
+    <h2 id="formTitle">Sign In</h2>
+
+    <form id="authForm">
+      <div class="auth-modal__error" id="authError"></div>
+      <input type="hidden" id="isLogin" value="true">
+
+      <div id="signupFields" style="display:none">
+        <div class="form-row">
+          <input type="text" id="authFirstName" placeholder="First name" required>
+          <input type="text" id="authLastName" placeholder="Last name" required>
+        </div>
+      </div>
+
+      <input type="email" id="authEmail" placeholder="Email" required>
+      <input type="password" id="authPassword" placeholder="Password" required>
+
+      <button type="submit" id="submitBtn" class="auth-modal__submit">Sign In</button>
+    </form>
+
+    <div class="auth-modal__toggle" id="toggleForm">
+      No account? <a>Create one</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.auth-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; }
+.auth-modal.show { display: flex; }
+.auth-modal__content { background: #fff; border-radius: 16px; padding: 40px; max-width: 400px; width: 90%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.auth-modal__close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; cursor: pointer; color: #999; }
+.auth-modal__close:hover { color: #333; }
+.auth-modal h2 { margin: 0 0 24px; color: var(--green-800); font-size: 1.5rem; }
+.auth-modal input { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; font-family: inherit; }
+.auth-modal input:focus { outline: none; border-color: var(--green-800); box-shadow: 0 0 0 3px rgba(15,45,29,0.1); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-row input { margin-bottom: 0; }
+.auth-modal__submit { width: 100%; padding: 14px; background: var(--green-800); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1rem; margin-top: 8px; }
+.auth-modal__submit:hover { background: var(--green-900); }
+.auth-modal__submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.auth-modal__error { background: #fee; color: #c33; padding: 12px; border-radius: 8px; margin-bottom: 16px; display: none; font-size: 0.9rem; }
+.auth-modal__error.show { display: block; }
+.auth-modal__toggle { text-align: center; margin-top: 16px; color: #666; font-size: 0.9rem; }
+.auth-modal__toggle a { color: var(--green-800); cursor: pointer; font-weight: 600; text-decoration: none; }
+.auth-modal__toggle a:hover { text-decoration: underline; }
+</style>
+
+<script src="assets/js/supabase-config.js"></script>
+<script src="assets/js/auth-modal.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
