@@ -1,13 +1,5 @@
 {
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
-  "env": {
-    "DATABASE_URL": "@database_url",
-    "JWT_SECRET": "@jwt_secret",
-    "CORS_ORIGIN": "@cors_origin"
-  }
+  "buildCommand": "true",
+  "outputDirectory": ".",
+  "nodeVersion": "18.x"
 }
