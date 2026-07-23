@@ -16,6 +16,7 @@
 <meta name="twitter:image" content="assets/img/hero-students.jpg">
 <link rel="icon" href="assets/img/logo.png">
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/career-assessment.css">
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <style>
 /* Mobile responsiveness for hero and feature sections */
@@ -62,9 +63,9 @@
         <h1 class="display-xl mt-s reveal-words">Bridging the<br>Skills Gap.</h1>
         <p class="lead mt-s reveal" data-d="1">Empowering Nigerian youth with practical skills, mentorship and global exposure, the foundation for real economic independence.</p>
         <div class="hero-cta reveal" data-d="2">
-          <a href="volunteer.html" class="btn btn--lg mag">Join the Community
+          <button onclick="document.getElementById('careerAssessmentModal').classList.add('show')" class="btn btn--lg mag">Career Assessment
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          </button>
           <a href="programmes.html" class="btn btn--ghost btn--lg mag">Our Programmes</a>
         </div>
       </div>
@@ -290,11 +291,73 @@
   </div>
 </section>
 
+<!-- CAREER ASSESSMENT MODAL -->
+<div id="careerAssessmentModal">
+  <div class="career-assessment-content">
+    <div class="career-assessment-header">
+      <h2>Career Assessment</h2>
+      <button class="close-career-modal" id="closeCareerModal">&times;</button>
+    </div>
+
+    <div class="career-form-body">
+      <form id="careerAssessmentForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="assessmentName">Full Name *</label>
+            <input type="text" id="assessmentName" name="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="assessmentAge">Age *</label>
+            <input type="number" id="assessmentAge" name="age" min="16" max="80" placeholder="Age" required>
+          </div>
+        </div>
+
+        <div class="form-row full">
+          <div class="field">
+            <label for="assessmentCurrentJob">Current Job/Status *</label>
+            <input type="text" id="assessmentCurrentJob" name="currentJob" placeholder="e.g., Software Engineer, Student, Career Changer" required>
+          </div>
+        </div>
+
+        <div class="form-row full">
+          <div class="field">
+            <label for="assessmentCV">Upload Your CV (Optional)</label>
+            <div class="cv-upload-area" onclick="document.getElementById('assessmentCV').click()">
+              <label class="cv-upload-label">
+                <strong>📎 Click to upload CV</strong><br>
+                <small>PDF, DOC, or DOCX (Max 5MB)</small>
+                <input type="file" id="assessmentCV" name="cv" accept=".pdf,.doc,.docx">
+              </label>
+              <div class="cv-file-selected" id="cvFileName"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row full">
+          <div class="field">
+            <label for="assessmentCareerGoal">What would you like to be? *</label>
+            <textarea id="assessmentCareerGoal" name="careerGoal" placeholder="Describe your career goal. E.g., 'I want to become a product manager in a tech startup' or 'I'm interested in healthcare technology'" required></textarea>
+          </div>
+        </div>
+
+        <div class="career-form-submit">
+          <button type="submit" class="btn btn--block">Get Your Roadmap
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="careerResultContainer"></div>
+  </div>
+</div>
+
 </main>
 
 <!-- FOOTER -->
 
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/career-assessment.js"></script>
 </body>
 </html>
