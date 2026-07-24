@@ -1,9 +1,0 @@
-{
-  "name": "wissenhaus",
-  "version": "1.0.0",
-  "description": "Wissen-Haus Youth Empowerment Foundation",
-  "private": true,
-  "dependencies": {
-    "@supabase/supabase-js": "^2.38.0"
-  }
-}

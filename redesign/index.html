@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wissen-Haus Youth Empowerment Foundation, Bridging the Skills Gap</title>
-<meta name="description" content="We equip Nigerian youth with practical skills, mentorship and global exposure for economic independence. 500+ students reached in our first year across Ibadan.">
+<meta name="description" content="We equip Nigerian youth with practical skills, mentorship and global exposure for economic independence. 15,000+ students reached across Ibadan and beyond.">
 <meta property="og:title" content="Wissen-Haus Youth Empowerment Foundation - Bridging the Skills Gap">
 <meta property="og:description" content="Empowering young Nigerians with practical career skills, mentorship, and global exposure. Join the Trade Fair, access mentorship, and build your future.">
 <meta property="og:image" content="assets/img/hero-students.jpg">
@@ -31,19 +31,27 @@
 
 @media (max-width: 560px) {
   h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+  .display-xl {
+    font-size: 1.5rem !important;
   }
   .lead {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
   }
   .hero-badge {
-    font-size: 0.85rem !important;
+    font-size: 0.75rem !important;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 }
 </style>
 </head>
 <body data-page="home">
-<noscript><div style="background:#0F2D1D;color:#fff;padding:12px 20px;text-align:center;font-family:sans-serif"><a href="index.html" style="color:#fff;margin:0 8px">Home</a><a href="about.html" style="color:#fff;margin:0 8px">About</a><a href="programmes.html" style="color:#fff;margin:0 8px">Programmes</a><a href="community.html" style="color:#fff;margin:0 8px">Community</a><a href="impact.html" style="color:#fff;margin:0 8px">Impact</a><a href="policy-research.html" style="color:#fff;margin:0 8px">Policy</a><a href="volunteer.html" style="color:#fff;margin:0 8px">Get Involved</a><a href="donate.html" style="color:#fff;margin:0 8px">Donate</a></div></noscript><div class="page-intro"><img class="page-intro__logo" src="assets/img/logo.png" alt="Wissen-Haus"><div class="page-intro__bar"><span></span></div></div>
+<noscript><div style="background:#0F2D1D;color:#fff;padding:12px 20px;text-align:center;font-family:sans-serif"><a href="index.html" style="color:#fff;margin:0 8px">Home</a><a href="about-story.html" style="color:#fff;margin:0 8px">About</a><a href="programmes.html" style="color:#fff;margin:0 8px">Programmes</a><a href="community.html" style="color:#fff;margin:0 8px">Community</a><a href="impact.html" style="color:#fff;margin:0 8px">Impact</a><a href="policy-research.html" style="color:#fff;margin:0 8px">Policy</a><a href="volunteer.html" style="color:#fff;margin:0 8px">Get Involved</a><a href="donate.html" style="color:#fff;margin:0 8px">Donate</a></div></noscript><div class="page-intro"><img class="page-intro__logo" src="assets/img/logo.png" alt="Wissen-Haus"><div class="page-intro__bar"><span></span></div></div>
 
 <!-- HEADER -->
 
@@ -51,18 +59,22 @@
 
 <main id="main">
 
-<!-- HERO -->
+<!-- HERO + MISSION INTEGRATED -->
 <section class="hero">
   <span class="blob blob--green"></span>
   <span class="blob blob--red"></span>
   <div class="wrap wrap-wide">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow reveal">Ibadan, Nigeria · Est. 2025</span>
-        <h1 class="display-xl mt-s reveal-words">Your Roadmap to<br>Opportunity Starts Here.</h1>
-        <p class="lead mt-s reveal" data-d="1">Confused about what's next? Don't know where to start? We've built resources that help you discover careers that match your interests, understand what it takes to succeed, and connect with people doing the work you're curious about.</p>
+        <span class="eyebrow reveal">Ibadan, Nigeria · Est. 2010</span>
+        <h1 class="display-xl mt-s reveal-words">Bridging the<br>Skills Gap.</h1>
+        <p class="lead mt-s reveal" data-d="1">Empowering Nigerian youth with practical skills, mentorship and global exposure, the foundation for real economic independence.</p>
+        <p class="lead mt-m reveal" data-d="1">We are dedicated to bridging the skills gap in Nigeria by equipping young people with practical career guidance and global exposure. Our mission is to empower the next generation through economic independence and social impact.</p>
         <div class="hero-cta reveal" data-d="2">
-          <a href="career-assessment.html" class="btn btn--lg mag">Take the Career Assessment
+          <a href="#" onclick="openAuthModal(); return false;" class="btn btn--lg mag">Join the Community
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="about-story.html" class="textlink" style="align-self:center">Read our story
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
@@ -72,15 +84,22 @@
         <span class="hero-ring hero-ring--2"></span>
         <div class="frame tilt-inner shine"><img src="assets/img/hero-students.jpg" alt="Nigerian secondary school students smiling in class"></div>
         <div class="hero-badge hero-badge--tl">
-          <span class="n" data-count="500" data-suffix="+">500+</span>
+          <span class="n" data-count="15000" data-suffix="+">15,000+</span>
           <span class="t">students reached</span>
         </div>
         <div class="hero-badge hero-badge--br">
-          <span class="n" data-count="15" data-suffix="+">15+</span>
+          <span class="n" data-count="120" data-suffix="+">120+</span>
           <span class="t">school partnerships</span>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="stats mt-l stagger" style="padding:0 2rem;max-width:1200px;margin-left:auto;margin-right:auto">
+    <div class="stat"><div class="num" data-count="15000" data-suffix="+">15,000+</div><div class="lbl">Students Reached</div></div>
+    <div class="stat"><div class="num" data-count="200" data-suffix="+">200+</div><div class="lbl">Mentors Involved</div></div>
+    <div class="stat"><div class="num" data-count="120" data-suffix="+">120+</div><div class="lbl">School Partnerships</div></div>
+    <div class="stat"><div class="num" data-count="15" data-suffix="+">15+</div><div class="lbl">Years of Impact</div></div>
   </div>
 </section>
 
@@ -92,27 +111,35 @@
   </div>
 </div>
 
-<!-- MISSION -->
-<section class="section" id="mission">
+<!-- CAREER HUB RESOURCES -->
+<section class="section">
   <div class="wrap">
-    <div class="split">
-      <div class="reveal--left">
-        <span class="section-index">01 · Our Mission</span>
-        <h2 class="mt-s">Every young Nigerian deserves the tools to thrive.</h2>
+    <div class="section-head mb-l reveal">
+      <span class="eyebrow">Career Hub</span>
+      <h2>Your roadmap to opportunity starts here.</h2>
+      <p class="lead">Confused about what's next? Don't know where to start? We've built resources that help you discover careers that match your interests, understand what it takes to succeed, and connect with people doing the work you're curious about.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="feature reveal">
+        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M21 10v5"/><path d="M6 12v4c0 1 2.7 3 6 3s6-2 6-3v-4"/></svg></div>
+        <h3>Discover Career Pathways</h3>
+        <p>Not sure what careers exist? Explore tech, business, media, entrepreneurship, healthcare, and social impact. For each path, we explain what the job actually is, the skills you need, realistic salary ranges in Nigeria, and how to get started today—not someday.</p>
       </div>
-      <div class="reveal--right">
-        <p class="lead">We are dedicated to bridging the skills gap in Nigeria by equipping young people with practical career guidance and global exposure. Our mission is to empower the next generation through economic independence and social impact, ensuring every young Nigerian has the tools to thrive.</p>
-        <a href="about.html" class="textlink mt-m">Read our story
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      <div class="feature reveal" data-d="1">
+        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z"/></svg></div>
+        <h3>See Global Opportunities</h3>
+        <p>Think opportunities only exist abroad? Think again. We show you remote jobs, international scholarships, visa-sponsored roles, and how to position yourself to compete globally—all while building your career in Nigeria.</p>
+      </div>
+      <div class="feature reveal" data-d="2">
+        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3.2 3.2 0 0 1 0 6M17.5 20a5.5 5.5 0 0 0-3-4.9"/></svg></div>
+        <h3>Get Real Mentorship</h3>
+        <p>Struggling to figure it out alone? Connect with professionals who've been where you are. Get answers to real questions, learn from their mistakes, and get accountability from people who actually care about your success.</p>
       </div>
     </div>
-
-    <div class="stats mt-l stagger">
-      <div class="stat"><div class="num" data-count="500" data-suffix="+">500+</div><div class="lbl">Students Reached</div></div>
-      <div class="stat"><div class="num" data-count="30" data-suffix="+">30+</div><div class="lbl">Mentors Involved</div></div>
-      <div class="stat"><div class="num" data-count="15" data-suffix="+">15+</div><div class="lbl">School Partnerships</div></div>
-      <div class="stat"><div class="num" data-count="1" data-suffix="">1</div><div class="lbl">Year Since Launch</div></div>
+    <div class="hero-cta mt-l reveal">
+      <a href="community.html" class="btn">Take the career assessment
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="community.html" class="btn btn--ghost">Explore the Community Hub</a>
     </div>
   </div>
 </section>
@@ -134,7 +161,7 @@
           <span class="card__num">01</span>
           <h3>Trade Fair</h3>
           <p>A one-day career exploration fair for all secondary school students in Ibadan. Meet professionals, explore diverse careers, and discover your path forward.</p>
-          <a href="programmes.html" class="textlink">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="bootcamp.html" class="textlink">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
       <article class="card reveal" data-d="1">
@@ -143,7 +170,7 @@
           <span class="card__num">02</span>
           <h3>Opportunity Blueprint</h3>
           <p>Weekly insights and career guidance from our experts, bridging the skills gap through global exposure.</p>
-          <a href="programmes.html" class="textlink">Listen now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="podcast.html" class="textlink">Listen now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
       <article class="card reveal" data-d="2">
@@ -152,39 +179,9 @@
           <span class="card__num">03</span>
           <h3>Impact Content</h3>
           <p>Empowering Nigerian youth through social-impact storytelling and community-driven initiatives.</p>
-          <a href="programmes.html" class="textlink">Explore more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="impact-content.html" class="textlink">Explore more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- CAREER HUB RESOURCES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head mb-l reveal">
-      <span class="eyebrow">What We Offer</span>
-      <h2>Three ways to get started.</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="feature reveal">
-        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M21 10v5"/><path d="M6 12v4c0 1 2.7 3 6 3s6-2 6-3v-4"/></svg></div>
-        <h3>Discover Career Pathways</h3>
-        <p>Explore tech, business, media, entrepreneurship, healthcare, and social impact. For each path, we explain what the job actually is, the skills you need, realistic salary ranges in Nigeria, and how to get started today.</p>
-      </div>
-      <div class="feature reveal" data-d="1">
-        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z"/></svg></div>
-        <h3>See Global Opportunities</h3>
-        <p>Remote jobs, international scholarships, visa-sponsored roles. Learn how to position yourself to compete globally—all while building your career in Nigeria.</p>
-      </div>
-      <div class="feature reveal" data-d="2">
-        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3.2 3.2 0 0 1 0 6M17.5 20a5.5 5.5 0 0 0-3-4.9"/></svg></div>
-        <h3>Get Real Mentorship</h3>
-        <p>Connect with professionals who've been where you are. Get answers to real questions, learn from their mistakes, and get accountability from people who care about your success.</p>
-      </div>
-    </div>
-    <div class="hero-cta mt-l reveal">
-      <a href="community.html" class="btn">Explore the Community Hub</a>
     </div>
   </div>
 </section>
@@ -217,7 +214,7 @@
 <section class="section section--tight">
   <div class="wrap">
     <div class="split split--reverse">
-      <div class="split__media reveal" data-d="1"><img src="assets/img/students-2.jpg" alt="Students engaged in learning and research"></div>
+      <div class="split__media reveal" data-d="1"><img src="assets/img/policy.jpg" alt="Researcher working on policy papers"></div>
       <div class="reveal">
         <span class="section-index">02 · Policy &amp; Research</span>
         <h2 class="mt-s">Evidence for the future of work.</h2>
@@ -259,11 +256,151 @@
   </div>
 </section>
 
+<!-- INSTAGRAM FEED -->
+<section class="section section--tight" id="instagram">
+  <div class="wrap">
+    <div class="ig-head reveal">
+      <div>
+        <span class="eyebrow">Follow Along</span>
+        <a href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener" class="ig-handle mt-s">
+          <span class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+          @wissen_haus
+        </a>
+      </div>
+      <a href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener" class="btn mag">Follow on Instagram
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="ig-scroll reveal" data-d="1" id="instagram-feed">
+      <!-- Feed loads here via JavaScript -->
+    </div>
+  </div>
+</section>
+
+<script>
+// Instagram Feed Widget - Loads latest posts from @wissen_haus
+(function() {
+  function loadInstagramFeed() {
+    const username = 'wissen_haus';
+    const container = document.getElementById('instagram-feed');
+
+    // Using Instagram's noembed endpoint for public profile data
+    fetch(`https://www.instagram.com/api/v1/users/web_profile_info/?username=${username}`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      }
+    })
+    .then(response => {
+      // Fallback: If direct API fails, show cached posts
+      if (!response.ok) throw new Error('API unavailable');
+      return response.json();
+    })
+    .then(data => {
+      const user = data.data.user;
+      const posts = user.edge_owner_to_timeline_media.edges.slice(0, 8);
+
+      if (posts.length === 0) {
+        container.innerHTML = '<p style="text-align:center;color:var(--ink-60)">Follow us on Instagram to see our latest posts</p>';
+        return;
+      }
+
+      container.innerHTML = posts.map(post => {
+        const node = post.node;
+        const img = node.display_url;
+        const caption = node.edge_media_to_caption.edges[0]?.node.text || 'Wissen-Haus post';
+        const postUrl = `https://www.instagram.com/p/${node.shortcode}/`;
+
+        return `
+          <a class="ig-post" href="${postUrl}" target="_blank" rel="noopener" title="${caption.substring(0, 50)}">
+            <img src="${img}" alt="${caption.substring(0, 100)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+            <span class="ig-post__ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+          </a>
+        `;
+      }).join('');
+    })
+    .catch(() => {
+      // Fallback: Show placeholder message
+      container.innerHTML = `
+        <div style="grid-column:1/-1;text-align:center;padding:40px 20px;color:var(--ink-60);">
+          <p>Latest posts from <strong>@wissen_haus</strong></p>
+          <a href="https://www.instagram.com/wissen_haus/" target="_blank" rel="noopener" style="color:var(--green-800);text-decoration:underline;">Visit our profile →</a>
+        </div>
+      `;
+    });
+  }
+
+  // Load when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadInstagramFeed);
+  } else {
+    loadInstagramFeed();
+  }
+})();
+</script>
+
 </main>
 
 <!-- FOOTER -->
 
 
+<!-- AUTH MODAL -->
+<div id="authModal" class="auth-modal">
+  <div class="auth-modal__content">
+    <button id="closeAuthModal" class="auth-modal__close">&times;</button>
+    <h2 id="formTitle">Sign In</h2>
+
+    <form id="authForm">
+      <div class="auth-modal__error" id="authError"></div>
+      <input type="hidden" id="isLogin" value="true">
+
+      <div id="signupFields" style="display:none">
+        <div class="form-row">
+          <input type="text" id="authFirstName" placeholder="First name" required>
+          <input type="text" id="authLastName" placeholder="Last name" required>
+        </div>
+      </div>
+
+      <input type="email" id="authEmail" placeholder="Email" required>
+      <input type="password" id="authPassword" placeholder="Password" required>
+
+      <button type="submit" id="submitBtn" class="auth-modal__submit">Sign In</button>
+    </form>
+
+    <div class="auth-modal__toggle" id="toggleForm">
+      No account? <a>Create one</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.auth-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; }
+.auth-modal.show { display: flex; }
+.auth-modal__content { background: #fff; border-radius: 16px; padding: 40px; max-width: 400px; width: 90%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.auth-modal__close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; cursor: pointer; color: #999; }
+.auth-modal__close:hover { color: #333; }
+.auth-modal h2 { margin: 0 0 24px; color: var(--green-800); font-size: 1.5rem; }
+.auth-modal input { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; font-family: inherit; }
+.auth-modal input:focus { outline: none; border-color: var(--green-800); box-shadow: 0 0 0 3px rgba(15,45,29,0.1); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-row input { margin-bottom: 0; }
+.auth-modal__submit { width: 100%; padding: 14px; background: var(--green-800); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1rem; margin-top: 8px; }
+.auth-modal__submit:hover { background: var(--green-900); }
+.auth-modal__submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.auth-modal__error { background: #fee; color: #c33; padding: 12px; border-radius: 8px; margin-bottom: 16px; display: none; font-size: 0.9rem; }
+.auth-modal__error.show { display: block; }
+.auth-modal__toggle { text-align: center; margin-top: 16px; color: #666; font-size: 0.9rem; }
+.auth-modal__toggle a { color: var(--green-800); cursor: pointer; font-weight: 600; text-decoration: none; }
+.auth-modal__toggle a:hover { text-decoration: underline; }
+</style>
+
+<script src="assets/js/supabase-config.js"></script>
+<script src="assets/js/auth-modal.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
+<!-- cache bust: 1784787873 -->

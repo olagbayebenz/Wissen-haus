@@ -7,7 +7,6 @@
 <meta name="description" content="The Wissen-Haus member community: scholarships, internships, free courses, mentorship and a live feed of wins and discussions, everything a young Nigerian changemaker needs in one place.">
 <link rel="icon" href="assets/img/logo.png">
 <link rel="stylesheet" href="assets/css/styles.css">
-<link rel="stylesheet" href="assets/css/career-assessment.css">
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body data-page="community">
@@ -58,7 +57,6 @@
       <a class="p" href="jobs.html">Jobs</a>
       <a class="p" href="internships.html">Internships</a>
       <a class="p" href="competitions.html">Competitions</a>
-      <button class="p" onclick="document.getElementById('careerAssessmentModal').classList.add('show')" style="background:none;border:none;cursor:pointer;padding:8px 16px;font-size:14px;color:var(--ink-60)">🎯 Career Assessment</button>
     </div>
     <div class="grid grid-3">
       <article class="card reveal">
@@ -239,70 +237,9 @@
   </div>
 </section>
 
-<!-- CAREER ASSESSMENT MODAL -->
-<div id="careerAssessmentModal">
-  <div class="career-assessment-content">
-    <div class="career-assessment-header">
-      <h2>Career Assessment</h2>
-      <button class="close-career-modal" id="closeCareerModal">&times;</button>
-    </div>
-
-    <div class="career-form-body">
-      <form id="careerAssessmentForm">
-        <div class="form-row">
-          <div class="field">
-            <label for="assessmentName">Full Name *</label>
-            <input type="text" id="assessmentName" name="name" placeholder="Your name" required>
-          </div>
-          <div class="field">
-            <label for="assessmentAge">Age *</label>
-            <input type="number" id="assessmentAge" name="age" min="16" max="80" placeholder="Age" required>
-          </div>
-        </div>
-
-        <div class="form-row full">
-          <div class="field">
-            <label for="assessmentCurrentJob">Current Job/Status *</label>
-            <input type="text" id="assessmentCurrentJob" name="currentJob" placeholder="e.g., Software Engineer, Student, Career Changer" required>
-          </div>
-        </div>
-
-        <div class="form-row full">
-          <div class="field">
-            <label for="assessmentCV">Upload Your CV (Optional)</label>
-            <div class="cv-upload-area" onclick="document.getElementById('assessmentCV').click()">
-              <label class="cv-upload-label">
-                <strong>📎 Click to upload CV</strong><br>
-                <small>PDF, DOC, or DOCX (Max 5MB)</small>
-                <input type="file" id="assessmentCV" name="cv" accept=".pdf,.doc,.docx">
-              </label>
-              <div class="cv-file-selected" id="cvFileName"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row full">
-          <div class="field">
-            <label for="assessmentCareerGoal">What would you like to be? *</label>
-            <textarea id="assessmentCareerGoal" name="careerGoal" placeholder="Describe your career goal. E.g., 'I want to become a product manager in a tech startup' or 'I'm interested in healthcare technology'" required></textarea>
-          </div>
-        </div>
-
-        <div class="career-form-submit">
-          <button type="submit" class="btn btn--block">Get Your Roadmap
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-      </form>
-    </div>
-
-    <div id="careerResultContainer"></div>
-  </div>
-</div>
 
 </main>
 
-<script src="assets/js/career-assessment.js"></script>
 <script>
   // Handle section button highlighting
   function initSectionNavigation() {

@@ -1,0 +1,32 @@
+# Ignore backend in frontend deployment
+backend/
+backend/**
+
+# Ignore documentation
+docs/
+docs/**
+
+# Ignore archived assets
+assets-archive/
+
+# Ignore development files
+*.md
+.git
+.gitignore
+.DS_Store
+
+# Ignore node_modules (use package.json dependencies)
+node_modules/
+**/node_modules
+
+# Ignore logs
+*.log
+npm-debug.log*
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+
+# Keep only what's needed for frontend deployment
+!redesign/
