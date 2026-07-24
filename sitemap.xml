@@ -3,25 +3,25 @@
   <!-- Main Pages -->
   <url>
     <loc>https://wissenhaus.org/index.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/about.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/about-story.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/founder.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -29,210 +29,206 @@
   <!-- Programmes -->
   <url>
     <loc>https://wissenhaus.org/programmes.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/bootcamp.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/podcast.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/impact-content.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Impact Stories -->
-  <url>
-    <loc>https://wissenhaus.org/impact.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Impact & Stories -->
   <url>
-    <loc>https://wissenhaus.org/story-ose-kaye.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-emeka-nwosu.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-aisha-jarrett.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-tunde-ifedire.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-chioma-udo.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-adanna-vaughn.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-zainab-khalil.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-chukwu-daniel.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-folake-adeyemi.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-kwame-osei.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wissenhaus.org/story-mary-oluwaseun.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://wissenhaus.org/impact.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Community & Opportunities -->
+  <!-- Opportunities -->
   <url>
-    <loc>https://wissenhaus.org/community-landing.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://wissenhaus.org/community.html</loc>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/jobs.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/internships.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/scholarships.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://wissenhaus.org/competitions.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://wissenhaus.org/learning-library.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Engagement Pages -->
+  <!-- Engagement -->
   <url>
     <loc>https://wissenhaus.org/careers.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/volunteer.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/partner.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/donate.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/donate-account.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/contact.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Policy & Research -->
+  <!-- Applications -->
   <url>
-    <loc>https://wissenhaus.org/policy-research.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://wissenhaus.org/mentor-application.html</loc>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wissenhaus.org/trainer-application.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wissenhaus.org/operations-application.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Core Feature -->
+  <url>
+    <loc>https://wissenhaus.org/career-assessment.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
 
   <!-- Courses -->
   <url>
     <loc>https://wissenhaus.org/soft-skills-course.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/workplace-readiness-course.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/ai-course.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/financial-literacy-course.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wissenhaus.org/career-launch-course.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Community -->
+  <url>
+    <loc>https://wissenhaus.org/thread-view.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Policy & Legal -->
+  <url>
+    <loc>https://wissenhaus.org/policy-research.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wissenhaus.org/privacy-policy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wissenhaus.org/terms-of-service.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Auth -->
+  <url>
+    <loc>https://wissenhaus.org/login.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
