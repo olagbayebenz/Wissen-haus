@@ -1,25 +1,4 @@
 {
-  "version": 2,
-  "buildCommand": "echo 'Static site'",
   "outputDirectory": "redesign",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/login",
-      "destination": "/login.html",
-      "permanent": false
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": "https://wissenhaus-backend.vercel.app/api/:1",
-      "permanent": false
-    }
-  ]
+  "cleanUrls": true
 }
