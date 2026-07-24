@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 2: Teamwork & Collaboration - Wissen-Haus</title>
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body data-page="softskills">
+<main id="main">
+<section class="section section--tight" style="padding-top:clamp(48px,6vw,84px)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Module 2 of 6</span>
+      <h1 class="display-lg mt-s">Teamwork & Collaboration</h1>
+      <p class="lead mt-m">Great teams aren't built on talent alone—they're built on trust, respect, and shared purpose. Learn to collaborate across differences, support your teammates, and resolve conflicts constructively.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" style="padding:clamp(24px,3vw,40px) 0">
+  <div class="wrap">
+    <div class="course-progress">
+      <div class="course-progress__label" id="progressLabel">0 of 6 modules complete</div>
+      <div class="course-progress__bar"><div class="course-progress__fill" id="progressFill"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="module-single" id="moduleContent"></div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="module-nav">
+      <a href="soft-skills-module-1.html" class="btn btn--outline">← Previous Module</a>
+      <a href="soft-skills-module-3.html" class="btn">Next Module →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/streak.js"></script>
+<script>
+  const MODULE_ID = 2;
+  const TOTAL_MODULES = 6;
+  document.getElementById('moduleContent').innerHTML = `
+    <article class="module">
+      <div class="module__header"><h2 class="module__title">Teamwork & Collaboration</h2></div>
+      <div class="module__body">
+        <div class="module__objectives">
+          <strong>Learning Objectives</strong>
+          <ul>
+            <li>Contribute effectively to team goals</li>
+            <li>Work respectfully across differences of opinion and background</li>
+            <li>Navigate conflict and find win-win solutions</li>
+          </ul>
+        </div>
+        <p class="module__summary">Great teams aren't built on talent alone—they're built on trust, respect, and shared purpose. Learn to collaborate across differences, support your teammates, and resolve conflicts constructively.</p>
+        <div class="module__quiz">
+          <strong>Quiz: Teamwork & Collaboration</strong>
+          <div class="module__question">
+            <p class="module__question-text"><strong>Q1:</strong> When two teammates disagree on project approach, what's the best first step?</p>
+            <div class="module__options">
+              <label class="module__option"><input type="radio" name="q_2_0" value="a"><span><strong>A.</strong> Go with your idea and ignore theirs</span></label>
+              <label class="module__option"><input type="radio" name="q_2_0" value="b"><span><strong>B.</strong> Ask each person why their approach matters to them and listen for underlying concerns</span></label>
+              <label class="module__option"><input type="radio" name="q_2_0" value="c"><span><strong>C.</strong> Let the loudest person decide</span></label>
+              <label class="module__option"><input type="radio" name="q_2_0" value="d"><span><strong>D.</strong> Avoid the conflict entirely</span></label>
+            </div>
+          </div>
+          <div class="module__question">
+            <p class="module__question-text"><strong>Q2:</strong> In a remote team setting, what's most important for collaboration?</p>
+            <div class="module__options">
+              <label class="module__option"><input type="radio" name="q_2_1" value="a"><span><strong>A.</strong> Only communicating through video calls</span></label>
+              <label class="module__option"><input type="radio" name="q_2_1" value="b"><span><strong>B.</strong> Clear documentation, regular check-ins, and respectful async communication</span></label>
+              <label class="module__option"><input type="radio" name="q_2_1" value="c"><span><strong>C.</strong> Working at the exact same time as everyone else</span></label>
+              <label class="module__option"><input type="radio" name="q_2_1" value="d"><span><strong>D.</strong> Assuming everyone works the same way you do</span></label>
+            </div>
+          </div>
+          <div class="module__question">
+            <p class="module__question-text"><strong>Q3:</strong> How should you handle a conflict with a teammate?</p>
+            <div class="module__options">
+              <label class="module__option"><input type="radio" name="q_2_2" value="a"><span><strong>A.</strong> Talk badly about them to other team members</span></label>
+              <label class="module__option"><input type="radio" name="q_2_2" value="b"><span><strong>B.</strong> Have a private conversation focused on solving the problem, not blaming</span></label>
+              <label class="module__option"><input type="radio" name="q_2_2" value="c"><span><strong>C.</strong> Ignore it and hope it goes away</span></label>
+              <label class="module__option"><input type="radio" name="q_2_2" value="d"><span><strong>D.</strong> Report them immediately without talking to them first</span></label>
+            </div>
+          </div>
+          <button class="module__submit-btn" id="submitBtn">Submit Quiz</button>
+          <div class="module__quiz-result" id="quizResult"></div>
+        </div>
+      </div>
+    </article>
+  `;
+  const answers = { correct: ['b', 'b', 'b'] };
+  const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
+  function getCourseProgress() {
+    const allProgress = JSON.parse(localStorage.getItem('wh_courseProgress') || '{}');
+    return allProgress[user.email] || { completedModules: [], certificateId: null, certificateIssuedAt: null };
+  }
+  function saveCourseProgress(progress) {
+    const allProgress = JSON.parse(localStorage.getItem('wh_courseProgress') || '{}');
+    allProgress[user.email] = progress;
+    localStorage.setItem('wh_courseProgress', JSON.stringify(allProgress));
+  }
+  function updateProgress() {
+    const progress = getCourseProgress();
+    const completed = progress.completedModules.length;
+    document.getElementById('progressLabel').textContent = `${completed} of ${TOTAL_MODULES} modules complete`;
+    document.getElementById('progressFill').style.width = (completed / TOTAL_MODULES) * 100 + '%';
+  }
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    const userAnswers = [document.querySelector('input[name="q_2_0"]:checked')?.value, document.querySelector('input[name="q_2_1"]:checked')?.value, document.querySelector('input[name="q_2_2"]:checked')?.value];
+    if (userAnswers.includes(undefined)) { document.getElementById('quizResult').innerHTML = '<div class="module__quiz-fail">Please answer all questions.</div>'; return; }
+    let correct = 0;
+    userAnswers.forEach((ans, idx) => { if (ans === answers.correct[idx]) correct++; });
+    if ((correct / 3) * 100 >= 80) {
+      document.getElementById('quizResult').innerHTML = `<div class="module__quiz-pass">✓ Passed! ${correct}/3 correct.</div>`;
+      this.disabled = true;
+      this.textContent = 'Completed ✓';
+      const progress = getCourseProgress();
+      if (!progress.completedModules.includes(MODULE_ID)) { progress.completedModules.push(MODULE_ID); }
+      saveCourseProgress(progress);
+      updateProgress();
+    } else {
+      document.getElementById('quizResult').innerHTML = `<div class="module__quiz-fail">You got ${correct}/3. Need 80% to pass.</div>`;
+    }
+  });
+  updateProgress();
+</script>
+</body>
+</html>

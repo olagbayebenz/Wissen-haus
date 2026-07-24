@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Profile - Wissen-Haus</title>
+<meta name="description" content="Manage your Wissen-Haus profile, track progress, view saved opportunities, and connect with mentors.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body data-page="community">
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="section section--tight" style="padding-top:clamp(48px,6vw,84px)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Member Profile</span>
+      <h1 class="display-lg mt-s">Your Learning Journey</h1>
+      <p class="lead mt-m">Track your progress, view certificates, and celebrate your achievements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE SECTION -->
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <!-- Profile Info -->
+      <div class="reveal">
+        <div style="background: linear-gradient(135deg, #0F2D1D 0%, #1a4d36 100%); padding: 40px; border-radius: 12px; color: white; margin-bottom: 32px">
+          <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 32px">👤</div>
+            <div>
+              <h2 style="margin: 0; color: white" id="userName">Loading...</h2>
+              <p style="margin: 8px 0 0; opacity: 0.9" id="userEmail">—</p>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+            <div>
+              <div style="font-size: 24px; font-weight: bold" id="streakDays">—</div>
+              <div style="opacity: 0.9; font-size: 14px">Day Streak 🔥</div>
+            </div>
+            <div>
+              <div style="font-size: 24px; font-weight: bold" id="courseCount">0/5</div>
+              <div style="opacity: 0.9; font-size: 14px">Courses Completed</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 0">Account Settings</h3>
+        <div style="border: 1px solid var(--line); border-radius: 8px; padding: 20px; margin-bottom: 16px">
+          <label style="display: block; margin-bottom: 12px">
+            <span style="font-weight: 600; color: var(--ink)">Email Address</span>
+            <input id="profileEmail" type="email" readonly style="width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 4px; margin-top: 8px; background: var(--bg-light)">
+          </label>
+          <label style="display: block; margin-bottom: 12px">
+            <span style="font-weight: 600; color: var(--ink)">Member Since</span>
+            <input id="memberSince" type="text" readonly style="width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 4px; margin-top: 8px; background: var(--bg-light)">
+          </label>
+          <button onclick="logout()" class="btn btn--outline" style="width: 100%; margin-top: 16px">Sign Out</button>
+        </div>
+      </div>
+
+      <!-- Courses & Certificates -->
+      <div class="reveal" data-d="1">
+        <h3 style="margin-top: 0">Course Progress</h3>
+
+        <div id="coursesList" style="display: grid; gap: 16px"></div>
+
+        <div style="margin-top: 32px; padding: 20px; background: var(--bg-light); border-radius: 8px">
+          <h4 style="margin-top: 0">Certificates & Achievements</h4>
+          <div id="certificatesList" style="display: grid; gap: 12px"></div>
+          <p id="noCertificates" style="color: var(--ink-60); margin: 0">No certificates yet. Complete a course to earn one!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div style="text-align: center; padding: 40px; background: var(--bg-light); border-radius: 8px">
+      <h2>Continue Learning</h2>
+      <p class="lead" style="margin: 16px 0">Pick up where you left off or explore new courses.</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap">
+        <a href="learning-library.html" class="btn">Browse Courses</a>
+        <a href="community.html" class="btn btn--outline">Back to Community</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/streak.js"></script>
+<script>
+const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
+const COURSES = ['soft-skills', 'career-launch', 'ai', 'financial-literacy', 'workplace-readiness'];
+
+if (!user) {
+  window.location.href = 'login.html';
+} else {
+  // Load profile
+  document.getElementById('userName').textContent = user.name;
+  document.getElementById('userEmail').textContent = user.email;
+  document.getElementById('profileEmail').value = user.email;
+  document.getElementById('memberSince').value = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  // Load streak
+  const streak = parseInt(localStorage.getItem('wh_streak') || '0');
+  document.getElementById('streakDays').textContent = streak;
+
+  // Load course progress
+  const allProgress = JSON.parse(localStorage.getItem('wh_courseProgress') || '{}');
+  const progress = allProgress[user.email] || {};
+
+  let completedCount = 0;
+  const coursesList = document.getElementById('coursesList');
+  const certificatesList = document.getElementById('certificatesList');
+
+  COURSES.forEach((courseId, idx) => {
+    const moduleCounts = { 'soft-skills': 6, 'career-launch': 10, 'ai': 10, 'financial-literacy': 10, 'workplace-readiness': 10 };
+    const total = moduleCounts[courseId];
+
+    let completed = 0;
+    for (let i = 1; i <= total; i++) {
+      if (progress[`${courseId}_${i}`]) completed++;
+    }
+
+    const percentage = Math.round((completed / total) * 100);
+    const courseNames = {
+      'soft-skills': 'Soft Skills',
+      'career-launch': 'Career Launch Blueprint',
+      'ai': 'AI for Students',
+      'financial-literacy': 'Financial Literacy',
+      'workplace-readiness': 'Workplace Readiness'
+    };
+
+    const html = `
+      <div style="border: 1px solid var(--line); border-radius: 8px; padding: 16px">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px">
+          <h4 style="margin: 0">${courseNames[courseId]}</h4>
+          <span style="font-size: 14px; color: var(--green-800); font-weight: 600">${percentage}%</span>
+        </div>
+        <div style="width: 100%; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden">
+          <div style="width: ${percentage}%; height: 100%; background: linear-gradient(90deg, #E8715F 0%, #C8A050 100%)"></div>
+        </div>
+        <p style="margin: 8px 0 0; color: var(--ink-60); font-size: 14px">${completed} of ${total} modules complete</p>
+      </div>
+    `;
+
+    coursesList.innerHTML += html;
+
+    // Check for certificate
+    if (percentage === 100) {
+      completedCount++;
+      const certId = progress[`${courseId}_cert`] || `WH-${courseId.slice(0, 3).toUpperCase()}-CERT`;
+      certificatesList.innerHTML += `
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: white; border-radius: 4px; border-left: 4px solid var(--green-800)">
+          <div>
+            <div style="font-weight: 600; color: var(--ink)">${courseNames[courseId]}</div>
+            <div style="font-size: 12px; color: var(--ink-60)">ID: ${certId}</div>
+          </div>
+          <a href="${courseId}-certificate.html" class="btn btn--sm" style="padding: 6px 12px; font-size: 12px">View Certificate</a>
+        </div>
+      `;
+    }
+  });
+
+  document.getElementById('courseCount').textContent = `${completedCount}/5`;
+
+  if (certificatesList.innerHTML === '') {
+    document.getElementById('noCertificates').style.display = 'block';
+  } else {
+    document.getElementById('noCertificates').style.display = 'none';
+  }
+}
+
+function logout() {
+  localStorage.removeItem('wh_currentUser');
+  localStorage.removeItem('wh_visitDate');
+  window.location.href = 'login.html';
+}
+</script>
+</body>
+</html>

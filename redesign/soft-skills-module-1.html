@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 1: Communication Skills - Wissen-Haus</title>
+<meta name="description" content="Learn communication skills: clear writing, active listening, and professional feedback.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body data-page="softskills">
+<noscript><div style="background:#0F2D1D;color:#fff;padding:12px 20px;text-align:center;font-family:sans-serif"><a href="community.html" style="color:#fff;margin:0 8px">Back to Community</a></div></noscript>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="section section--tight" style="padding-top:clamp(48px,6vw,84px)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Module 1 of 6</span>
+      <h1 class="display-lg mt-s">Communication Skills</h1>
+      <p class="lead mt-m">Master the art of clear, empathetic communication—the foundation of all workplace relationships. Learn to express ideas concisely, listen actively, and handle difficult conversations with grace.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS BAR -->
+<section class="section section--tight" style="padding:clamp(24px,3vw,40px) 0">
+  <div class="wrap">
+    <div class="course-progress">
+      <div class="course-progress__label" id="progressLabel">0 of 6 modules complete</div>
+      <div class="course-progress__bar">
+        <div class="course-progress__fill" id="progressFill"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE CONTENT -->
+<section class="section">
+  <div class="wrap">
+    <div class="module-single" id="moduleContent"></div>
+  </div>
+</section>
+
+<!-- NAVIGATION -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="module-nav">
+      <a href="soft-skills-course.html" class="btn btn--outline">← Back to Course</a>
+      <a href="soft-skills-module-2.html" class="btn">Next Module →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/streak.js"></script>
+<script>
+  // Load module 1
+  const MODULE_ID = 1;
+  const TOTAL_MODULES = 6;
+
+  document.getElementById('moduleContent').innerHTML = `
+    <article class="module">
+      <div class="module__header">
+        <h2 class="module__title">Communication Skills</h2>
+      </div>
+      <div class="module__body">
+        <div class="module__objectives">
+          <strong>Learning Objectives</strong>
+          <ul>
+            <li>Communicate clearly in writing and verbally</li>
+            <li>Practice active listening and ask clarifying questions</li>
+            <li>Give and receive constructive feedback professionally</li>
+          </ul>
+        </div>
+        <p class="module__summary">Master the art of clear, empathetic communication—the foundation of all workplace relationships. Learn to express ideas concisely, listen actively, and handle difficult conversations with grace.</p>
+
+        <div class="module__quiz">
+          <strong>Quiz: Communication Skills</strong>
+
+          <div class="module__question">
+            <p class="module__question-text"><strong>Q1:</strong> When writing a professional email about a problem, what should you always include?</p>
+            <div class="module__options">
+              <label class="module__option">
+                <input type="radio" name="q_1_0" value="a">
+                <span><strong>A.</strong> Just the problem without offering solutions</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_0" value="b">
+                <span><strong>B.</strong> The specific issue, its impact, and concrete next steps</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_0" value="c">
+                <span><strong>C.</strong> Emotional language to express how frustrated you are</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_0" value="d">
+                <span><strong>D.</strong> A list of all past problems with this person</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="module__question">
+            <p class="module__question-text"><strong>Q2:</strong> What is active listening?</p>
+            <div class="module__options">
+              <label class="module__option">
+                <input type="radio" name="q_1_1" value="a">
+                <span><strong>A.</strong> Staying quiet while someone talks</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_1" value="b">
+                <span><strong>B.</strong> Fully focusing on the speaker, asking clarifying questions, and reflecting back what you heard</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_1" value="c">
+                <span><strong>C.</strong> Thinking about your response while they speak</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_1" value="d">
+                <span><strong>D.</strong> Taking detailed notes without making eye contact</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="module__question">
+            <p class="module__question-text"><strong>Q3:</strong> When giving constructive feedback, you should focus on:</p>
+            <div class="module__options">
+              <label class="module__option">
+                <input type="radio" name="q_1_2" value="a">
+                <span><strong>A.</strong> The person's character and personality</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_2" value="b">
+                <span><strong>B.</strong> Specific behaviors and their impact, with suggestions for improvement</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_2" value="c">
+                <span><strong>C.</strong> Criticism disguised as jokes</span>
+              </label>
+              <label class="module__option">
+                <input type="radio" name="q_1_2" value="d">
+                <span><strong>D.</strong> Only pointing out mistakes without solutions</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="module__submit-btn" id="submitBtn">Submit Quiz</button>
+          <div class="module__quiz-result" id="quizResult"></div>
+        </div>
+      </div>
+    </article>
+  `;
+
+  const answers = { correct: ['b', 'b', 'b'] };
+  const user = JSON.parse(localStorage.getItem('wh_currentUser') || 'null');
+
+  function getCourseProgress() {
+    const allProgress = JSON.parse(localStorage.getItem('wh_courseProgress') || '{}');
+    return allProgress[user.email] || { completedModules: [], certificateId: null, certificateIssuedAt: null };
+  }
+
+  function saveCourseProgress(progress) {
+    const allProgress = JSON.parse(localStorage.getItem('wh_courseProgress') || '{}');
+    allProgress[user.email] = progress;
+    localStorage.setItem('wh_courseProgress', JSON.stringify(allProgress));
+  }
+
+  function updateProgress() {
+    const progress = getCourseProgress();
+    const completed = progress.completedModules.length;
+    document.getElementById('progressLabel').textContent = `${completed} of ${TOTAL_MODULES} modules complete`;
+    document.getElementById('progressFill').style.width = (completed / TOTAL_MODULES) * 100 + '%';
+  }
+
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    const userAnswers = [
+      document.querySelector('input[name="q_1_0"]:checked')?.value,
+      document.querySelector('input[name="q_1_1"]:checked')?.value,
+      document.querySelector('input[name="q_1_2"]:checked')?.value
+    ];
+
+    if (userAnswers.includes(undefined)) {
+      document.getElementById('quizResult').innerHTML = '<div class="module__quiz-fail">Please answer all questions before submitting.</div>';
+      return;
+    }
+
+    let correct = 0;
+    userAnswers.forEach((ans, idx) => {
+      if (ans === answers.correct[idx]) correct++;
+    });
+
+    const percentage = (correct / 3) * 100;
+    const passed = percentage >= 80;
+    const resultDiv = document.getElementById('quizResult');
+
+    if (passed) {
+      resultDiv.innerHTML = `<div class="module__quiz-pass">✓ Passed! You got ${correct}/3 correct. Well done!</div>`;
+      this.disabled = true;
+      this.textContent = 'Completed ✓';
+
+      const progress = getCourseProgress();
+      if (!progress.completedModules.includes(MODULE_ID)) {
+        progress.completedModules.push(MODULE_ID);
+      }
+      saveCourseProgress(progress);
+      updateProgress();
+    } else {
+      resultDiv.innerHTML = `<div class="module__quiz-fail">You got ${correct}/3 correct. Need 80% to pass. Try again!</div>`;
+    }
+  });
+
+  updateProgress();
+</script>
+</body>
+</html>

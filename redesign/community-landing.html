@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community Hub - Wissen-Haus Youth Empowerment Foundation</title>
+<meta name="description" content="Join the Wissen-Haus community hub to access scholarships, internships, jobs, courses, and mentorship.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body data-page="community">
+<noscript><div style="background:#0F2D1D;color:#fff;padding:12px 20px;text-align:center;font-family:sans-serif"><a href="index.html" style="color:#fff;margin:0 8px">Home</a><a href="about.html" style="color:#fff;margin:0 8px">About</a><a href="programmes.html" style="color:#fff;margin:0 8px">Programmes</a><a href="community.html" style="color:#fff;margin:0 8px">Community</a></div></noscript>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="section section--tight" style="padding-top:clamp(48px,6vw,84px)">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Community Hub</span>
+        <h1 class="display-lg mt-s">Where Nigerian Youth Grow, Together.</h1>
+        <p class="lead mt-m">Access scholarships, internships, jobs, free courses, mentorship and a thriving community—everything a young changemaker needs in one place.</p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
+          <a href="login.html" class="btn">Join Now</a>
+          <a href="login.html" class="btn btn--outline" onclick="showLogin(event)">Sign In</a>
+        </div>
+      </div>
+      <div class="split__media reveal" data-d="1"><img src="assets/img/community.jpg" alt="Wissen-Haus community members collaborating"></div>
+    </div>
+  </div>
+</section>
+
+<div class="pattern-edge" aria-hidden="true"></div>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head mb-m reveal">
+      <h2>What You'll Access as a Member</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="card reveal">
+        <div class="card__body">
+          <span class="tl-tag">Opportunities</span>
+          <h3>Scholarships & Jobs</h3>
+          <p>Curated opportunities from top organizations across Africa. Updated daily from multiple sources.</p>
+        </div>
+      </article>
+      <article class="card reveal" data-d="1">
+        <div class="card__body">
+          <span class="tl-tag">Learning</span>
+          <h3>Free Courses</h3>
+          <p>Certificate courses in soft skills, digital literacy, AI, entrepreneurship, and leadership.</p>
+        </div>
+      </article>
+      <article class="card reveal" data-d="2">
+        <div class="card__body">
+          <span class="tl-tag">Community</span>
+          <h3>Member Network</h3>
+          <p>Connect with peers, share wins, ask questions, and access mentorship from experienced professionals.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP CTA -->
+<section class="section panel-dark">
+  <div class="wrap">
+    <div style="text-align:center;max-width:700px;margin:0 auto">
+      <h2 style="color:#fff;margin-bottom:24px">Join 1000+ Nigerian Youth</h2>
+      <p style="color:#fff;font-size:1.1rem;margin-bottom:32px;line-height:1.7">
+        Get instant access to scholarships, internships, jobs, free courses, and a supportive community of changemakers.
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="login.html" class="btn" style="background:#fff;color:var(--green-800)">Create Free Account</a>
+        <a href="login.html" class="btn btn--outline" style="border-color:#fff;color:#fff" onclick="showLogin(event)">Already a Member?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<script src="assets/js/main.js"></script>
+<script>
+function showLogin(e) {
+  e.preventDefault();
+  // Redirect to login with login form shown
+  window.location.href = 'login.html#signin';
+}
+</script>
+</body>
+</html>
