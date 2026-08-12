@@ -1,575 +1,6 @@
 {
-  "generatedAt": "2026-08-11T06:07:22.131Z",
+  "generatedAt": "2026-08-12T08:04:47.259Z",
   "items": [
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-resonance-residency-programme-2026",
-      "title": "The RESONANCE Residency Programme 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-resonance-residency-programme-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "nigeria",
-      "eligibilityLabel": "Open to Nigeria",
-      "tags": [
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-faculty-scholarship-microelectronics-tu-delft-",
-      "title": "Faculty scholarship: Microelectronics (TU Delft)",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/faculty-scholarship-microelectronics-tu-delft",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Netherlands",
-        "Masters"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-international-postgraduate-funding-webinar-series-",
-      "title": "International Postgraduate Funding Webinar Series 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/international-postgraduate-funding-webinar-series-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "United Kingdom",
-        "Postgraduate"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-vital-voices-vvengage-fellowship-2026-for-women-in",
-      "title": "Vital Voices’ VVEngage Fellowship 2026 for Women in Public Leadership",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/vital-voices-vvengage-fellowship-2026-for-women-in-public-leadership",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Postdoc",
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-scholarships-from-other-providers",
-      "title": "Scholarships from other providers",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/scholarships-from-other-providers",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Netherlands",
-        "Partial"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-unesco-youth-eyes-on-the-silk-roads-photo-contest-",
-      "title": "UNESCO Youth Eyes on the Silk Roads Photo Contest 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/unesco-youth-eyes-on-the-silk-roads-photo-contest-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": []
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-french-institutes-for-advanced-study-fellowshi",
-      "title": "The French Institutes for Advanced Study Fellowship Programme 2027/2028 at the Paris IAS",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-french-institutes-for-advanced-study-fellowship-programme-2027-2028-at-the-p",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Postdoc",
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-unido-one-world-sustainability-awards-2026",
-      "title": "UNIDO ONE World Sustainability Awards 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/unido-one-world-sustainability-awards-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": []
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-world-innovation-summit-for-education-wise-awards-",
-      "title": "World Innovation Summit for Education (WISE) Awards Program 2026/2027",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/world-innovation-summit-for-education-wise-awards-program-2026-2027",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Partial"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-unaoc-plural-youth-video-festival-2026",
-      "title": "The UNAOC PLURAL+ Youth Video Festival 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-unaoc-plural-youth-video-festival-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-funded-studentships-and-research-projects",
-      "title": "Funded studentships and research projects",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/funded-studentships-and-research-projects",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "United Kingdom",
-        "Postgraduate"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-doctoral-training-programmes-at-cambridge",
-      "title": "Doctoral training programmes at Cambridge",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/doctoral-training-programmes-at-cambridge",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "United Kingdom",
-        "PhD"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-afreximbank-edordu-research-competition-2026",
-      "title": "The Afreximbank–Edordu Research Competition 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-afreximbank-edordu-research-competition-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Postgraduate",
-        "Partial"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-twas-cui-postgraduate-fellowship-programme-2026",
-      "title": "TWAS-CUI Postgraduate Fellowship Programme 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/twas-cui-postgraduate-fellowship-programme-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "PhD",
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-union-for-international-cancer-control-uicc-techni",
-      "title": "Union for International Cancer Control (UICC) Technical Fellowships 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/union-for-international-cancer-control-uicc-technical-fellowships-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": []
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-atlantic-dialogues-emerging-leaders-program-2026",
-      "title": "Atlantic Dialogues Emerging Leaders Program 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/atlantic-dialogues-emerging-leaders-program-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-french-institutes-for-advanced-study-fellowship-pr",
-      "title": "French Institutes for Advanced Study Fellowship Programme 2027/2028",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/french-institutes-for-advanced-study-fellowship-programme-2027-2028",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Postdoc",
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-justus-amp-louise-van-effen-excellence-scholarship",
-      "title": "Justus &amp; Louise van Effen Excellence Scholarships",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/justus-louise-van-effen-excellence-scholarships",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Netherlands",
-        "Masters"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-schulich-leader-scholarships",
-      "title": "Schulich Leader Scholarships",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/schulich-leader-scholarships",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Canada",
-        "Undergraduate"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-international-students-scholarship-university-of-t",
-      "title": "International Students Scholarship (University of Toronto)",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/international-students-scholarship-university-of-toronto",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Canada",
-        "Undergraduate"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-postgraduate-funding-search",
-      "title": "Postgraduate Funding Search",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/postgraduate-funding-search",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "United Kingdom",
-        "Postgraduate"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-university-of-toronto-dalla-lana-school-of-public-",
-      "title": "University of Toronto Dalla Lana School of Public Health Women in Global Health Leadership Fellowship 2026/2027",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/university-of-toronto-dalla-lana-school-of-public-health-women-in-global-health-",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-undp-youth4climate-mentorship-programme-2026",
-      "title": "The UNDP Youth4Climate Mentorship Programme 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-undp-youth4climate-mentorship-programme-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": []
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-cartier-women-s-initiative-regional-award-2027",
-      "title": "The Cartier Women’s Initiative Regional Award 2027",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-cartier-women-s-initiative-regional-award-2027",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": []
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-afreximbank-creative-africa-nexus-programme-ca",
-      "title": "The Afreximbank Creative Africa Nexus programme (CANEX) short film competition 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-afreximbank-creative-africa-nexus-programme-canex-short-film-competition-202",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "nigeria",
-      "eligibilityLabel": "Open to Nigeria",
-      "tags": [
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-global-resilience-partnership-innovation-challenge",
-      "title": "Global Resilience Partnership Innovation Challenge 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/global-resilience-partnership-innovation-challenge-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Partial"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-afcfta-startup-acceleration-amp-partnership-pr",
-      "title": "The AfCFTA Startup Acceleration &amp; Partnership Program 2026",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-afcfta-startup-acceleration-partnership-program-2026",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": []
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-ioc-olympic-studies-centre-osc-2027-phd-studen",
-      "title": "The IOC Olympic Studies Centre (OSC) 2027 PhD Students and Early Career Academics Research Grant Programme",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-ioc-olympic-studies-centre-osc-2027-phd-students-and-early-career-academics-",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "PhD",
-        "Fully Funded"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-carnegie-mellon-university-africa-innovation-h",
-      "title": "The Carnegie Mellon University Africa Innovation Hub Business Incubation Program 2026/2027",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-carnegie-mellon-university-africa-innovation-hub-business-incubation-program",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "africa",
-      "eligibilityLabel": "Open to Africa",
-      "tags": [
-        "Partial"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-university-scholarship-for-peak-students",
-      "title": "University Scholarship for PEAK Students",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/university-scholarship-for-peak-students",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Japan",
-        "Undergraduate"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-the-university-of-tokyo-special-scholarship-for-in",
-      "title": "The University of Tokyo Special Scholarship for International Students (University of Tokyo Fellowship)",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/the-university-of-tokyo-special-scholarship-for-international-students-universit",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Japan",
-        "PhD"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-orlando-lauti-foundation-scholarship",
-      "title": "Orlando Lauti Foundation Scholarship",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/orlando-lauti-foundation-scholarship",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Switzerland",
-        "Undergraduate, Masters"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-mext-honors-scholarship-for-privately-financed-int",
-      "title": "MEXT Honors Scholarship for Privately Financed International Students",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/mext-honors-scholarship-for-privately-financed-international-students",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Japan",
-        "Undergraduate, Masters, PhD"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-hans-wilsdorf-foundation-scholarship",
-      "title": "Hans Wilsdorf Foundation Scholarship",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/hans-wilsdorf-foundation-scholarship",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Switzerland",
-        "Masters"
-      ]
-    },
-    {
-      "type": "scholarship",
-      "source": "scholarshipsforafricans",
-      "id": "sfa-japanese-government-monbukagakusho-mext-scholarshi",
-      "title": "Japanese Government (Monbukagakusho: MEXT) Scholarship",
-      "company": "N/A",
-      "url": "https://scholarshipsforafricans.com/scholarships/japanese-government-monbukagakusho-mext-scholarship",
-      "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.129Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Japan",
-        "Undergraduate, Masters, PhD"
-      ]
-    },
     {
       "type": "scholarship",
       "source": "scholarshipsforafricans",
@@ -578,7 +9,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/moe-taiwan-scholarship",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -595,7 +26,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/afox-visiting-fellowships-oxford",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -612,7 +43,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/taiwan-icdf-higher-education-scholarship",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -629,7 +60,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/brunei-darussalam-government-scholarship",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -646,7 +77,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/visegrad-scholarship-program",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -663,7 +94,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/msca-marie-sklodowska-curie-actions",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -680,7 +111,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/turkiye-burslari-scholarships",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -697,7 +128,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/international-major-entrance-scholarship-for-vantage-one",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -714,7 +145,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/international-scholars-program",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -731,7 +162,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/lester-b-pearson-international-scholarship",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -748,7 +179,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/the-developpp-ventures-ideas-competition-2026",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -764,7 +195,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/2026-2027-african-leadership-centre-associate-fellowship-in-peace-security-and-d",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -778,7 +209,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/the-relx-environmental-challenge-2026",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -794,7 +225,7 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/apni-young-african-phosphorus-fellowship-2026",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -810,12 +241,856 @@
       "company": "N/A",
       "url": "https://scholarshipsforafricans.com/scholarships/orange-corners-nigeria-incubation-programme-cohort-15",
       "datePosted": null,
-      "firstSeenAt": "2026-08-11T06:07:22.128Z",
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
       "expiresAt": null,
       "eligibility": "nigeria",
       "eligibilityLabel": "Open to Nigeria",
       "tags": [
         "Partial"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-resonance-residency-programme-2026",
+      "title": "The RESONANCE Residency Programme 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-resonance-residency-programme-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "nigeria",
+      "eligibilityLabel": "Open to Nigeria",
+      "tags": [
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-faculty-scholarship-microelectronics-tu-delft-",
+      "title": "Faculty scholarship: Microelectronics (TU Delft)",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/faculty-scholarship-microelectronics-tu-delft",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Netherlands",
+        "Masters"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-international-postgraduate-funding-webinar-series-",
+      "title": "International Postgraduate Funding Webinar Series 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/international-postgraduate-funding-webinar-series-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "United Kingdom",
+        "Postgraduate"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-vital-voices-vvengage-fellowship-2026-for-women-in",
+      "title": "Vital Voices’ VVEngage Fellowship 2026 for Women in Public Leadership",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/vital-voices-vvengage-fellowship-2026-for-women-in-public-leadership",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Postdoc",
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-scholarships-from-other-providers",
+      "title": "Scholarships from other providers",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/scholarships-from-other-providers",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Netherlands",
+        "Partial"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-unesco-youth-eyes-on-the-silk-roads-photo-contest-",
+      "title": "UNESCO Youth Eyes on the Silk Roads Photo Contest 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/unesco-youth-eyes-on-the-silk-roads-photo-contest-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": []
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-french-institutes-for-advanced-study-fellowshi",
+      "title": "The French Institutes for Advanced Study Fellowship Programme 2027/2028 at the Paris IAS",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-french-institutes-for-advanced-study-fellowship-programme-2027-2028-at-the-p",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Postdoc",
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-unido-one-world-sustainability-awards-2026",
+      "title": "UNIDO ONE World Sustainability Awards 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/unido-one-world-sustainability-awards-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": []
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-world-innovation-summit-for-education-wise-awards-",
+      "title": "World Innovation Summit for Education (WISE) Awards Program 2026/2027",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/world-innovation-summit-for-education-wise-awards-program-2026-2027",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Partial"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-unaoc-plural-youth-video-festival-2026",
+      "title": "The UNAOC PLURAL+ Youth Video Festival 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-unaoc-plural-youth-video-festival-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-funded-studentships-and-research-projects",
+      "title": "Funded studentships and research projects",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/funded-studentships-and-research-projects",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "United Kingdom",
+        "Postgraduate"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-doctoral-training-programmes-at-cambridge",
+      "title": "Doctoral training programmes at Cambridge",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/doctoral-training-programmes-at-cambridge",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "United Kingdom",
+        "PhD"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-afreximbank-edordu-research-competition-2026",
+      "title": "The Afreximbank–Edordu Research Competition 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-afreximbank-edordu-research-competition-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Postgraduate",
+        "Partial"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-twas-cui-postgraduate-fellowship-programme-2026",
+      "title": "TWAS-CUI Postgraduate Fellowship Programme 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/twas-cui-postgraduate-fellowship-programme-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "PhD",
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-union-for-international-cancer-control-uicc-techni",
+      "title": "Union for International Cancer Control (UICC) Technical Fellowships 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/union-for-international-cancer-control-uicc-technical-fellowships-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": []
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-atlantic-dialogues-emerging-leaders-program-2026",
+      "title": "Atlantic Dialogues Emerging Leaders Program 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/atlantic-dialogues-emerging-leaders-program-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-french-institutes-for-advanced-study-fellowship-pr",
+      "title": "French Institutes for Advanced Study Fellowship Programme 2027/2028",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/french-institutes-for-advanced-study-fellowship-programme-2027-2028",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Postdoc",
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-justus-amp-louise-van-effen-excellence-scholarship",
+      "title": "Justus &amp; Louise van Effen Excellence Scholarships",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/justus-louise-van-effen-excellence-scholarships",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Netherlands",
+        "Masters"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-schulich-leader-scholarships",
+      "title": "Schulich Leader Scholarships",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/schulich-leader-scholarships",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Canada",
+        "Undergraduate"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-international-students-scholarship-university-of-t",
+      "title": "International Students Scholarship (University of Toronto)",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/international-students-scholarship-university-of-toronto",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Canada",
+        "Undergraduate"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-postgraduate-funding-search",
+      "title": "Postgraduate Funding Search",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/postgraduate-funding-search",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "United Kingdom",
+        "Postgraduate"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-university-of-toronto-dalla-lana-school-of-public-",
+      "title": "University of Toronto Dalla Lana School of Public Health Women in Global Health Leadership Fellowship 2026/2027",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/university-of-toronto-dalla-lana-school-of-public-health-women-in-global-health-",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-undp-youth4climate-mentorship-programme-2026",
+      "title": "The UNDP Youth4Climate Mentorship Programme 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-undp-youth4climate-mentorship-programme-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": []
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-cartier-women-s-initiative-regional-award-2027",
+      "title": "The Cartier Women’s Initiative Regional Award 2027",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-cartier-women-s-initiative-regional-award-2027",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": []
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-afreximbank-creative-africa-nexus-programme-ca",
+      "title": "The Afreximbank Creative Africa Nexus programme (CANEX) short film competition 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-afreximbank-creative-africa-nexus-programme-canex-short-film-competition-202",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "nigeria",
+      "eligibilityLabel": "Open to Nigeria",
+      "tags": [
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-global-resilience-partnership-innovation-challenge",
+      "title": "Global Resilience Partnership Innovation Challenge 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/global-resilience-partnership-innovation-challenge-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Partial"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-afcfta-startup-acceleration-amp-partnership-pr",
+      "title": "The AfCFTA Startup Acceleration &amp; Partnership Program 2026",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-afcfta-startup-acceleration-partnership-program-2026",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": []
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-ioc-olympic-studies-centre-osc-2027-phd-studen",
+      "title": "The IOC Olympic Studies Centre (OSC) 2027 PhD Students and Early Career Academics Research Grant Programme",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-ioc-olympic-studies-centre-osc-2027-phd-students-and-early-career-academics-",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "PhD",
+        "Fully Funded"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-carnegie-mellon-university-africa-innovation-h",
+      "title": "The Carnegie Mellon University Africa Innovation Hub Business Incubation Program 2026/2027",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-carnegie-mellon-university-africa-innovation-hub-business-incubation-program",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "africa",
+      "eligibilityLabel": "Open to Africa",
+      "tags": [
+        "Partial"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-university-scholarship-for-peak-students",
+      "title": "University Scholarship for PEAK Students",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/university-scholarship-for-peak-students",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Japan",
+        "Undergraduate"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-the-university-of-tokyo-special-scholarship-for-in",
+      "title": "The University of Tokyo Special Scholarship for International Students (University of Tokyo Fellowship)",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/the-university-of-tokyo-special-scholarship-for-international-students-universit",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Japan",
+        "PhD"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-orlando-lauti-foundation-scholarship",
+      "title": "Orlando Lauti Foundation Scholarship",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/orlando-lauti-foundation-scholarship",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Switzerland",
+        "Undergraduate, Masters"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-mext-honors-scholarship-for-privately-financed-int",
+      "title": "MEXT Honors Scholarship for Privately Financed International Students",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/mext-honors-scholarship-for-privately-financed-international-students",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Japan",
+        "Undergraduate, Masters, PhD"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-hans-wilsdorf-foundation-scholarship",
+      "title": "Hans Wilsdorf Foundation Scholarship",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/hans-wilsdorf-foundation-scholarship",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Switzerland",
+        "Masters"
+      ]
+    },
+    {
+      "type": "scholarship",
+      "source": "scholarshipsforafricans",
+      "id": "sfa-japanese-government-monbukagakusho-mext-scholarshi",
+      "title": "Japanese Government (Monbukagakusho: MEXT) Scholarship",
+      "company": "N/A",
+      "url": "https://scholarshipsforafricans.com/scholarships/japanese-government-monbukagakusho-mext-scholarship",
+      "datePosted": null,
+      "firstSeenAt": "2026-08-12T08:04:47.257Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Japan",
+        "Undergraduate, Masters, PhD"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-mercury-customer-support-systems-amp-analytics-arc-",
+      "title": "Mercury: Customer Support Systems &amp; Analytics Architect",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/mercury-customer-support-systems-analytics-architect",
+      "datePosted": "2026-08-12",
+      "firstSeenAt": "2026-08-12T08:04:45.898Z",
+      "expiresAt": "2026-09-11T07:31:04.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Customer Support"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-sofi-influencer-strategist-contract--",
+      "title": "SoFi: Influencer Strategist (Contract)",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/sofi-influencer-strategist-contract",
+      "datePosted": "2026-08-12",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-11T07:31:04.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Full-Stack Programming"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-netlify-senior-financial-analyst-",
+      "title": "Netlify: Senior Financial Analyst",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/netlify-senior-financial-analyst",
+      "datePosted": "2026-08-12",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-11T07:31:02.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Full-Stack Programming"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-sofi-director-learning-and-development-operations-",
+      "title": "SoFi: Director, Learning and Development - Operations",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/sofi-director-learning-and-development-operations",
+      "datePosted": "2026-08-12",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-11T07:30:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Full-Stack Programming"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-mercury-counsel-product-amp-regulatory-payments-am-",
+      "title": "Mercury: Counsel, Product &amp; Regulatory - Payments &amp; AML",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/mercury-counsel-product-regulatory-payments-aml",
+      "datePosted": "2026-08-12",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-11T07:30:59.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Back-End Programming"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "arbeitnow",
+      "id": "remote-senior-manager-customer-success-engineering-428126",
+      "title": "Senior Manager, Customer Success Engineering",
+      "company": "Veeamsoftware",
+      "url": "https://www.arbeitnow.com/jobs/companies/veeamsoftware/remote-senior-manager-customer-success-engineering-428126",
+      "datePosted": "2026-08-12",
+      "firstSeenAt": "2026-08-12T08:04:45.516Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "WW Customer Success 1009886"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "remoteok",
+      "id": "remoteok-1136379",
+      "title": "Sales Development Representative Attributeâ",
+      "company": "DoiT",
+      "url": "https://remoteOK.com/remote-jobs/",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.841Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "technical",
+        "marketing"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "remoteok",
+      "id": "remoteok-1136378",
+      "title": "Senior Software QA Engineer",
+      "company": "CoverGo",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-qa-engineer-covergo-1136378",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.841Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "dev",
+        "customer support"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "remoteok",
+      "id": "remoteok-1136553",
+      "title": "Handyman",
+      "company": "Compass Group Canada",
+      "url": "https://remoteOK.com/remote-jobs/remote-handyman-compass-group-canada-1136553",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.841Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "education",
+        "supervisor"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-hospitable-customer-advocate-lead-north-america-re-",
+      "title": "Hospitable: Customer Advocate Lead (North America - Remote)",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/hospitable-customer-advocate-lead-north-america-remote-1",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-10T16:03:20.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Customer Support"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-toptal-tech-lead-manufacturing-data-amp-ai-platfor-",
+      "title": "Toptal: Tech Lead - Manufacturing Data &amp; AI Platforms - Global Pharmaceutical Company",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/toptal-tech-lead-manufacturing-data-ai-platforms-global-pharmaceutical-company",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-10T12:58:39.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Full-Stack Programming"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-toptal-data-scientist-for-top-cosmetic-firm-",
+      "title": "Toptal: Data Scientist for Top Cosmetic firm",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/toptal-data-scientist-for-top-cosmetic-firm",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-10T12:40:35.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Full-Stack Programming"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-harney-amp-sons-fine-teas-associate-erp-operations-",
+      "title": "Harney &amp; Sons Fine Teas: Associate – ERP Operations (SAP Business One)",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/harney-sons-fine-teas-associate-erp-operations-sap-business-one",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-10T11:45:38.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "All Other Remote"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-justworks-international-consultant-apac-",
+      "title": "Justworks: International Consultant, APAC",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/justworks-international-consultant-apac",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-10T07:30:45.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "All Other Remote"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-remote-account-executive-dach-",
+      "title": "Remote: Account Executive DACH",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/remote-account-executive-dach-1",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.899Z",
+      "expiresAt": "2026-09-10T07:30:41.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Sales and Marketing"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-amplitude-senior-enterprise-account-executive-",
+      "title": "Amplitude : Senior Enterprise Account Executive",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/amplitude-senior-enterprise-account-executive",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.900Z",
+      "expiresAt": "2026-09-10T07:30:36.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Sales and Marketing"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-remote-account-executive-dach-",
+      "title": "Remote: Account Executive DACH",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/remote-account-executive-dach",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.900Z",
+      "expiresAt": "2026-09-10T07:30:36.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Sales and Marketing"
       ]
     },
     {
@@ -826,7 +1101,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/pixel-one-senior-visual-designer",
       "datePosted": "2026-08-11",
-      "firstSeenAt": "2026-08-11T06:07:21.011Z",
+      "firstSeenAt": "2026-08-12T08:04:45.900Z",
       "expiresAt": "2026-09-10T03:24:55.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -842,12 +1117,62 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/pixel-one-senior-product-designer",
       "datePosted": "2026-08-11",
-      "firstSeenAt": "2026-08-11T06:07:21.011Z",
+      "firstSeenAt": "2026-08-12T08:04:45.900Z",
       "expiresAt": "2026-09-10T02:51:33.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
       "tags": [
         "Design"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "arbeitnow",
+      "id": "remote-contracts-inventory-administrator-6-month-ftc-322913",
+      "title": "Contracts & Inventory Administrator - 6 Month FTC",
+      "company": "loveholidays",
+      "url": "https://www.arbeitnow.com/jobs/companies/loveholidays/remote-contracts-inventory-administrator-6-month-ftc-322913",
+      "datePosted": "2026-08-11",
+      "firstSeenAt": "2026-08-12T08:04:45.517Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "Supply"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "remoteok",
+      "id": "remoteok-1136364",
+      "title": "Electrician Royal Beach Club",
+      "company": "Royal Caribbean International",
+      "url": "https://remoteOK.com/remote-jobs/remote-electrician-royal-beach-club-royal-caribbean-international-1136364",
+      "datePosted": "2026-08-10",
+      "firstSeenAt": "2026-08-12T08:04:45.841Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "sys admin",
+        "infosec"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "remoteok",
+      "id": "remoteok-1136393",
+      "title": "Sales Team Member Cotton On Westfield Bondi",
+      "company": "Cotton On Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-team-member-cotton-on-westfield-bondi-cotton-on-group-1136393",
+      "datePosted": "2026-08-10",
+      "firstSeenAt": "2026-08-12T08:04:45.842Z",
+      "expiresAt": null,
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "customer support",
+        "marketing"
       ]
     },
     {
@@ -858,7 +1183,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/food-service-specialties-back-office-support-1",
       "datePosted": "2026-08-10",
-      "firstSeenAt": "2026-08-11T06:07:21.011Z",
+      "firstSeenAt": "2026-08-12T08:04:45.900Z",
       "expiresAt": "2026-09-09T21:39:16.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -874,7 +1199,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/nvidia-global-immigration-specialist",
       "datePosted": "2026-08-10",
-      "firstSeenAt": "2026-08-11T06:07:21.011Z",
+      "firstSeenAt": "2026-08-12T08:04:45.900Z",
       "expiresAt": "2026-09-09T15:22:19.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -890,7 +1215,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/zoom-solutions-consultant",
       "datePosted": "2026-08-10",
-      "firstSeenAt": "2026-08-11T06:07:21.011Z",
+      "firstSeenAt": "2026-08-12T08:04:45.900Z",
       "expiresAt": "2026-09-09T15:13:30.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -906,7 +1231,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/the-psychics-connection-work-at-home-psychics-tarot-readers-us-canada",
       "datePosted": "2026-08-09",
-      "firstSeenAt": "2026-08-11T06:07:21.011Z",
+      "firstSeenAt": "2026-08-12T08:04:45.900Z",
       "expiresAt": "2026-09-08T14:39:49.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -922,7 +1247,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/iterable-account-executive-enterprise-west-region",
       "datePosted": "2026-08-09",
-      "firstSeenAt": "2026-08-11T06:07:21.012Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-08T07:30:40.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -938,7 +1263,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/amwell-manager-government-compliance-authorization",
       "datePosted": "2026-08-09",
-      "firstSeenAt": "2026-08-11T06:07:21.012Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-08T07:30:40.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -948,34 +1273,19 @@
     },
     {
       "type": "job",
-      "source": "weworkremotely",
-      "id": "wwr-lattice-engineering-manager-ai-",
-      "title": "Lattice: Engineering Manager, AI",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/lattice-engineering-manager-ai-1",
+      "source": "remoteok",
+      "id": "remoteok-1136470",
+      "title": "Director Proposal Management Defense and Space",
+      "company": "Honeywell Aerospace",
+      "url": "https://remoteOK.com/remote-jobs/remote-director-proposal-management-defense-and-space-honeywell-aerospace-1136470",
       "datePosted": "2026-08-08",
-      "firstSeenAt": "2026-08-11T06:07:21.012Z",
-      "expiresAt": "2026-09-07T07:30:54.000Z",
+      "firstSeenAt": "2026-08-12T08:04:45.842Z",
+      "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
       "tags": [
-        "Full-Stack Programming"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "weworkremotely",
-      "id": "wwr-lattice-engineering-manager-ai-",
-      "title": "Lattice: Engineering Manager, AI",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/lattice-engineering-manager-ai",
-      "datePosted": "2026-08-08",
-      "firstSeenAt": "2026-08-11T06:07:21.012Z",
-      "expiresAt": "2026-09-07T07:30:46.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Full-Stack Programming"
+        "excel",
+        "non tech"
       ]
     },
     {
@@ -986,7 +1296,7 @@
       "company": "Lemon.io",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-react-full-stack-developer-lemon-io-1136299",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.073Z",
+      "firstSeenAt": "2026-08-12T08:04:45.843Z",
       "expiresAt": null,
       "eligibility": "africa",
       "eligibilityLabel": "Open to Africa",
@@ -1003,7 +1313,7 @@
       "company": "CCDC - The Cambridge Crystallographic Data Centre",
       "url": "https://remoteOK.com/remote-jobs/remote-open-vacancies-ccdc-the-cambridge-crystallographic-data-centre-1136303",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.073Z",
+      "firstSeenAt": "2026-08-12T08:04:45.843Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1020,7 +1330,7 @@
       "company": "ODF",
       "url": "https://remoteOK.com/remote-jobs/remote-traba-odf-1136297",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.073Z",
+      "firstSeenAt": "2026-08-12T08:04:45.844Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1034,7 +1344,7 @@
       "company": "The Well",
       "url": "https://remoteOK.com/remote-jobs/remote-joel-q-the-well-1136288",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.073Z",
+      "firstSeenAt": "2026-08-12T08:04:45.844Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1051,7 +1361,7 @@
       "company": "FedEx",
       "url": "https://remoteOK.com/remote-jobs/remote-cr281-customs-agent-fedex-1136279",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.073Z",
+      "firstSeenAt": "2026-08-12T08:04:45.845Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1068,7 +1378,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/simpletiger-llc-b2b-saas-ppc-manager",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.013Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-06T21:06:02.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1084,7 +1394,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/headway-senior-manager-content-community-marketing",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.013Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-06T18:48:42.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1100,7 +1410,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/reddit-group-product-manager-finance-technology",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.013Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-06T18:27:08.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1111,28 +1421,12 @@
     {
       "type": "job",
       "source": "weworkremotely",
-      "id": "wwr-toptal-stibo-sr-architect-platform-owner-for-globa-",
-      "title": "Toptal: Stibo Sr. Architect/Platform Owner for Global Fortune 500",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/toptal-stibo-sr-architect-platform-owner-for-global-fortune-500",
-      "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.013Z",
-      "expiresAt": "2026-09-06T15:54:26.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Full-Stack Programming"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "weworkremotely",
       "id": "wwr-kazaar-fragrances-brand-amp-creative-designer-free-",
       "title": "Kazaar Fragrances: Brand &amp; Creative Designer (Freelance, 100% Remote)",
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/kazaar-fragrances-brand-creative-designer-freelance-100-remote",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.013Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-06T09:59:18.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1148,7 +1442,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-forward-deployed-engineer-compliance-office-of-the-cto",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.013Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-06T07:31:06.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1164,7 +1458,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-derivative-sales-analyst",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.013Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-06T07:31:06.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1180,7 +1474,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/grafana-labs-associate-observability-architect-est-remote",
       "datePosted": "2026-08-07",
-      "firstSeenAt": "2026-08-11T06:07:21.013Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-06T07:31:06.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1196,7 +1490,7 @@
       "company": "Elockers.Com Pty Ltd",
       "url": "https://remoteOK.com/remote-jobs/remote-yha-queensland-elockers-com-pty-ltd-1136265",
       "datePosted": "2026-08-06",
-      "firstSeenAt": "2026-08-11T06:07:21.073Z",
+      "firstSeenAt": "2026-08-12T08:04:45.845Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1213,7 +1507,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/kuno-creative-group-inc-senior-revenue-operations-strategist",
       "datePosted": "2026-08-06",
-      "firstSeenAt": "2026-08-11T06:07:21.014Z",
+      "firstSeenAt": "2026-08-12T08:04:45.901Z",
       "expiresAt": "2026-09-05T15:25:55.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1224,28 +1518,12 @@
     {
       "type": "job",
       "source": "weworkremotely",
-      "id": "wwr-webflow-customer-success-manager-pacific-time-",
-      "title": "Webflow: Customer Success Manager - Pacific Time",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/webflow-customer-success-manager-pacific-time",
-      "datePosted": "2026-08-06",
-      "firstSeenAt": "2026-08-11T06:07:21.014Z",
-      "expiresAt": "2026-09-05T07:30:50.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Sales and Marketing"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "weworkremotely",
       "id": "wwr-jumio-devops-engineer-iv-obs--",
       "title": "Jumio: DevOps Engineer IV (Obs)",
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/jumio-devops-engineer-iv-obs",
       "datePosted": "2026-08-06",
-      "firstSeenAt": "2026-08-11T06:07:21.014Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-05T07:30:49.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1256,28 +1534,12 @@
     {
       "type": "job",
       "source": "weworkremotely",
-      "id": "wwr-webflow-corporate-account-executive-west-",
-      "title": "Webflow: Corporate Account Executive - West",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/webflow-corporate-account-executive-west",
-      "datePosted": "2026-08-06",
-      "firstSeenAt": "2026-08-11T06:07:21.014Z",
-      "expiresAt": "2026-09-05T07:30:42.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Sales and Marketing"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "weworkremotely",
       "id": "wwr-jumio-customer-escalation-engineer-",
       "title": "Jumio: Customer Escalation Engineer",
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/jumio-customer-escalation-engineer",
       "datePosted": "2026-08-06",
-      "firstSeenAt": "2026-08-11T06:07:21.014Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-05T07:30:42.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1293,7 +1555,7 @@
       "company": "Carnival Corporation",
       "url": "https://remoteOK.com/remote-jobs/remote-technical-storekeeper-carnival-corporation-1136268",
       "datePosted": "2026-08-05",
-      "firstSeenAt": "2026-08-11T06:07:21.074Z",
+      "firstSeenAt": "2026-08-12T08:04:45.846Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1304,64 +1566,13 @@
     },
     {
       "type": "job",
-      "source": "remoteok",
-      "id": "remoteok-1136206",
-      "title": "owlette",
-      "company": "Tridant",
-      "url": "https://remoteOK.com/remote-jobs/remote-owlette-tridant-1136206",
-      "datePosted": "2026-08-05",
-      "firstSeenAt": "2026-08-11T06:07:21.074Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "education",
-        "non tech"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "remoteok",
-      "id": "remoteok-1136247",
-      "title": "Scout",
-      "company": "WestTech Home Automation, LLC",
-      "url": "https://remoteOK.com/remote-jobs/remote-scout-westtech-home-automation-llc-1136247",
-      "datePosted": "2026-08-05",
-      "firstSeenAt": "2026-08-11T06:07:21.074Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "dev",
-        "exec"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "remoteok",
-      "id": "remoteok-1136185",
-      "title": "Stay Hungry. Stay Foolish. Serve Others",
-      "company": "AS UNEXPECTED",
-      "url": "https://remoteOK.com/remote-jobs/remote-stay-hungry-stay-foolish-serve-others-as-unexpected-1136185",
-      "datePosted": "2026-08-05",
-      "firstSeenAt": "2026-08-11T06:07:21.075Z",
-      "expiresAt": null,
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "exec",
-        "full time"
-      ]
-    },
-    {
-      "type": "job",
       "source": "weworkremotely",
       "id": "wwr-memberspace-senior-react-developer-",
       "title": "MemberSpace: Senior React Developer",
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/memberspace-senior-react-developer",
       "datePosted": "2026-08-05",
-      "firstSeenAt": "2026-08-11T06:07:21.014Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-04T22:24:37.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1377,7 +1588,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/lemon-io-senior-ai-engineer-4",
       "datePosted": "2026-08-05",
-      "firstSeenAt": "2026-08-11T06:07:21.014Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-04T08:23:41.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1393,7 +1604,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/hook-ladder-web-developer",
       "datePosted": "2026-08-04",
-      "firstSeenAt": "2026-08-11T06:07:21.014Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-03T22:13:03.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1409,7 +1620,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/thehivecareers-co-web-developer-remote-1",
       "datePosted": "2026-08-04",
-      "firstSeenAt": "2026-08-11T06:07:21.015Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-03T22:13:00.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1425,7 +1636,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/algaecal-automation-qa-engineer-lead",
       "datePosted": "2026-08-04",
-      "firstSeenAt": "2026-08-11T06:07:21.015Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-03T22:13:00.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1441,7 +1652,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/uptalent-io-part-time-brand-outreach-assistant-b2b-saas-vc-remote-1",
       "datePosted": "2026-08-04",
-      "firstSeenAt": "2026-08-11T06:07:21.015Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-03T15:18:27.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1457,7 +1668,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/power-digital-growth-marketing-manager-b2b-saas-1",
       "datePosted": "2026-08-04",
-      "firstSeenAt": "2026-08-11T06:07:21.015Z",
+      "firstSeenAt": "2026-08-12T08:04:45.902Z",
       "expiresAt": "2026-09-03T15:18:27.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1473,7 +1684,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/druva-technical-sales-enablement-manager-partners",
       "datePosted": "2026-08-04",
-      "firstSeenAt": "2026-08-11T06:07:21.015Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-09-03T15:18:27.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1489,7 +1700,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/power-digital-growth-marketing-manager-b2b-saas",
       "datePosted": "2026-08-04",
-      "firstSeenAt": "2026-08-11T06:07:21.015Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-09-03T15:18:17.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1505,7 +1716,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/truelogic-senior-software-architect-c-angular-ai-first-govtech-saas-company",
       "datePosted": "2026-08-04",
-      "firstSeenAt": "2026-08-11T06:07:21.016Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-09-03T15:18:17.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1521,7 +1732,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/amwell-lead-fp-a-analyst",
       "datePosted": "2026-07-31",
-      "firstSeenAt": "2026-08-11T06:07:21.016Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-08-30T07:31:03.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1537,7 +1748,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/gitlab-area-vice-president-financial-services",
       "datePosted": "2026-07-31",
-      "firstSeenAt": "2026-08-11T06:07:21.016Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-08-30T07:31:03.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1553,7 +1764,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/customer-io-customer-success-manager-emea",
       "datePosted": "2026-07-30",
-      "firstSeenAt": "2026-08-11T06:07:21.016Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-08-29T07:31:03.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1564,28 +1775,12 @@
     {
       "type": "job",
       "source": "weworkremotely",
-      "id": "wwr-clickhouse-accounts-receivable-and-billing-operati-",
-      "title": "ClickHouse: Accounts Receivable and Billing Operations Manager",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/clickhouse-accounts-receivable-and-billing-operations-manager",
-      "datePosted": "2026-07-30",
-      "firstSeenAt": "2026-08-11T06:07:21.016Z",
-      "expiresAt": "2026-08-29T07:31:03.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Management and Finance"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "weworkremotely",
       "id": "wwr-remote-accountant-",
       "title": "Remote: Accountant",
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/remote-accountant-1",
       "datePosted": "2026-07-29",
-      "firstSeenAt": "2026-08-11T06:07:21.016Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-08-28T07:31:01.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1601,7 +1796,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/joby-customer-support-product-demo-specialist",
       "datePosted": "2026-07-28",
-      "firstSeenAt": "2026-08-11T06:07:21.016Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-08-27T21:46:54.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1617,7 +1812,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/zapiet-head-of-marketing",
       "datePosted": "2026-07-26",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-08-25T17:42:41.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1633,7 +1828,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/yoko-co-front-end-wordpress-developer",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
+      "firstSeenAt": "2026-08-12T08:04:45.903Z",
       "expiresAt": "2026-08-23T14:03:46.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1649,7 +1844,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/tines-customer-success-manager-ii-west",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T07:01:22.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1665,7 +1860,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/customer-io-contract-it-specialist",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T07:01:22.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1681,7 +1876,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/webflow-associate-general-counsel-corporate",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T07:01:12.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1697,7 +1892,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/collibra-professional-services-sales-executive",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T07:01:12.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1713,7 +1908,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/launchdarkly-backend-engineer-flag-delivery",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T07:01:12.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1724,44 +1919,12 @@
     {
       "type": "job",
       "source": "weworkremotely",
-      "id": "wwr-smartsheet-commercial-solutions-engineer-",
-      "title": "Smartsheet: Commercial Solutions Engineer",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/smartsheet-commercial-solutions-engineer",
-      "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
-      "expiresAt": "2026-08-23T07:01:12.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Customer Support"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "weworkremotely",
-      "id": "wwr-customer-io-account-manager-emea-",
-      "title": "Customer.io: Account Manager, EMEA",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/customer-io-account-manager-emea",
-      "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
-      "expiresAt": "2026-08-23T07:01:12.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "Customer Support"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "weworkremotely",
       "id": "wwr-bybit-blockchain-risk-control-research-intern-",
       "title": "Bybit: Blockchain Risk Control Research Intern",
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/bybit-blockchain-risk-control-research-intern",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.017Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T07:01:12.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1777,7 +1940,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-staff-software-engineer-legal-automation",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T07:01:02.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1788,28 +1951,12 @@
     {
       "type": "job",
       "source": "weworkremotely",
-      "id": "wwr-abnormal-content-strategist-",
-      "title": "Abnormal: Content Strategist",
-      "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/abnormal-content-strategist",
-      "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
-      "expiresAt": "2026-08-23T07:01:02.000Z",
-      "eligibility": "worldwide",
-      "eligibilityLabel": "Open Worldwide",
-      "tags": [
-        "DevOps and Sysadmin"
-      ]
-    },
-    {
-      "type": "job",
-      "source": "weworkremotely",
       "id": "wwr-coinbase-senior-staff-software-engineer-finance-au-",
       "title": "Coinbase: Senior Staff Software Engineer, Finance Automation",
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-staff-software-engineer-finance-automation",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T07:00:51.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1825,7 +1972,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-software-engineer-data-layer",
       "datePosted": "2026-07-24",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-23T05:20:50.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1841,7 +1988,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/nuuly-nuuly-senior-software-engineer",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-22T19:25:07.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1852,28 +1999,28 @@
     {
       "type": "job",
       "source": "weworkremotely",
-      "id": "wwr-redspace-senior-software-developer-ad-tech-",
-      "title": "REDspace: Senior Software Developer - Ad Tech",
+      "id": "wwr-pricewaterhousecoopers-it-maintenance-and-support--",
+      "title": "PricewaterhouseCoopers: IT Maintenance and Support Expert | Digital&amp;IPA (freelance)",
       "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/redspace-senior-software-developer-ad-tech",
+      "url": "https://weworkremotely.com/remote-jobs/pricewaterhousecoopers-it-maintenance-and-support-expert-digital-ipa-freelance",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
-      "expiresAt": "2026-08-22T13:29:27.000Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
+      "expiresAt": "2026-08-22T13:29:54.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
       "tags": [
-        "Back-End Programming"
+        "Management and Finance"
       ]
     },
     {
       "type": "job",
       "source": "weworkremotely",
-      "id": "wwr-cfive-solutions-senior-web-developer-software-engi-",
-      "title": "cFive Solutions: Senior Web Developer/Software Engineer",
+      "id": "wwr-redspace-senior-software-developer-ad-tech-",
+      "title": "REDspace: Senior Software Developer - Ad Tech",
       "company": "",
-      "url": "https://weworkremotely.com/remote-jobs/cfive-solutions-senior-web-developer-software-engineer",
+      "url": "https://weworkremotely.com/remote-jobs/redspace-senior-software-developer-ad-tech",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
+      "firstSeenAt": "2026-08-12T08:04:45.904Z",
       "expiresAt": "2026-08-22T13:29:27.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1889,7 +2036,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/twilio-senior-security-engineer-incident-response",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
       "expiresAt": "2026-08-22T07:05:02.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1905,7 +2052,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-software-engineer-infrastructure-compute-platform-1",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
       "expiresAt": "2026-08-22T07:04:48.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1921,7 +2068,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-software-engineer-infrastructure-compute-platform",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.018Z",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
       "expiresAt": "2026-08-22T07:04:41.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1937,7 +2084,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/stripe-technical-solutions-engineer",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.019Z",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
       "expiresAt": "2026-08-22T07:04:41.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1953,7 +2100,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-software-engineer-frontend-consumer-payments",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.019Z",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
       "expiresAt": "2026-08-22T07:04:31.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -1969,8 +2116,24 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-software-engineer-eaa",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.019Z",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
       "expiresAt": "2026-08-22T07:04:27.000Z",
+      "eligibility": "worldwide",
+      "eligibilityLabel": "Open Worldwide",
+      "tags": [
+        "DevOps and Sysadmin"
+      ]
+    },
+    {
+      "type": "job",
+      "source": "weworkremotely",
+      "id": "wwr-coinbase-senior-software-engineer-",
+      "title": "Coinbase: Senior Software Engineer",
+      "company": "",
+      "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-software-engineer-1",
+      "datePosted": "2026-07-23",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
+      "expiresAt": "2026-08-22T07:03:34.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
       "tags": [
@@ -1985,7 +2148,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-senior-software-engineer",
       "datePosted": "2026-07-23",
-      "firstSeenAt": "2026-08-11T06:07:21.019Z",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
       "expiresAt": "2026-08-22T07:03:20.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -2001,7 +2164,7 @@
       "company": "",
       "url": "https://weworkremotely.com/remote-jobs/coinbase-machine-learning-engineer-cx-intelligence",
       "datePosted": "2026-07-22",
-      "firstSeenAt": "2026-08-11T06:07:21.019Z",
+      "firstSeenAt": "2026-08-12T08:04:45.905Z",
       "expiresAt": "2026-08-21T07:04:06.000Z",
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
@@ -2017,7 +2180,7 @@
       "company": "nill",
       "url": "https://code-for-humanity.devpost.com/",
       "datePosted": "2026-07-16",
-      "firstSeenAt": "2026-08-11T06:07:21.465Z",
+      "firstSeenAt": "2026-08-12T08:04:46.289Z",
       "expiresAt": null,
       "eligibility": "worldwide",
       "eligibilityLabel": "Open Worldwide",
